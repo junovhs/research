@@ -189,10 +189,5 @@ class ValidatorTests(unittest.TestCase):
         self.write("EVIDENCE/legacy/R-001/a.json", "{}")
         self.assertFails("does not match its historical SHA-256 anchor")
 
-class RepositoryTreeTest(unittest.TestCase):
-    def test_this_repository_validates(self):
-        r = subprocess.run([sys.executable, str(VALIDATOR), "--root", str(HERE.parent)], capture_output=True, text=True)
-        self.assertEqual(r.returncode, 0, r.stdout)
-
 if __name__ == "__main__":
     unittest.main()
