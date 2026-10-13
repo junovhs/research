@@ -1,12 +1,16 @@
 # 02 - LIVE STATE - the only current scientific handoff
 
-**Updated:** 2026-10-13. **Purpose:** scientific state remains [R-014](../RESULTS/R-014.md); owner-approved **workflow integrity update** adds reproducible research evidence, decision gates and independent challenge expectations. No new scientific experiment or confirmation was performed by this policy change. The lab now lives in **junovhs/research** (migrated from junovhs/fractodactyl@314abc8; workflow-only, see [MIGRATION.md](../MIGRATION.md)).
+**Updated:** 2026-10-13. **Latest exploratory decision:** [R-015](../RESULTS/R-015.md) executed a phase-conditioned semidiscrete ODE probe; PARK a general continuous Allen–Cahn solver, and keep only a narrowly scoped phase-label/forcing-tail challenge. R-014 remains the latest broad transfer evidence.  **Purpose:** scientific state remains [R-014](../RESULTS/R-014.md); owner-approved **workflow integrity update** adds reproducible research evidence, decision gates and independent challenge expectations. No new scientific experiment or confirmation was performed by this policy change. The lab now lives in **junovhs/research** (migrated from junovhs/fractodactyl@314abc8; workflow-only, see [MIGRATION.md](../MIGRATION.md)).
 
 ## Goal and priority discipline
 
 Find trustworthy, transferable mathematical shortcuts for expensive scientific computation. **No industrial speedup, general nonlinear compiler, certified continuous PDE solver or proven novel algorithm has been demonstrated.** P-051's original frozen MPFR/performance question remains UNTESTED. The owner's anti-tunnel-vision direction remains active: transfer or resolve a substantive obstruction, rather than indefinitely tune a narrow favorable example. Small credible gains remain valid findings; no universal speed threshold is imposed.
 
 ## Latest executed evidence
+
+**R-015 (2026-10-13): REPORTED / EXPLORATORY / PREREGISTERED NO / POD NO / NOVELTY UNVERIFIED.** A source-bound three-case, D=16 semidiscrete ODE probe (not continuum PDE) found a small phase-conditioned scalar envelope after an unforced prefix, but a final -0.25 drive moved the positive center to 0.8803950935673981, so a phase-only equilibrium substitute fails. An assumed 0.92 tail contraction rate gives a 5.665865e-10 width estimate, but finite-arithmetic and numerical integration errors are **not certified**, and the phase bit was free. This narrows the question without establishing novel speed or industrial applicability. **Decision: PARK** general validated-PDE development; challenge only a bounded recent-drive scalar certificate with charged phase classification and fallback, versus a validated specialist. **One-agent self-review, no independent reviewer.** No MAP update (unchanged lineage).
+
+## Prior broad transfer evidence
 
 **R-014: REPORTED / EXPLORATORY / PREREGISTERED NO / POD NO / NOVELTY UNVERIFIED.** A standard cubic Allen-Cahn finite-difference Euler recurrence with heterogeneous dyadic initial conditions and piecewise-bilinear correlated forcing was enclosed using its monotone combined stencil and exact directed 40-bit dyadic integer arithmetic. The target is one exact DISCRETE terminal component, not the continuous PDE.
 
@@ -34,9 +38,10 @@ R-001 through R-009 retain their negative, scoped or known-method results; no hi
 
 ## Recent handoff decisions (maximum three)
 
+- **2026-10-13 - R-015:** phase-conditioned semidiscrete terminal probe; recent forcing invalidates equilibrium-only shortcut. PARK broad PDE development; only narrow specialist-aware phase/tail falsifier remains. Self-review only; no MAP trigger.
+
 - **2026-10-13 - R-014:** partial transfer to correlated-drive Allen-Cahn discrete queries; 23/48 admissions, three million-step references, matched rival, invariant-phase obstruction and measured discretization gap. Next: total continuous-model error, not toy tuning. No MAP trigger.
 - **2026-10-13 - R-013:** space-time terminal-query omission with archived reconstruction, a persistent-memory counterexample and temporal-only rival. One provisional direction remains in MAP.md.
-- **2026-10-13 - WORKFLOW ONLY:** owner approved durable source-bound evidence, run/checkpoint fingerprints, challenger review, decision-changing gates, and a narrowly scoped research-source exception; the lab was then migrated to junovhs/research with pull-request delivery and CI-enforced static evidence checks. No scientific R-card or performance improvement implied.
 
 ## Update rule
 

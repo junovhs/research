@@ -1,0 +1,83 @@
+{
+  "cases": [
+    {
+      "field_center": 1.0000000000125653,
+      "field_inside_rk4_envelope": true,
+      "field_max": 1.000000000014036,
+      "field_min": 1.0000000000116827,
+      "interval_width_contraction_bound": 5.665865029851688e-10,
+      "observed_step_halving": 3.3306690738754696e-16,
+      "phase": "positive",
+      "pre_interval": [
+        0.999999998862616,
+        1.000000000284346
+      ],
+      "pulse": 0.0,
+      "terminal_interval_rk4_coarse": [
+        0.9999999998460721,
+        1.0000000000384819
+      ],
+      "terminal_interval_rk4_fine": [
+        0.9999999998460725,
+        1.0000000000384817
+      ],
+      "terminal_width_observed": 1.9240919968410708e-10
+    },
+    {
+      "field_center": 0.8803950935673981,
+      "field_inside_rk4_envelope": true,
+      "field_max": 0.8803950935696596,
+      "field_min": 0.8803950935660435,
+      "interval_width_contraction_bound": 5.665865029851688e-10,
+      "observed_step_halving": 2.3647750424515834e-14,
+      "phase": "positive",
+      "pre_interval": [
+        0.999999998862616,
+        1.000000000284346
+      ],
+      "pulse": -0.25,
+      "terminal_interval_rk4_coarse": [
+        0.8803950933115348,
+        0.8803950936072277
+      ],
+      "terminal_interval_rk4_fine": [
+        0.8803950933115114,
+        0.880395093607204
+      ],
+      "terminal_width_observed": 2.956925815311706e-10
+    },
+    {
+      "field_center": -1.0987741605146086,
+      "field_inside_rk4_envelope": true,
+      "field_max": -1.0987741605137153,
+      "field_min": -1.0987741605152614,
+      "interval_width_contraction_bound": 5.665865029851688e-10,
+      "observed_step_halving": 1.0258460747536446e-13,
+      "phase": "negative",
+      "pre_interval": [
+        -1.000000000284346,
+        -0.999999998862616
+      ],
+      "pulse": -0.25,
+      "terminal_interval_rk4_coarse": [
+        -1.0987741605313153,
+        -1.0987741604049588
+      ],
+      "terminal_interval_rk4_fine": [
+        -1.0987741605314179,
+        -1.0987741604050596
+      ],
+      "terminal_width_observed": 1.263582571908728e-10
+    }
+  ],
+  "config": {
+    "contraction_rate": 0.92,
+    "diffusivity": 1,
+    "sites": 16,
+    "step": 0.001953125,
+    "tail_time": 1.0,
+    "target_width": 1e-09,
+    "unforced_time": 10.5
+  },
+  "scope": "semidiscrete continuous-time ODE, not continuum PDE; RK4 numbers diagnostic only"
+}
