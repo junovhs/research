@@ -41,3 +41,4 @@ R-001 through R-009 retain their negative, scoped or known-method results; no hi
 ## Update rule
 
 An ordinary meaningful exploratory session updates this file and one new R-card or linked correction, plus source-bound EVIDENCE/R-NNN/ when calculations were executed, in one pull request into `main` of junovhs/research that passes `lab-checks`. MAP.md changes only for an evidence-backed structural trigger. Keep mathematics, tables, searches and reconstruction in RESULTS. Read all four AGENTS-READ-THIS files each session and follow [03-WRITEBACK-CHECKLIST.md](03-WRITEBACK-CHECKLIST.md). Never routinely synchronize other historical root documents.
+- **CI demo only (branch ci-demo/evidence-pass-fail, never merged):** [R-999](../RESULTS/R-999.md)
