@@ -30,7 +30,7 @@ class ValidatorTests(unittest.TestCase):
         self.write("AGENTS.md", "entry\n")
         self.write("CLAUDE.md", "entry\n")
         self.write("RESULTS/R-001.md", LEGACY_CARD)
-        self.write("scripts/research_run.py", RUNNER.read_text())
+        self.write("scripts/research_run.py", RUNNER.read_text(encoding="utf-8"))
         legacy = {"frozen_records": {"RESULTS/R-001.md": hashlib.sha256(LEGACY_CARD.encode()).hexdigest()},
                   "archives": [{"id": "R-001-companion", "status": "NOT_RECOVERED",
                                 "recovered_path": "EVIDENCE/legacy/R-001", "sha256_anchors": {"a.json": "0" * 64}}]}
@@ -42,7 +42,7 @@ class ValidatorTests(unittest.TestCase):
     def write(self, rel, text):
         p = self.root / rel
         p.parent.mkdir(parents=True, exist_ok=True)
-        p.write_text(text)
+        p.write_text(text, encoding="utf-8", newline="\n")  # same bytes on every OS so fixture hashes match
         return p
 
     def validate(self, *extra):
