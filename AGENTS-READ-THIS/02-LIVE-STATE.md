@@ -1,6 +1,6 @@
 # 02 - LIVE STATE - the only current scientific handoff
 
-**Updated:** 2026-10-13. **Purpose:** scientific state remains [R-014](../RESULTS/R-014.md); owner-approved **workflow integrity update** adds reproducible research evidence, decision gates and independent challenge expectations. No new scientific experiment or confirmation was performed by this policy change.
+**Updated:** 2026-10-13. **Purpose:** scientific state remains [R-014](../RESULTS/R-014.md); owner-approved **workflow integrity update** adds reproducible research evidence, decision gates and independent challenge expectations. No new scientific experiment or confirmation was performed by this policy change. The lab now lives in **junovhs/research** (migrated from junovhs/fractodactyl@314abc8; workflow-only, see [MIGRATION.md](../MIGRATION.md)).
 
 ## Goal and priority discipline
 
@@ -14,7 +14,7 @@ A 48-case transfer grid at D=512,N=16557 admitted **23** and abstained on **25**
 
 Three fully replayed million-step cases at D=256 used 8192,2048,4096 recent steps. The first needed the whole ring on its final pass; the other two used 65 and 129 sites. Including failed attempts, local work was 2803456,177920,706304 interval cell updates versus 256044288 full-replay updates. Fresh-query local medians were 122.867,8.26266,32.2700 ms; the same-arithmetic temporal-only rival took 185.123,45.1155,96.0986 ms: **1.51x,5.46x,2.98x**, not a gain over a literature-wide best solver. Shortcut medians use seven batches of three calls; full-replay sampling is limited and explicitly disclosed. Startup/import/compilation are excluded.
 
-Checks: 10,000 exact-Fraction endpoint tuples, 5,000 independent input calculations, 20 independent full/patch replays including wrapped boundaries, 1,000 interval inclusion samples and four 90-digit full trajectories. Source, all completed raw samples and reconstruction instructions are delivered separately; no external reproduction or formal program verification is claimed.
+Checks: 10,000 exact-Fraction endpoint tuples, 5,000 independent input calculations, 20 independent full/patch replays including wrapped boundaries, 1,000 interval inclusion samples and four 90-digit full trajectories. Source, all completed raw samples and reconstruction instructions are delivered separately; no external reproduction or formal program verification is claimed. *(Migration note: that companion was never committed to Git and is NOT_RECOVERED in this repository; only its SHA-256 anchors survive. See [EVIDENCE/LEGACY.json](../EVIDENCE/LEGACY.json).)*
 
 ## Two decisive boundaries
 
@@ -36,8 +36,8 @@ R-001 through R-009 retain their negative, scoped or known-method results; no hi
 
 - **2026-10-13 - R-014:** partial transfer to correlated-drive Allen-Cahn discrete queries; 23/48 admissions, three million-step references, matched rival, invariant-phase obstruction and measured discretization gap. Next: total continuous-model error, not toy tuning. No MAP trigger.
 - **2026-10-13 - R-013:** space-time terminal-query omission with archived reconstruction, a persistent-memory counterexample and temporal-only rival. One provisional direction remains in MAP.md.
-- **2026-10-13 - WORKFLOW ONLY:** owner approved durable source-bound evidence, run/checkpoint fingerprints, challenger review, decision-changing gates, and a narrowly scoped research-source branch exception. No scientific R-card or performance improvement implied.
+- **2026-10-13 - WORKFLOW ONLY:** owner approved durable source-bound evidence, run/checkpoint fingerprints, challenger review, decision-changing gates, and a narrowly scoped research-source exception; the lab was then migrated to junovhs/research with pull-request delivery and CI-enforced static evidence checks. No scientific R-card or performance improvement implied.
 
 ## Update rule
 
-An ordinary meaningful exploratory session updates this file and one new R-card or linked correction, plus source-bound EVIDENCE/R-NNN/ when calculations were executed, in one commit on research/dynamics-transfer-lab. MAP.md changes only for an evidence-backed structural trigger. Keep mathematics, tables, searches and reconstruction in RESULTS. Read all four AGENTS-READ-THIS files each session and follow [03-WRITEBACK-CHECKLIST.md](03-WRITEBACK-CHECKLIST.md). Never routinely synchronize other historical root documents.
+An ordinary meaningful exploratory session updates this file and one new R-card or linked correction, plus source-bound EVIDENCE/R-NNN/ when calculations were executed, in one pull request into `main` of junovhs/research that passes `lab-checks`. MAP.md changes only for an evidence-backed structural trigger. Keep mathematics, tables, searches and reconstruction in RESULTS. Read all four AGENTS-READ-THIS files each session and follow [03-WRITEBACK-CHECKLIST.md](03-WRITEBACK-CHECKLIST.md). Never routinely synchronize other historical root documents.

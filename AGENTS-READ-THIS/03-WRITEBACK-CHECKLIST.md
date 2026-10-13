@@ -2,16 +2,18 @@
 
 This is the **single persistent checklist**. READ THIS FILE FULLY each session. Do not edit the shared checklist to tick boxes; perform the applicable steps and report completion honestly in the result/response.
 
+Session shape: **define a valuable task → design a discriminating test → run it → preserve verifiable evidence → challenge the result → decide CONTINUE / CHALLENGE / PARK / CLOSE.** CI verifies the objective evidence facts; scientific judgment is the separate challenge step and is never implied by a green check.
+
 ## Before working — compulsory reading and boundaries
 
-- [ ] Confirm repo junovhs/fractodactyl and current branch research/dynamics-transfer-lab. Do not use main or any other branch.
+- [ ] Confirm the repository is **junovhs/research** and create a short-lived branch from an up-to-date `main`. Never commit directly to `main`, never write to junovhs/fractodactyl (out of scope unless the owner separately authorizes a specific task), and never touch any other repository.
 - [ ] Read **all four Markdown files** in AGENTS-READ-THIS/ **fully**, in numbered order. No skimming, cached summary or partial excerpt.
 - [ ] Identify the active gap in 02-LIVE-STATE.md; read relevant historical P/R papers and source materials **only as needed**. Historical files are not independently authoritative.
 - [ ] Choose an explicit extension, prediction and falsifier; specify task/output, accuracy layer (discrete versus continuous), input access, workload, strongest fair opponent, and why this question outranks the strongest other direction. Define what result changes CONTINUE / CHALLENGE / PARK / CLOSE.
 
 ## Exploratory run (default)
 
-- [ ] Derive/test a concrete claim with independent correctness checks where possible. First seal the executed source/config/input/command and exit status using scripts/research_run.py (or equivalent). Save completed raw samples, interruptions and exact hash verification; **do not claim execution without an actual execution record**. Separate arithmetic/omission/discretization/model error.
+- [ ] Derive/test a concrete claim with independent correctness checks where possible. First seal the executed source/config/input/command and exit status using `scripts/research_run.py run --experiment R-NNN --out EVIDENCE/R-NNN ...` (an equivalent manifest will be rejected by CI unless it matches the runner's schema; otherwise use a verified external archive line). Save completed raw samples, interruptions and exact hash verification; **do not claim execution without an actual execution record**. Separate arithmetic/omission/discretization/model error.
 - [ ] If executed, create **one new RESULTS/R-NNN.md** using the next unused ID (or an explicitly linked correction). Include equations, independent check, exact error scope, raw observations, source/config fingerprint, command/exit status, available durable evidence URI and hash, rival including rejection+fallback workload, strongest failure, challenger limitations, known prior work, and status **EXPLORATORY / PREREGISTERED NO / POD NO**. Never claim a missing bundle is retrievable.
 - [ ] Update **AGENTS-READ-THIS/02-LIVE-STATE.md** in the **same research-result commit** with the latest status, report link, alternative direction, evidence-backed next priority and explicit CONTINUE / CHALLENGE / PARK / CLOSE decision. Keep at most three recent entries.
 - [ ] If no execution, do **not** create a fake R-card. State NOT RUN and reason; update 02-LIVE-STATE.md only if a substantive decision/obstruction changes the next research action. Otherwise no file update is required.
@@ -53,15 +55,22 @@ The R-card must have individually verified answers to **all ten**:
 7. Cold/setup, warm, amortization, abstention/fallback and realistic workload where relevant, or justified NOT MEASURED with no performance claim.
 8. Frozen-gate verdict separate from any smaller true effect, utility and decision.
 9. Novelty, known ingredients, limits, proof scope and REPORTED/REPRODUCED/CERTIFIED provenance.
-10. R-card and **02-LIVE-STATE.md** links/status consistent (and MAP.md only if its structural trigger fired), committed **only to the lab branch**, with read-back confirmed. This supersedes automatic INDEX/MAP/FRONTIER synchronization.
+10. R-card and **02-LIVE-STATE.md** links/status consistent (and MAP.md only if its structural trigger fired), merged into `main` of junovhs/research through a pull request with passing `lab-checks`, with read-back confirmed. This supersedes automatic INDEX/MAP/FRONTIER synchronization.
 
 Only when all are real and checked is **POD: YES** permissible; otherwise **POD: NO**, even for a useful exploratory or failed trial. Lean is selective; never label a numerical output CERTIFIED without the actual linked proof/interval enclosure.
 
+## Pull request, CI and review
+
+- [ ] Run locally before pushing: `python3 scripts/test_research_run.py`, `python3 scripts/test_validate_lab.py`, `python3 scripts/validate_lab.py --base origin/main`. Fix every error; do not weaken the validator to pass.
+- [ ] Open one pull request into `main` per session. The PR description states the decision gate, what was executed (run IDs), the strongest failure, and what CI cannot check. The required `lab-checks` status must pass; never bypass it.
+- [ ] Historical records (RESULTS/, PROMPTS/, PRIOR_ART/, EVIDENCE/R-NNN/) are append-only and CI rejects edits or deletions. Correct a record with a new linked file (e.g. RESULTS/R-NNN-correction.md).
+- [ ] Before promoting a significant claim (CHALLENGE, confirmation, or a MAP structural trigger), obtain a distinct review pass on the PR: an owner review, or a separate challenger agent/session that did not write the result, recorded as a PR review or in the R-card. Label one-agent self-review as such; never call it independent.
+
 ## Final Git audit — every write
 
-- [ ] Confirm the target is only research/dynamics-transfer-lab, preserve previous history and frozen gates, add no code/dependencies/binaries/renderer and do not merge or force-push.
+- [ ] Confirm the target is only junovhs/research on a short-lived branch merged by pull request; preserve previous history and frozen gates, add no application code/dependencies/binaries/renderer, and never force-push, rewrite or delete `main`.
 - [ ] For ordinary executed exploration, verify the changed-path list contains RESULTS/R-NNN.md (or linked correction), AGENTS-READ-THIS/02-LIVE-STATE.md, **bounded EVIDENCE/R-NNN/** files for actual execution, and MAP.md **only** on the evidence-backed structural trigger. No research-source artifacts are required for NOT RUN sessions. For a structural reassessment without execution, MAP.md + live state may be the only changed files. For confirmation, allow the explicitly required P/PA pair in its pretest commit. For an owner-authorized workflow change, only the necessary policy/entrypoint/map-description files may differ.
 - [ ] Commit with a specific message; read the branch tip and every changed file back; check that evidence and live summary agree. If a write/read-back fails, say so. Never claim success prematurely.
-- [ ] Hand off what mathematical construction was attempted, what actually happened, its strongest failure, what is and is not established, next falsifier and exact branch/commit.
+- [ ] Hand off what mathematical construction was attempted, what actually happened, its strongest failure, what is and is not established, next falsifier and exact pull request/merge commit.
 
 **Changing the workflow itself** (editing rules/entrypoints or adding an evidence harness) is a rare explicit owner-authorized exception. The owner approved the 2026-10-13 durability, run-fingerprint, challenger, and decision-gate changes as workflow-only, as well as the limited research source/evidence exception. These are **not** scientific discoveries. The original 2026-10-13 consolidation and MAP policy changes remain workflow-only. Thereafter keep writeback small and localized.

@@ -1,0 +1,50 @@
+# Static evidence validation for the research lab.
+#
+# Safety: this workflow never runs experiment sources from EVIDENCE/ or
+# RESULTS/. It runs only the lab's own stdlib test suites and the static
+# validator (scripts/validate_lab.py), which reads files and hashes them.
+# Executing experiments is a deliberate, separately authorized activity done
+# with scripts/research_run.py outside CI. Uses the pull_request event (never
+# pull_request_target), a read-only token and no secrets.
+name: lab-checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lab-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: evidence-and-structure
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Evidence-runner tests
+        run: python3 scripts/test_research_run.py -v
+
+      - name: Validator tests (success and failure paths)
+        run: python3 scripts/test_validate_lab.py -v
+
+      - name: Validate structure, frozen records and archived evidence
+        run: python3 scripts/validate_lab.py
+
+      - name: Enforce append-only history against the pull request base
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: python3 scripts/validate_lab.py --base "origin/$BASE_REF"

@@ -1,3 +1,5 @@
+> **Repository: junovhs/research — home of the Dynamics Transfer Lab since 2026-10-13.** The lab was migrated here from branch `research/dynamics-transfer-lab` of junovhs/fractodactyl (commit 314abc8; see [MIGRATION.md](MIGRATION.md)). Agents: start at [AGENTS.md](AGENTS.md). Contribute through short-lived branches and pull requests into `main`; the `lab-checks` CI ([scripts/README.md](scripts/README.md)) must pass. References below to "this branch", "documentation-only" or "do not merge into main" describe the lab's former home in Fractodactyl and are kept as history.
+
 > **Historical/reference snapshot (2026-10-13).** This file is retained for optional background and provenance; it is **not** the live agent contract, frontier or routine update target. For every session, read all four files in [AGENTS-READ-THIS/](AGENTS-READ-THIS/00-START-HERE.md) in full. Live status: [02-LIVE-STATE.md](AGENTS-READ-THIS/02-LIVE-STATE.md). Only a new RESULTS/R-card and that live state need routine research writeback. Any legacy instruction below to synchronize README/INDEX/MAP/FRONTIER/SOURCES/etc. is superseded.
 
 # Computational Structure Lab
