@@ -1,0 +1,37 @@
+{
+ "rows": [
+  {
+   "patch_rtol": 1e-09,
+   "width": 6.938880581230933e-10,
+   "contains_ref_1e-10": true,
+   "envelope_updates": 660080,
+   "lower_minus_ref": 2.0894397323445446e-12,
+   "upper_minus_ref": 6.959774978554378e-10
+  },
+  {
+   "patch_rtol": 1e-08,
+   "width": 6.944683716980649e-10,
+   "contains_ref_1e-10": true,
+   "envelope_updates": 506456,
+   "lower_minus_ref": 1.5947243525715749e-12,
+   "upper_minus_ref": 6.960630960506364e-10
+  },
+  {
+   "patch_rtol": 1e-07,
+   "width": 6.910221284073259e-10,
+   "contains_ref_1e-10": true,
+   "envelope_updates": 390572,
+   "lower_minus_ref": 6.556866161133712e-12,
+   "upper_minus_ref": 6.975789945684596e-10
+  },
+  {
+   "patch_rtol": 1e-06,
+   "width": 7.102786137025419e-10,
+   "contains_ref_1e-10": true,
+   "envelope_updates": 312872,
+   "lower_minus_ref": 2.045585922871851e-12,
+   "upper_minus_ref": 7.123241996254137e-10
+  }
+ ],
+ "ref_center": -0.9994159675277491
+}
