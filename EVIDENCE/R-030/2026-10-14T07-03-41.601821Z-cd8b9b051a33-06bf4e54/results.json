@@ -1,0 +1,28 @@
+{
+ "rows": [
+  {
+   "rtol": 1e-08,
+   "max_step": 1.0,
+   "scalar_updates": 3657728,
+   "err_vs_ref": 1.5570051192792533e-08
+  },
+  {
+   "rtol": 1e-09,
+   "max_step": 1.0,
+   "scalar_updates": 4708352,
+   "err_vs_ref": 2.5408416759464814e-09
+  },
+  {
+   "rtol": 1e-10,
+   "max_step": 1.0,
+   "scalar_updates": 6060032,
+   "err_vs_ref": 3.6973643591231564e-10
+  },
+  {
+   "rtol": 1e-11,
+   "max_step": 1.0,
+   "scalar_updates": 7866368,
+   "err_vs_ref": 4.450063928462811e-11
+  }
+ ]
+}
