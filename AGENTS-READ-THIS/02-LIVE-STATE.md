@@ -1,6 +1,6 @@
 # 02 - LIVE STATE - the only current scientific handoff
 
-**Updated:** 2026-10-13 PDT, literature-based task/value gate after portfolio reassessment (no numerical run; last run 2026-10-14 UTC). **Active portfolio decision:** PARK R-013/R-014 reconstruction until a real exact-discrete sparse-output workload and a specialist-relative capability are established. **Latest exploratory decision:** [R-017](../RESULTS/R-017.md) establishes a narrow exact-rational input-change locality admission on a manufactured 64-site cubic algebraic ring: 24/54 sites can reuse an exact cached output at tolerance 1e-6, 30 abstain, but near-critical coupling makes the certificate expensive and no specialist-relative gain has been shown. **Decision: PARK** a general reuse engine, retain only a realistic-cost falsifier. [R-016](../RESULTS/R-016.md) continues to PARK broad phase-aware PDE development. [MIGRATION.md](../MIGRATION.md) documents provenance.
+**Updated:** 2026-10-13 PDT / 2026-10-14 UTC, latest source-bound result R-018 (narrow specialist challenge, not full confirmation). **Active portfolio decision:** PARK R-013/R-014 reconstruction until a real exact-discrete sparse-output workload and a specialist-relative capability are established. **Latest exploratory decision:** [R-017](../RESULTS/R-017.md) establishes a narrow exact-rational input-change locality admission on a manufactured 64-site cubic algebraic ring: 24/54 sites can reuse an exact cached output at tolerance 1e-6, 30 abstain, but near-critical coupling makes the certificate expensive and no specialist-relative gain has been shown. **Decision: PARK** a general reuse engine, retain only a realistic-cost falsifier. [R-016](../RESULTS/R-016.md) continues to PARK broad phase-aware PDE development. [MIGRATION.md](../MIGRATION.md) documents provenance.
 
 ## Task/value gate screening — literature-only, NOT RUN (2026-10-13 PDT)
 
@@ -17,6 +17,10 @@
 **Cost/admission falsifier before further coding:** for a named, externally anchored exact-discrete workload, collect recurrence and archived input layout, demanded terminal outputs/error, representative and adversarial cases, query volume and reuse, input-slice access cost, checkpoint availability, and the best feasible guaranteed specialist. Demand that *all-in* certificate-attempt cost + rejection probability × specialist fallback + amortized preparation be favorable, with actual output correctness; no universal speedup threshold. If a continuous model is the real target, price independent temporal/spatial/model error first. **If this gate remains unmet, do not create R-018 just to reconstruct old toy evidence.** Opportunity cost currently favors searching for a more distinctive mathematical capability over tuning prior R-013/R-014 windows or automatically promoting parked R-015/R-017 lines.
 
 **Provenance:** source/abstract and official-document screening only; **NOT RUN**, no external independent challenge, no new R-card/P-card/EVIDENCE, no certified/novel/performance claim. R-013/R-014's original companion bundles remain NOT_RECOVERED. **MAP.md unchanged:** no evidence-backed new branch, theorem, or decisive overturn of the existing lineage.
+
+## Latest research decision — R-018
+
+**[R-018](../RESULTS/R-018.md): EXPLORATORY YES; PREREGISTERED NO; POD NO; NOVELTY UNVERIFIED; REPORTED.** Executed an exact-linear time-varying transport *surrogate* with a specialist transpose-adjoint rival, not EPANET, and not a reconstruction of R-014. Twenty-four exact-Fraction forward/backward cases agreed exactly; 144 binary64 scenarios agreed to max 8.14e-20 observed discrepancy (not certified floating-point error). A uniform time-suffix bound at tolerance 1e-8 admitted K=286 or 581 for faster decay, but abstained at rho=255/256 even using N=2048. Reusing one adjoint for 48 sparse source scenarios beat this full-width suffix on both admitted coefficients in a small in-process benchmark; Q=1 was faster by suffix. Actual hydraulics, physical accuracy, input data, R-014 space trimming and EPANET specialists were not benchmarked. Literature already provides particle-backtracking water-quality methods. **Decision: PARK generic linear quality-transport engineering; a meaningful documented nonlinear specialty gap is required before further implementation.** No industrial claim, external independent replication, or new MAP structural trigger. [Source-bound manifest](../EVIDENCE/R-018/2026-10-14T05-20-21.814120Z-95e4a2c81d1e-84492304/manifest.json); locally equivalent schema-2 guard disclosed.
 
 ## Goal and priority discipline
 
@@ -67,9 +71,9 @@ R-001 through R-009 retain their negative, scoped or known-method results; no hi
 
 ## Recent handoff decisions (maximum three)
 
+- **2026-10-13 PDT / 2026-10-14 UTC — R-018:** water-transport surrogate specialist challenge, 24 exact-rational checks, 144 binary64 comparisons; PARK generic linear transport; no MAP trigger; one-agent review.
 - **2026-10-13 PDT / 2026-10-14 UTC — R-017:** exact-rational remote-input-update bound admits 24/54 cached outputs in a manufactured cubic algebraic ring; near-critical a=11/5 requires 196 iterations for 2/18 admissions. PARK unless specialist economics justify; no MAP trigger, self-review only.
 - **2026-10-13 PDT / 2026-10-14 UTC — R-016:** global scalar extrema fail heterogeneous-forcing enclosure; spatial extremal tails narrow only numerically, PARK general PDE solver.
-- **2026-10-13 — R-015:** phase-aware semidiscrete terminal probe; recent forcing invalidates equilibrium-only shortcut. PARK broad PDE development.
 
 ## Update rule
 

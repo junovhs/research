@@ -1,0 +1,12 @@
+{
+  "model": "linear positive time-varying nearest-neighbor recurrence, post-hydraulic transport surrogate",
+  "D": 96,
+  "N": 2048,
+  "target": 41,
+  "seed": 271828,
+  "rhos": [0.9375, 0.96875, 0.99609375],
+  "eps": 1e-08,
+  "events_per_query": 10,
+  "query_counts": [1, 4, 16, 48],
+  "timing_repetitions": 3
+}
