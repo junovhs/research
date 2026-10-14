@@ -1,0 +1,194 @@
+{
+ "rows": [
+  {
+   "seed": 7,
+   "center": 256,
+   "minimal": {
+    "R": 24,
+    "width": 6.125002727230822e-10,
+    "sites": 49
+   },
+   "tried": [
+    {
+     "R": 14,
+     "width": 0.0005147772327263045,
+     "contains": true
+    },
+    {
+     "R": 16,
+     "width": 2.8133037586863807e-05,
+     "contains": true
+    },
+    {
+     "R": 18,
+     "width": 1.9515289022553617e-06,
+     "contains": true
+    },
+    {
+     "R": 20,
+     "width": 1.3401195908535612e-07,
+     "contains": true
+    },
+    {
+     "R": 22,
+     "width": 9.061560390932755e-09,
+     "contains": true
+    },
+    {
+     "R": 24,
+     "width": 6.125002727230822e-10,
+     "contains": true
+    }
+   ]
+  },
+  {
+   "seed": 7,
+   "center": 100,
+   "minimal": {
+    "R": 28,
+    "width": 2.975553137218867e-10,
+    "sites": 57
+   },
+   "tried": [
+    {
+     "R": 14,
+     "width": 0.0035681253477822805,
+     "contains": true
+    },
+    {
+     "R": 16,
+     "width": 0.00013210001875063604,
+     "contains": true
+    },
+    {
+     "R": 18,
+     "width": 1.65195573982313e-05,
+     "contains": true
+    },
+    {
+     "R": 20,
+     "width": 1.577633497396036e-06,
+     "contains": true
+    },
+    {
+     "R": 22,
+     "width": 2.6355254589827126e-07,
+     "contains": true
+    },
+    {
+     "R": 24,
+     "width": 2.4672991760787966e-08,
+     "contains": true
+    },
+    {
+     "R": 26,
+     "width": 2.579867208751807e-09,
+     "contains": true
+    },
+    {
+     "R": 28,
+     "width": 2.975553137218867e-10,
+     "contains": true
+    }
+   ]
+  },
+  {
+   "seed": 99,
+   "center": 256,
+   "minimal": null,
+   "tried": [
+    {
+     "R": 14,
+     "width": 1.996956412351453,
+     "contains": true
+    },
+    {
+     "R": 16,
+     "width": 1.9969555744356586,
+     "contains": true
+    },
+    {
+     "R": 18,
+     "width": 1.9969553502111843,
+     "contains": true
+    },
+    {
+     "R": 20,
+     "width": 1.9969552961858779,
+     "contains": true
+    },
+    {
+     "R": 22,
+     "width": 1.9969552843681733,
+     "contains": true
+    },
+    {
+     "R": 24,
+     "width": 1.99695528199253,
+     "contains": true
+    },
+    {
+     "R": 26,
+     "width": 1.9969552815517275,
+     "contains": true
+    },
+    {
+     "R": 28,
+     "width": 7.469949983018864e-07,
+     "contains": true
+    },
+    {
+     "R": 30,
+     "width": 5.765736454943493e-08,
+     "contains": true
+    }
+   ]
+  },
+  {
+   "seed": 99,
+   "center": 100,
+   "minimal": {
+    "R": 26,
+    "width": 1.5969880973187855e-10,
+    "sites": 53
+   },
+   "tried": [
+    {
+     "R": 14,
+     "width": 0.06823630949489223,
+     "contains": true
+    },
+    {
+     "R": 16,
+     "width": 1.716440573229505e-05,
+     "contains": true
+    },
+    {
+     "R": 18,
+     "width": 1.7137146178791696e-06,
+     "contains": true
+    },
+    {
+     "R": 20,
+     "width": 1.9541084328444924e-07,
+     "contains": true
+    },
+    {
+     "R": 22,
+     "width": 1.6451014106522166e-08,
+     "contains": true
+    },
+    {
+     "R": 24,
+     "width": 1.60379431957125e-09,
+     "contains": true
+    },
+    {
+     "R": 26,
+     "width": 1.5969880973187855e-10,
+     "contains": true
+    }
+   ]
+  }
+ ]
+}
