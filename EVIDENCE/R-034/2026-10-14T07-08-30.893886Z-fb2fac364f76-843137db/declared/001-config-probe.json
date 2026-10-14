@@ -1,0 +1,3 @@
+{"D": 512, "T": 258.703125, "amplitude": 0.5, "diffusion": 1.0, "n_knots": 33,
+ "seeds": [20261014, 7, 99], "centers": [256, 100], "M": 1.19, "R": 18,
+ "max_step": 1.0, "patch_rtol": 1e-7, "specialist_rtol": 3e-10}
