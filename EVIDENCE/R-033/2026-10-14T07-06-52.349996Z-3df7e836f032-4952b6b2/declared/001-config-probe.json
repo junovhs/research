@@ -1,0 +1,2 @@
+{"D": 512, "T": 258.703125, "amplitude": 0.5, "diffusion": 1.0, "n_knots": 33, "seed": 20261014,
+ "center": 256, "M": 1.19, "R": 18, "max_step": 1.0, "rtol": 1e-7, "methods": ["DOP853", "RK45", "LSODA"]}
