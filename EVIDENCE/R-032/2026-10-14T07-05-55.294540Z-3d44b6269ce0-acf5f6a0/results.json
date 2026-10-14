@@ -1,0 +1,25 @@
+{
+ "rows": [
+  {
+   "R": 16,
+   "sites": 33,
+   "width": 1.0395661220741204e-08,
+   "contains_ref_1e-10": true,
+   "envelope_updates": 347556
+  },
+  {
+   "R": 17,
+   "sites": 35,
+   "width": 2.6933436592102566e-09,
+   "contains_ref_1e-10": true,
+   "envelope_updates": 367780
+  },
+  {
+   "R": 18,
+   "sites": 37,
+   "width": 6.910221284073259e-10,
+   "contains_ref_1e-10": true,
+   "envelope_updates": 390572
+  }
+ ]
+}
