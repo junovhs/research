@@ -1,0 +1,3 @@
+{"D": 512, "T": 258.703125, "amplitude": 0.5, "diffusion": 1.0, "n_knots": 33, "seed": 20261014,
+ "max_step": 0.125, "center": 256, "M_list": [1.2, 1.19, 1.25],
+ "patch_rtols": [1e-10, 1e-9], "radii": [14, 15, 16, 17, 18, 19, 20]}
