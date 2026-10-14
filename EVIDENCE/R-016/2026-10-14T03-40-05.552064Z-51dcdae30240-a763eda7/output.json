@@ -1,0 +1,115 @@
+{
+  "cases": {
+    "localized_plus": {
+      "center_step_change": 1.8034462812011043e-12,
+      "fine": {
+        "all_in_spatial": true,
+        "center": 1.0648666408443173,
+        "h": 0.001953125,
+        "scalar": [
+          0.9999999998460721,
+          1.0987741605313153
+        ],
+        "spatial": [
+          1.064866640704271,
+          1.064866640864234
+        ]
+      },
+      "forcing_extrema": [
+        0.0,
+        0.25
+      ],
+      "scalar_bound_step_change": 1.6506795930126827e-12,
+      "spatial_bound_step_change": 1.8034462812011043e-12
+    },
+    "no_pulse": {
+      "center_step_change": 6.661338147750939e-16,
+      "fine": {
+        "all_in_spatial": true,
+        "center": 1.000000000014541,
+        "h": 0.001953125,
+        "scalar": [
+          0.9999999998460721,
+          1.0000000000384819
+        ],
+        "spatial": [
+          0.9999999998460721,
+          1.0000000000384819
+        ]
+      },
+      "forcing_extrema": [
+        0.0,
+        0.0
+      ],
+      "scalar_bound_step_change": 6.661338147750939e-16,
+      "spatial_bound_step_change": 6.661338147750939e-16
+    },
+    "smooth_cosine": {
+      "center_step_change": 1.7412737918220955e-12,
+      "fine": {
+        "all_in_spatial": true,
+        "center": 1.0945670277999986,
+        "h": 0.001953125,
+        "scalar": [
+          0.8803950933115348,
+          1.0987741605313153
+        ],
+        "spatial": [
+          1.0945670276851602,
+          1.0945670278163264
+        ]
+      },
+      "forcing_extrema": [
+        -0.25,
+        0.25
+      ],
+      "scalar_bound_step_change": 1.6506795930126827e-12,
+      "spatial_bound_step_change": 1.7421619702417956e-12
+    },
+    "uniform_minus": {
+      "center_step_change": 3.7214675785435247e-13,
+      "fine": {
+        "all_in_spatial": true,
+        "center": 0.8803950935704359,
+        "h": 0.001953125,
+        "scalar": [
+          0.8803950933115348,
+          0.8803950936072277
+        ],
+        "spatial": [
+          0.8803950933115348,
+          0.8803950936072277
+        ]
+      },
+      "forcing_extrema": [
+        -0.25,
+        -0.25
+      ],
+      "scalar_bound_step_change": 3.7247982476174e-13,
+      "spatial_bound_step_change": 3.7247982476174e-13
+    }
+  },
+  "global_scalar_lower_bound": 0.14515770606113762,
+  "initial": [
+    0.8,
+    1.3,
+    1.8,
+    0.7,
+    1.2,
+    1.7,
+    0.6,
+    1.1,
+    1.6,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    0.9,
+    1.4,
+    1.9
+  ],
+  "prefix_scalar_bounds": [
+    0.999999998862616,
+    1.000000000284346
+  ]
+}

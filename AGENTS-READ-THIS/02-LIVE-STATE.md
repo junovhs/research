@@ -1,12 +1,14 @@
 # 02 - LIVE STATE - the only current scientific handoff
 
-**Updated:** 2026-10-13. **Latest exploratory decision:** [R-015](../RESULTS/R-015.md) executed a phase-conditioned semidiscrete ODE probe; PARK a general continuous Allen–Cahn solver, and keep only a narrowly scoped phase-label/forcing-tail challenge. R-014 remains the latest broad transfer evidence.  **Purpose:** scientific state remains [R-014](../RESULTS/R-014.md); owner-approved **workflow integrity update** adds reproducible research evidence, decision gates and independent challenge expectations. No new scientific experiment or confirmation was performed by this policy change. The lab now lives in **junovhs/research** (migrated from junovhs/fractodactyl@314abc8; workflow-only, see [MIGRATION.md](../MIGRATION.md)).
+**Updated:** 2026-10-13 PDT (R-016 UTC 2026-10-14). **Latest exploratory decision:** [R-016](../RESULTS/R-016.md) shows spatially varying forcing defeats the global scalar-extrema tail enclosure while spatial extremal tails are narrow only in sampled RK4, not certified. **Decision: PARK** broad continuous-model solver work. [R-014](../RESULTS/R-014.md) remains the latest broad transfer evidence; [MIGRATION.md](../MIGRATION.md) holds repository provenance.
 
 ## Goal and priority discipline
 
 Find trustworthy, transferable mathematical shortcuts for expensive scientific computation. **No industrial speedup, general nonlinear compiler, certified continuous PDE solver or proven novel algorithm has been demonstrated.** P-051's original frozen MPFR/performance question remains UNTESTED. The owner's anti-tunnel-vision direction remains active: transfer or resolve a substantive obstruction, rather than indefinitely tune a narrow favorable example. Small credible gains remain valid findings; no universal speed threshold is imposed.
 
 ## Latest executed evidence
+
+**R-016 (2026-10-13 PDT / 2026-10-14 UTC): REPORTED / EXPLORATORY / PREREGISTERED NO / POD NO / NOVELTY UNVERIFIED.** On the D=16 semidiscrete Allen–Cahn ODE with spatial cosine drive ±0.25 over the last unit, a global scalar forcing-extrema envelope has a proved width lower bound (25/166)(1-exp(-83/25)) ≈0.145, so cannot admit a 1e-9 terminal query; sampled RK4 width was 0.218379. With known per-site forcing, two spatial extremal tails gave a sampled 1.31e-10 width, but with no certified integration-error bound, realistic workload, phase-label cost, or validated specialist cost comparison. [R-016 evidence](../EVIDENCE/R-016/2026-10-14T03-40-05.552064Z-51dcdae30240-a763eda7/manifest.json) uses an equivalent local schema-2 guard, not the checked-in runner. One-agent self-review only. **Decision: PARK** broad solver development, no MAP trigger.
 
 **R-015 (2026-10-13): REPORTED / EXPLORATORY / PREREGISTERED NO / POD NO / NOVELTY UNVERIFIED.** A source-bound three-case, D=16 semidiscrete ODE probe (not continuum PDE) found a small phase-conditioned scalar envelope after an unforced prefix, but a final -0.25 drive moved the positive center to 0.8803950935673981, so a phase-only equilibrium substitute fails. An assumed 0.92 tail contraction rate gives a 5.665865e-10 width estimate, but finite-arithmetic and numerical integration errors are **not certified**, and the phase bit was free. This narrows the question without establishing novel speed or industrial applicability. **Decision: PARK** general validated-PDE development; challenge only a bounded recent-drive scalar certificate with charged phase classification and fallback, versus a validated specialist. **One-agent self-review, no independent reviewer.** No MAP update (unchanged lineage).
 
@@ -28,6 +30,8 @@ Checks: 10,000 exact-Fraction endpoint tuples, 5,000 independent input calculati
 
 ## Next discriminating research step
 
+**R-016 restriction:** global scalar forcing extrema irretrievably lose too much sitewise information for heterogeneous recent drive. Spatial extremal tails may retain tightness but require two D-site solves; next justify phase acquisition, rigorous integration budget and total admitted/rejected/fallback cost against a validated adaptive specialist using the same prefix shortcut. Alternatively prioritize an independently promising computation-elimination mechanism rather than tuning this example.
+
 **Priority 1: a decision gate, not automatic solver development.** First define the intended computational output (exact discrete terminal component versus continuous physical-model state), accuracy budget, representative query/fallback workload, available forcing, and strongest specialist comparator. Explicitly compare two next directions: (a) continuous-model omission admission via validated/adaptive high-order time integration, including the phase-persistent obstruction; (b) a different transferable computation-elimination mechanism with a clearer economic/scientific task. Choose the cheapest experiment that would *change that priority decision*, not another radius or amplitude tuning pass. Preserve a CONTINUE/CHALLENGE/PARK/CLOSE decision and competitor rationale with the next R-card. Formal confirmation still requires prospective P/PA and challenge review.
 
 R-014 reuses the existing R-013 lineage; no new MAP edge or routine root-document synchronization. Prior art includes maximum-principle schemes, comparison/forgetting and goal-oriented error control; novelty is unverified. Full equations, source inspection, search provenance, raw observations and hash anchors are in R-014 and its companion.
@@ -38,10 +42,9 @@ R-001 through R-009 retain their negative, scoped or known-method results; no hi
 
 ## Recent handoff decisions (maximum three)
 
-- **2026-10-13 - R-015:** phase-conditioned semidiscrete terminal probe; recent forcing invalidates equilibrium-only shortcut. PARK broad PDE development; only narrow specialist-aware phase/tail falsifier remains. Self-review only; no MAP trigger.
-
-- **2026-10-13 - R-014:** partial transfer to correlated-drive Allen-Cahn discrete queries; 23/48 admissions, three million-step references, matched rival, invariant-phase obstruction and measured discretization gap. Next: total continuous-model error, not toy tuning. No MAP trigger.
-- **2026-10-13 - R-013:** space-time terminal-query omission with archived reconstruction, a persistent-memory counterexample and temporal-only rival. One provisional direction remains in MAP.md.
+- **2026-10-13 PDT / 2026-10-14 UTC — R-016:** global scalar-tail envelope fails cosine drive; spatial extremal tails narrow only numerically. PARK general solver; no MAP trigger, self-review only.
+- **2026-10-13 — R-015:** phase-aware semidiscrete terminal probe; recent forcing invalidates equilibrium-only shortcut. PARK broad PDE development.
+- **2026-10-13 — R-014:** partial discrete Allen–Cahn transfer, 23/48 admissions and a discrete/continuous error gap. No MAP trigger.
 
 ## Update rule
 
