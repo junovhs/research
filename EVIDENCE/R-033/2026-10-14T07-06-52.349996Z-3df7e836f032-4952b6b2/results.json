@@ -1,0 +1,25 @@
+{
+ "rows": [
+  {
+   "method": "DOP853",
+   "width": 6.910221284073259e-10,
+   "contains_ref_1e-10": true,
+   "envelope_updates": 390572,
+   "seconds": 0.21920841400060453
+  },
+  {
+   "method": "RK45",
+   "width": -3.7912784023319546e-10,
+   "contains_ref_1e-10": false,
+   "envelope_updates": 439412,
+   "seconds": 0.2473171830006322
+  },
+  {
+   "method": "LSODA",
+   "width": -3.240093859879778e-09,
+   "contains_ref_1e-10": false,
+   "envelope_updates": 355015,
+   "seconds": 0.16535648700119054
+  }
+ ]
+}
