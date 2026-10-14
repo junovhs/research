@@ -1,0 +1,12 @@
+{
+  "sites": 16,
+  "diffusion": 1.0,
+  "prefix": 10.5,
+  "tail": 1.0,
+  "forcing_amplitude": 0.25,
+  "center": 0,
+  "steps_per_unit": [256, 512],
+  "cases": ["no_pulse", "uniform_minus", "smooth_cosine", "localized_plus"],
+  "goal_absolute_error": 1e-9,
+  "note": "Exploratory sampled RK4; no formal numerical certification; no cost or novelty measurement"
+}

@@ -1,0 +1,43 @@
+{
+  "command": [
+    "python3",
+    "probe.py"
+  ],
+  "declared": [
+    {
+      "kind": "source",
+      "path": "probe.py",
+      "sha256": "562d809bb856ea0e237b928a7a7238243629e0466f793347855d6374b2c7b5b1",
+      "snapshot": "declared/000-source-probe.py"
+    },
+    {
+      "kind": "config",
+      "path": "config.json",
+      "sha256": "d5ab7ca125c92468488051ff37fa807db774e273485eb9ae2714886b71139f78",
+      "snapshot": "declared/001-config-config.json"
+    }
+  ],
+  "environment": {
+    "env": {},
+    "implementation": "CPython",
+    "machine": "x86_64",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.13.5"
+  },
+  "exit_code": 0,
+  "experiment": "R-016",
+  "files": {
+    "declared/000-source-probe.py": "562d809bb856ea0e237b928a7a7238243629e0466f793347855d6374b2c7b5b1",
+    "declared/001-config-config.json": "d5ab7ca125c92468488051ff37fa807db774e273485eb9ae2714886b71139f78",
+    "output.json": "f8beaf7f069fada7a6f11af98ef49df3fb9505b66418de7fb6d643f4da27146e",
+    "stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.bin": "aee05964cadefa2001f5663b1935063a221d7ac75ddcd10d7086a669f29b7b14"
+  },
+  "fingerprint": "51dcdae302401bd01438c7b775dd2b9677c65fb582ab5bd99271dda42125ccb3",
+  "finished_utc": "2026-10-14T03:40:07.073691+00:00",
+  "resumed_from": null,
+  "run_id": "2026-10-14T03-40-05.552064Z-51dcdae30240-a763eda7",
+  "schema": 2,
+  "started_utc": "2026-10-14T03:40:05.552412+00:00",
+  "status": "COMPLETE"
+}
