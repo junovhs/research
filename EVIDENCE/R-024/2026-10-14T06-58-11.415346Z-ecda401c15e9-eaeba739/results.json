@@ -1,0 +1,65 @@
+{
+ "D": 512,
+ "T": 258.703125,
+ "M": 1.2,
+ "center": 256,
+ "ref_center": -0.9994159675277493,
+ "full_nfev": 25432,
+ "full_scalar_updates": 13021184,
+ "rows": [
+  {
+   "R": 4,
+   "patch_sites": 9,
+   "U_c": 1.0010883187441446,
+   "L_c": -0.9999503492287429,
+   "width": 2.0010386679728875,
+   "contains_ref": true,
+   "patch_scalar_updates": 457344
+  },
+  {
+   "R": 8,
+   "patch_sites": 17,
+   "U_c": -0.9989214040886939,
+   "L_c": -0.9994188010553073,
+   "width": 0.0004973969666134392,
+   "contains_ref": true,
+   "patch_scalar_updates": 864688
+  },
+  {
+   "R": 16,
+   "patch_sites": 33,
+   "U_c": -0.999415956969022,
+   "L_c": -0.9994159676090817,
+   "width": 1.0640059722177853e-08,
+   "contains_ref": true,
+   "patch_scalar_updates": 1678512
+  },
+  {
+   "R": 32,
+   "patch_sites": 65,
+   "U_c": -0.9994159675277489,
+   "L_c": -0.9994159675277491,
+   "width": 2.220446049250313e-16,
+   "contains_ref": false,
+   "patch_scalar_updates": 3306160
+  },
+  {
+   "R": 64,
+   "patch_sites": 129,
+   "U_c": -0.9994159675277491,
+   "L_c": -0.9994159675277491,
+   "width": 0.0,
+   "contains_ref": false,
+   "patch_scalar_updates": 6561456
+  },
+  {
+   "R": 128,
+   "patch_sites": 257,
+   "U_c": -0.9994159675277491,
+   "L_c": -0.9994159675277492,
+   "width": 1.1102230246251565e-16,
+   "contains_ref": false,
+   "patch_scalar_updates": 13072048
+  }
+ ]
+}
