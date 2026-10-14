@@ -1,0 +1,82 @@
+{
+  "all_exact": true,
+  "cases": [
+    {
+      "exact_errors_zero": true,
+      "exact_queries": 7,
+      "kind": "equal",
+      "nonzero_corrections": 0,
+      "probe_reads_two_species": 0,
+      "sample_hashes": [
+        "3d56c793ee006979",
+        "0d562bfb9d84c670",
+        "f3c59dcbb9bdf273",
+        "0d6c9143440f40ea",
+        "f45875896a3cab36",
+        "e0d2bae70e800189",
+        "9219eb20d1470436"
+      ],
+      "support_per_t": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exact_errors_zero": true,
+      "exact_queries": 7,
+      "kind": "local_ports",
+      "nonzero_corrections": 7,
+      "probe_reads_two_species": 20,
+      "sample_hashes": [
+        "105356ebd70d7331",
+        "7c5beb1f27128723",
+        "5a3464cb8ff0392e",
+        "7136c92818134bb8",
+        "e7a8d9686a24208d",
+        "c3c4de17d1b96c57",
+        "3b751da01da704d1"
+      ],
+      "support_per_t": [
+        4,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "exact_errors_zero": true,
+      "exact_queries": 7,
+      "kind": "rank_one_dense",
+      "nonzero_corrections": 7,
+      "probe_reads_two_species": 64,
+      "sample_hashes": [
+        "90b69bbde2937451",
+        "d5a4d7fdfb0009c3",
+        "fde2bcf6ea8d72bd",
+        "45c5230e6e354263",
+        "eb05f879a90e10f6",
+        "c320e8f037004327",
+        "b097ccb4f099a92d"
+      ],
+      "support_per_t": [
+        8,
+        8,
+        8,
+        8
+      ]
+    }
+  ],
+  "contract": "exact discrete split step, not continuous or EPANET",
+  "dimensions": {
+    "D": 8,
+    "N": 4,
+    "Q": 7,
+    "sensor": 2
+  },
+  "hostiles": {
+    "unmodelled_wall_product_defect": "1/1024",
+    "variable_yield_defect": "-1/512"
+  }
+}

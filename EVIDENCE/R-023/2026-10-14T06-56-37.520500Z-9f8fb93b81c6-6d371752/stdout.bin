@@ -1,0 +1,1 @@
+{"cases": [["equal", [0, 0, 0, 0], true], ["local_ports", [4, 2, 2, 2], true], ["rank_one_dense", [8, 8, 8, 8], true]], "hostiles": {"unmodelled_wall_product_defect": "1/1024", "variable_yield_defect": "-1/512"}}
