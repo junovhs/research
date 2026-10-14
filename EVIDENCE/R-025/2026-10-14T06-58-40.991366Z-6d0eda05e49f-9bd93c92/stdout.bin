@@ -1,0 +1,24 @@
+T 64.0 full 3540992
+  R 8 width 1.057e-04 upd 224944
+  R 12 width 3.046e-07 upd 331100
+  R 16 width 8.229e-10 upd 437448
+  R 20 width 1.041e-11 upd 543496
+  R 24 width 6.952e-12 upd 649544
+T 128.0 full 6692864
+  R 8 width 2.329e-04 upd 433840
+  R 12 width 9.379e-07 upd 638300
+  R 16 width 3.404e-09 upd 842952
+  R 20 width 1.090e-11 upd 1047304
+  R 24 width 3.131e-14 upd 1251656
+T 258.703125 full 13168640
+  R 8 width 4.974e-04 upd 864688
+  R 12 width 2.315e-06 upd 1271600
+  R 16 width 1.064e-08 upd 1678512
+  R 20 width 4.806e-11 upd 2085424
+  R 24 width 2.113e-13 upd 2492336
+T 512.0 full 25554944
+  R 8 width 2.000e+00 upd 1687216
+  R 12 width 4.901e-06 upd 2481500
+  R 16 width 2.429e-08 upd 3275976
+  R 20 width 1.201e-10 upd 4070152
+  R 24 width 5.924e-13 upd 4864328

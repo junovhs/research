@@ -1,0 +1,2 @@
+{"D": 512, "T": 258.703125, "amplitude": 0.5, "diffusion": 1.0, "n_knots": 33, "seed": 20261014,
+ "max_step": 0.125, "M": 1.2, "center": 256, "radii": [8, 12, 16, 20, 24]}
