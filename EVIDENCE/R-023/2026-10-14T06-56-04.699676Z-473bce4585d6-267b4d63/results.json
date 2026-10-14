@@ -1,0 +1,31 @@
+{
+ "D": 512,
+ "T": 258.703125,
+ "reference_nfev": 25720,
+ "reference_seconds": 1.2336004839999077,
+ "reference_rtol1e-11_nfev": 25456,
+ "reference_gap_rtol1e-12_vs_1e-11": 4.243294604577841e-11,
+ "rows": [
+  {
+   "rtol": 1e-06,
+   "nfev": 25024,
+   "scalar_updates": 12812288,
+   "max_abs_err": 1.5200580225083193e-08,
+   "seconds": 1.1910152879991074
+  },
+  {
+   "rtol": 1e-08,
+   "nfev": 25156,
+   "scalar_updates": 12879872,
+   "max_abs_err": 9.387711483177519e-09,
+   "seconds": 1.2093040519994247
+  },
+  {
+   "rtol": 1e-10,
+   "nfev": 25432,
+   "scalar_updates": 13021184,
+   "max_abs_err": 3.203184106848056e-10,
+   "seconds": 1.2372857199989085
+  }
+ ]
+}
