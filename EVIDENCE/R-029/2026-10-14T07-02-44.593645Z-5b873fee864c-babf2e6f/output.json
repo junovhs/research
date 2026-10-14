@@ -1,0 +1,45 @@
+{
+  "identical": {
+    "global_annihilator": true,
+    "global_composite_delta": "0",
+    "independent_random_telescoping_cases": 20,
+    "local_annihilator": true,
+    "local_composite_delta": "0",
+    "nonzero_local_obstruction": [],
+    "null_dimension": 5,
+    "reach_rank_exact": 5,
+    "reach_rank_mod_1009": 5,
+    "reaction_rates": [
+      "1/8",
+      "1/4"
+    ]
+  },
+  "unequal": {
+    "global_annihilator": true,
+    "global_composite_delta": "0",
+    "independent_random_telescoping_cases": 20,
+    "local_annihilator": false,
+    "local_composite_delta": "-35/2048",
+    "nonzero_local_obstruction": [
+      [
+        5,
+        "-1/4"
+      ],
+      [
+        6,
+        "1/8"
+      ],
+      [
+        9,
+        "1/8"
+      ]
+    ],
+    "null_dimension": 1,
+    "reach_rank_exact": 9,
+    "reach_rank_mod_1009": 9,
+    "reaction_rates": [
+      "1/8",
+      "1/4"
+    ]
+  }
+}
