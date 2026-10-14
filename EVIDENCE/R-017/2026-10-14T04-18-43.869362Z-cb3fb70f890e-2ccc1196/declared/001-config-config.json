@@ -1,0 +1,11 @@
+{
+  "sites": 64,
+  "coupling": [1, 1],
+  "cubic": [1, 1],
+  "cached_uniform_state": [1, 8],
+  "perturbation": [1, 4],
+  "query_tolerance": [1, 1000000],
+  "diagonals": [[4, 1], [3, 1], [11, 5]],
+  "distances": [0, 4, 8, 12, 16, 20, 24, 28, 32],
+  "max_terms": 800
+}

@@ -1,12 +1,14 @@
 # 02 - LIVE STATE - the only current scientific handoff
 
-**Updated:** 2026-10-13 PDT (R-016 UTC 2026-10-14). **Latest exploratory decision:** [R-016](../RESULTS/R-016.md) shows spatially varying forcing defeats the global scalar-extrema tail enclosure while spatial extremal tails are narrow only in sampled RK4, not certified. **Decision: PARK** broad continuous-model solver work. [R-014](../RESULTS/R-014.md) remains the latest broad transfer evidence; [MIGRATION.md](../MIGRATION.md) holds repository provenance.
+**Updated:** 2026-10-13 PDT (R-017 run 2026-10-14 UTC). **Latest exploratory decision:** [R-017](../RESULTS/R-017.md) establishes a narrow exact-rational input-change locality admission on a manufactured 64-site cubic algebraic ring: 24/54 sites can reuse an exact cached output at tolerance 1e-6, 30 abstain, but near-critical coupling makes the certificate expensive and no specialist-relative gain has been shown. **Decision: PARK** a general reuse engine, retain only a realistic-cost falsifier. [R-016](../RESULTS/R-016.md) continues to PARK broad phase-aware PDE development. [MIGRATION.md](../MIGRATION.md) documents provenance.
 
 ## Goal and priority discipline
 
 Find trustworthy, transferable mathematical shortcuts for expensive scientific computation. **No industrial speedup, general nonlinear compiler, certified continuous PDE solver or proven novel algorithm has been demonstrated.** P-051's original frozen MPFR/performance question remains UNTESTED. The owner's anti-tunnel-vision direction remains active: transfer or resolve a substantive obstruction, rather than indefinitely tune a narrow favorable example. Small credible gains remain valid findings; no universal speed threshold is imposed.
 
 ## Latest executed evidence
+
+**R-017 (2026-10-13 PDT / 2026-10-14 UTC): REPORTED / EXPLORATORY / PREREGISTERED NO / POD NO / NOVELTY UNVERIFIED.** An exact-rational walk-series/supersolution comparison for changed single-site forcing in a strictly monotone 64-site *algebraic* cubic ring admitted **24/54** remote-output reuse queries at 1e-6 and abstained on **30/54**. At a=4 and 3 it admitted 12/18 and 10/18; near the diagonal-dominance boundary a=11/5, it required 196 rational walk terms and admitted 2/18. The exact manufactured cached root was free; an accuracy-matched residual-certified warm Newton challenger required 3–5 sparse linear solves, but no fair full-workload cold/warm/fallback cost study was run. The positive locality property follows known monotone inverse-decay ingredients; novelty and economic value are **unverified**. [R-017 source-bound evidence](../EVIDENCE/R-017/2026-10-14T04-18-43.869362Z-cb3fb70f890e-2ccc1196/manifest.json) was executed using a locally equivalent schema-2 guard rather than the checked-in launcher; one-agent self-review only. **Decision: PARK** solver engineering; condition future work on an economical guaranteed comparison with cached-factorization/adjoint/Newton specialists. No MAP trigger.
 
 **R-016 (2026-10-13 PDT / 2026-10-14 UTC): REPORTED / EXPLORATORY / PREREGISTERED NO / POD NO / NOVELTY UNVERIFIED.** On the D=16 semidiscrete Allen–Cahn ODE with spatial cosine drive ±0.25 over the last unit, a global scalar forcing-extrema envelope has a proved width lower bound (25/166)(1-exp(-83/25)) ≈0.145, so cannot admit a 1e-9 terminal query; sampled RK4 width was 0.218379. With known per-site forcing, two spatial extremal tails gave a sampled 1.31e-10 width, but with no certified integration-error bound, realistic workload, phase-label cost, or validated specialist cost comparison. [R-016 evidence](../EVIDENCE/R-016/2026-10-14T03-40-05.552064Z-51dcdae30240-a763eda7/manifest.json) uses an equivalent local schema-2 guard, not the checked-in runner. One-agent self-review only. **Decision: PARK** broad solver development, no MAP trigger.
 
@@ -30,6 +32,8 @@ Checks: 10,000 exact-Fraction endpoint tuples, 5,000 independent input calculati
 
 ## Next discriminating research step
 
+**R-017 decision gate:** An exact cached state and localized forcing permit mathematically bounded reuse of distant coordinates for this strictly diagonal-dominant algebraic model, but this is established inverse-decay territory and can require 196*N rational work for only two distant admissions. Define/charge the initial cached solution and its error, certificate construction/reuse, all rejected-query guarantee-matched fallback, and sparse factored/adjoint/verified Newton specialist cost on a realistic batch; otherwise do not continue this lineage by default. Compare against a genuinely different computational-elimination question. **PARK** pending evidence, no novelty claim.
+
 **R-016 restriction:** global scalar forcing extrema irretrievably lose too much sitewise information for heterogeneous recent drive. Spatial extremal tails may retain tightness but require two D-site solves; next justify phase acquisition, rigorous integration budget and total admitted/rejected/fallback cost against a validated adaptive specialist using the same prefix shortcut. Alternatively prioritize an independently promising computation-elimination mechanism rather than tuning this example.
 
 **Priority 1: a decision gate, not automatic solver development.** First define the intended computational output (exact discrete terminal component versus continuous physical-model state), accuracy budget, representative query/fallback workload, available forcing, and strongest specialist comparator. Explicitly compare two next directions: (a) continuous-model omission admission via validated/adaptive high-order time integration, including the phase-persistent obstruction; (b) a different transferable computation-elimination mechanism with a clearer economic/scientific task. Choose the cheapest experiment that would *change that priority decision*, not another radius or amplitude tuning pass. Preserve a CONTINUE/CHALLENGE/PARK/CLOSE decision and competitor rationale with the next R-card. Formal confirmation still requires prospective P/PA and challenge review.
@@ -42,9 +46,9 @@ R-001 through R-009 retain their negative, scoped or known-method results; no hi
 
 ## Recent handoff decisions (maximum three)
 
-- **2026-10-13 PDT / 2026-10-14 UTC — R-016:** global scalar-tail envelope fails cosine drive; spatial extremal tails narrow only numerically. PARK general solver; no MAP trigger, self-review only.
+- **2026-10-13 PDT / 2026-10-14 UTC — R-017:** exact-rational remote-input-update bound admits 24/54 cached outputs in a manufactured cubic algebraic ring; near-critical a=11/5 requires 196 iterations for 2/18 admissions. PARK unless specialist economics justify; no MAP trigger, self-review only.
+- **2026-10-13 PDT / 2026-10-14 UTC — R-016:** global scalar extrema fail heterogeneous-forcing enclosure; spatial extremal tails narrow only numerically, PARK general PDE solver.
 - **2026-10-13 — R-015:** phase-aware semidiscrete terminal probe; recent forcing invalidates equilibrium-only shortcut. PARK broad PDE development.
-- **2026-10-13 — R-014:** partial discrete Allen–Cahn transfer, 23/48 admissions and a discrete/continuous error gap. No MAP trigger.
 
 ## Update rule
 
