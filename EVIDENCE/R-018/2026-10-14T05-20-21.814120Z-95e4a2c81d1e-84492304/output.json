@@ -1,0 +1,342 @@
+{
+  "exact_fraction_test": {
+    "completed": 24,
+    "exact_equal": 24,
+    "sample": [
+      {
+        "exact_equal": true,
+        "fraction_denominator": 2361183241434822606848,
+        "fraction_numerator": 3243089799556574625,
+        "q": 0
+      },
+      {
+        "exact_equal": true,
+        "fraction_denominator": 81129638414606681695789005144064,
+        "fraction_numerator": 93703397349157726858105078125,
+        "q": 1
+      },
+      {
+        "exact_equal": true,
+        "fraction_denominator": 40564819207303340847894502572032,
+        "fraction_numerator": 32608863997437294891110287125,
+        "q": 2
+      }
+    ]
+  },
+  "model_scope": "linear discrete nonnegative transport surrogate, NOT EPANET",
+  "parameters": {
+    "D": 96,
+    "N": 2048,
+    "eps": 1e-08,
+    "events_per_query": 10,
+    "model": "linear positive time-varying nearest-neighbor recurrence, post-hydraulic transport surrogate",
+    "query_counts": [
+      1,
+      4,
+      16,
+      48
+    ],
+    "rhos": [
+      0.9375,
+      0.96875,
+      0.99609375
+    ],
+    "seed": 271828,
+    "target": 41,
+    "timing_repetitions": 3
+  },
+  "qualification": "All medians single-container timings; no real hydraulics/preparation charged; no industrial or novelty claim; specialist identity proven only for exact linear recurrence.",
+  "results": [
+    {
+      "D": 96,
+      "N": 2048,
+      "adjoint_preparation_timing": {
+        "median_ms": 18.849914,
+        "samples_ms": [
+          18.849914,
+          17.369716,
+          19.177179
+        ]
+      },
+      "event_generation_timing": {
+        "median_ms": 0.57555,
+        "samples_ms": [
+          0.57555,
+          0.677193,
+          0.527417
+        ]
+      },
+      "event_key_index_timing": {
+        "median_ms": 0.032859,
+        "samples_ms": [
+          0.032859,
+          0.038058,
+          0.025158
+        ]
+      },
+      "events_per_query": 10,
+      "forward_all_queries_timing": {
+        "median_ms": 870.005529,
+        "samples_ms": [
+          869.772812,
+          870.005529,
+          880.423999
+        ]
+      },
+      "input_event_pairs_unique": 480,
+      "max_forward_adjoint_error": 1.3552527156068805e-20,
+      "max_forward_suffix_error": 4.537105656414856e-12,
+      "q_costs": [
+        {
+          "Q": 1,
+          "forward_cold_estimated_ms": 18.1371058125,
+          "forward_cost_extrapolated_from_batch": true,
+          "lookup_median_ms": 0.002273,
+          "specialist_adjoint_cold_ms": 18.897036624999995,
+          "specialist_amortized_ms_per_query": 18.897036624999995,
+          "suffix_admission": true,
+          "suffix_cold_estimated_ms": 2.813846958333333,
+          "suffix_cost_extrapolated_from_batch": true
+        },
+        {
+          "Q": 4,
+          "forward_cold_estimated_ms": 72.54842325,
+          "forward_cost_extrapolated_from_batch": true,
+          "lookup_median_ms": 0.004417,
+          "specialist_adjoint_cold_ms": 18.935152499999997,
+          "specialist_amortized_ms_per_query": 4.733788124999999,
+          "suffix_admission": true,
+          "suffix_cold_estimated_ms": 11.255387833333332,
+          "suffix_cost_extrapolated_from_batch": true
+        },
+        {
+          "Q": 16,
+          "forward_cold_estimated_ms": 290.193693,
+          "forward_cost_extrapolated_from_batch": true,
+          "lookup_median_ms": 0.015694,
+          "specialist_adjoint_cold_ms": 19.090316999999995,
+          "specialist_amortized_ms_per_query": 1.1931448124999997,
+          "suffix_admission": true,
+          "suffix_cold_estimated_ms": 45.02155133333333,
+          "suffix_cost_extrapolated_from_batch": true
+        },
+        {
+          "Q": 48,
+          "forward_cold_estimated_ms": 870.581079,
+          "forward_cost_extrapolated_from_batch": true,
+          "lookup_median_ms": 0.045419,
+          "specialist_adjoint_cold_ms": 19.503741999999995,
+          "specialist_amortized_ms_per_query": 0.40632795833333324,
+          "suffix_admission": true,
+          "suffix_cold_estimated_ms": 135.064654,
+          "suffix_cost_extrapolated_from_batch": true
+        }
+      ],
+      "queries_checked": 48,
+      "rho": 0.9375,
+      "suffix_K": 286,
+      "suffix_all_queries_timing": {
+        "median_ms": 134.489104,
+        "samples_ms": [
+          134.489104,
+          134.563167,
+          122.41948
+        ]
+      },
+      "suffix_unknown_prefix_upper_bound": 9.633521042114597e-09,
+      "target_site": 41
+    },
+    {
+      "D": 96,
+      "N": 2048,
+      "adjoint_preparation_timing": {
+        "median_ms": 19.905119,
+        "samples_ms": [
+          19.905119,
+          20.497344,
+          18.441897
+        ]
+      },
+      "event_generation_timing": {
+        "median_ms": 0.710825,
+        "samples_ms": [
+          0.710825,
+          0.744966,
+          0.543913
+        ]
+      },
+      "event_key_index_timing": {
+        "median_ms": 0.045128,
+        "samples_ms": [
+          0.027342,
+          0.045128,
+          0.088654
+        ]
+      },
+      "events_per_query": 10,
+      "forward_all_queries_timing": {
+        "median_ms": 907.127556,
+        "samples_ms": [
+          1074.525763,
+          897.589256,
+          907.127556
+        ]
+      },
+      "input_event_pairs_unique": 480,
+      "max_forward_adjoint_error": 8.131516293641283e-20,
+      "max_forward_suffix_error": 6.007085516849128e-12,
+      "q_costs": [
+        {
+          "Q": 1,
+          "forward_cold_estimated_ms": 18.913299604166667,
+          "forward_cost_extrapolated_from_batch": true,
+          "lookup_median_ms": 0.001943,
+          "specialist_adjoint_cold_ms": 19.966998854166665,
+          "specialist_amortized_ms_per_query": 19.966998854166665,
+          "suffix_admission": true,
+          "suffix_cold_estimated_ms": 5.542994041666667,
+          "suffix_cost_extrapolated_from_batch": true
+        },
+        {
+          "Q": 4,
+          "forward_cold_estimated_ms": 75.65319841666667,
+          "forward_cost_extrapolated_from_batch": true,
+          "lookup_median_ms": 0.004367,
+          "specialist_adjoint_cold_ms": 20.013849416666663,
+          "specialist_amortized_ms_per_query": 5.003462354166666,
+          "suffix_admission": true,
+          "suffix_cold_estimated_ms": 22.171976166666667,
+          "suffix_cost_extrapolated_from_batch": true
+        },
+        {
+          "Q": 16,
+          "forward_cold_estimated_ms": 302.6127936666667,
+          "forward_cost_extrapolated_from_batch": true,
+          "lookup_median_ms": 0.016345,
+          "specialist_adjoint_cold_ms": 20.203533666666665,
+          "specialist_amortized_ms_per_query": 1.2627208541666666,
+          "suffix_admission": true,
+          "suffix_cold_estimated_ms": 88.68790466666667,
+          "suffix_cost_extrapolated_from_batch": true
+        },
+        {
+          "Q": 48,
+          "forward_cold_estimated_ms": 907.838381,
+          "forward_cost_extrapolated_from_batch": true,
+          "lookup_median_ms": 0.084677,
+          "specialist_adjoint_cold_ms": 20.745748999999996,
+          "specialist_amortized_ms_per_query": 0.4322031041666666,
+          "suffix_admission": true,
+          "suffix_cold_estimated_ms": 266.063714,
+          "suffix_cost_extrapolated_from_batch": true
+        }
+      ],
+      "queries_checked": 48,
+      "rho": 0.96875,
+      "suffix_K": 581,
+      "suffix_all_queries_timing": {
+        "median_ms": 265.352889,
+        "samples_ms": [
+          248.156731,
+          265.352889,
+          275.005285
+        ]
+      },
+      "suffix_unknown_prefix_upper_bound": 9.750047103977389e-09,
+      "target_site": 41
+    },
+    {
+      "D": 96,
+      "N": 2048,
+      "adjoint_preparation_timing": {
+        "median_ms": 19.647628,
+        "samples_ms": [
+          17.913328,
+          19.880139,
+          19.647628
+        ]
+      },
+      "event_generation_timing": {
+        "median_ms": 0.565184,
+        "samples_ms": [
+          0.578935,
+          0.565184,
+          0.524983
+        ]
+      },
+      "event_key_index_timing": {
+        "median_ms": 0.051388,
+        "samples_ms": [
+          0.051388,
+          0.075715,
+          0.024497
+        ]
+      },
+      "events_per_query": 10,
+      "forward_all_queries_timing": {
+        "median_ms": 917.691587,
+        "samples_ms": [
+          947.831034,
+          883.080103,
+          917.691587
+        ]
+      },
+      "input_event_pairs_unique": 480,
+      "max_forward_adjoint_error": 8.131516293641283e-20,
+      "max_forward_suffix_error": null,
+      "q_costs": [
+        {
+          "Q": 1,
+          "forward_cold_estimated_ms": 19.130349395833335,
+          "forward_cost_extrapolated_from_batch": true,
+          "lookup_median_ms": 0.002013,
+          "specialist_adjoint_cold_ms": 19.71280366666667,
+          "specialist_amortized_ms_per_query": 19.71280366666667,
+          "suffix_admission": false,
+          "suffix_cold_estimated_ms": null,
+          "suffix_cost_extrapolated_from_batch": true
+        },
+        {
+          "Q": 4,
+          "forward_cold_estimated_ms": 76.52139758333334,
+          "forward_cost_extrapolated_from_batch": true,
+          "lookup_median_ms": 0.004076,
+          "specialist_adjoint_cold_ms": 19.75019066666667,
+          "specialist_amortized_ms_per_query": 4.937547666666667,
+          "suffix_admission": false,
+          "suffix_cold_estimated_ms": null,
+          "suffix_cost_extrapolated_from_batch": true
+        },
+        {
+          "Q": 16,
+          "forward_cold_estimated_ms": 306.08559033333336,
+          "forward_cost_extrapolated_from_batch": true,
+          "lookup_median_ms": 0.015985,
+          "specialist_adjoint_cold_ms": 19.90339566666667,
+          "specialist_amortized_ms_per_query": 1.2439622291666668,
+          "suffix_admission": false,
+          "suffix_cold_estimated_ms": null,
+          "suffix_cost_extrapolated_from_batch": true
+        },
+        {
+          "Q": 48,
+          "forward_cold_estimated_ms": 918.256771,
+          "forward_cost_extrapolated_from_batch": true,
+          "lookup_median_ms": 0.052469,
+          "specialist_adjoint_cold_ms": 20.316668999999997,
+          "specialist_amortized_ms_per_query": 0.42326393749999996,
+          "suffix_admission": false,
+          "suffix_cold_estimated_ms": null,
+          "suffix_cost_extrapolated_from_batch": true
+        }
+      ],
+      "queries_checked": 48,
+      "rho": 0.99609375,
+      "suffix_K": null,
+      "suffix_all_queries_timing": null,
+      "suffix_unknown_prefix_upper_bound": 0.00033024828431430485,
+      "target_site": 41
+    }
+  ],
+  "status": "complete"
+}

@@ -1,0 +1,1 @@
+OK {"fraction_checks": 24, "rho_summaries": [{"rho": 0.9375, "suffix_K": 286, "max_adj_error": 1.3552527156068805e-20, "max_suffix_err": 4.537105656414856e-12}, {"rho": 0.96875, "suffix_K": 581, "max_adj_error": 8.131516293641283e-20, "max_suffix_err": 6.007085516849128e-12}, {"rho": 0.99609375, "suffix_K": null, "max_adj_error": 8.131516293641283e-20, "max_suffix_err": null}]}
