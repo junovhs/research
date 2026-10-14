@@ -1,0 +1,93 @@
+{
+  "cost_exclusions": [
+    "process startup/import time",
+    "real hydraulics/EPANET",
+    "data file I/O",
+    "independent specialist chemistry solver",
+    "certified roundoff",
+    "continuous physical accuracy"
+  ],
+  "environment": {
+    "numpy": "2.3.5",
+    "python": "3.13.5"
+  },
+  "experiment": "R-019",
+  "float": {
+    "D": 96,
+    "N": 1024,
+    "correctness_cross_check_seconds": 2.453379376000157,
+    "first_original": [
+      0.006033659670388211,
+      0.07434308997045747,
+      0.311922305214138,
+      0.3486949895328211
+    ],
+    "first_reduced": [
+      0.006033659670388211,
+      0.0743430899704576,
+      0.311922305214138,
+      0.3486949895328211
+    ],
+    "maximum_full_reduced_absolute_difference": 1.6653345369377348e-16,
+    "num_cases": 24
+  },
+  "fraction": {
+    "cases": 12,
+    "exact_matches": 12,
+    "example": [
+      {
+        "invariant_denominator_digits": 8,
+        "invariant_numerator_digits": 7,
+        "seed": 0
+      }
+    ]
+  },
+  "hostile": {
+    "variable_yield_invariant_failure_den": "1600",
+    "variable_yield_invariant_failure_num": "-1",
+    "wall_yield_unmodelled": "1/1024"
+  },
+  "purpose": "test two-reactant byproduct reaction invariant against a matched specialist",
+  "timing_ms": {
+    "full_Q1": {
+      "median_ms": 55.54027,
+      "samples_ms": [
+        55.901216,
+        55.54027,
+        55.438747,
+        55.098211,
+        55.593991
+      ]
+    },
+    "full_Q24": {
+      "median_ms": 1381.164126,
+      "samples_ms": [
+        1390.034861,
+        1410.438663,
+        1381.164126,
+        1363.592014,
+        1367.833495
+      ]
+    },
+    "reduced_Q1": {
+      "median_ms": 53.796104,
+      "samples_ms": [
+        54.215818,
+        53.770084,
+        53.796104,
+        54.015144,
+        53.487266
+      ]
+    },
+    "reduced_Q24": {
+      "median_ms": 1021.670855,
+      "samples_ms": [
+        1023.670441,
+        1007.195896,
+        1061.11357,
+        1020.235074,
+        1021.670855
+      ]
+    }
+  }
+}
