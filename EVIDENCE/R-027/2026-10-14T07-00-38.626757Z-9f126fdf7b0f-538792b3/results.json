@@ -1,0 +1,72 @@
+{
+ "max_abs_s": 0.9830493441823833,
+ "ref_center": -0.9994159675277491,
+ "rows": [
+  {
+   "M": 1.2,
+   "valid_invariant": true,
+   "margin": 0.03647532790880814,
+   "patch_rtol": 1e-10,
+   "minimal": {
+    "R": 18,
+    "width": 7.169843607712778e-10,
+    "sites": 37
+   }
+  },
+  {
+   "M": 1.2,
+   "valid_invariant": true,
+   "margin": 0.03647532790880814,
+   "patch_rtol": 1e-09,
+   "minimal": {
+    "R": 18,
+    "width": 7.169844717935803e-10,
+    "sites": 37
+   }
+  },
+  {
+   "M": 1.19,
+   "valid_invariant": true,
+   "margin": 0.0036343279088082436,
+   "patch_rtol": 1e-10,
+   "minimal": {
+    "R": 18,
+    "width": 7.016387471026064e-10,
+    "sites": 37
+   }
+  },
+  {
+   "M": 1.19,
+   "valid_invariant": true,
+   "margin": 0.0036343279088082436,
+   "patch_rtol": 1e-09,
+   "minimal": {
+    "R": 18,
+    "width": 7.016388581249089e-10,
+    "sites": 37
+   }
+  },
+  {
+   "M": 1.25,
+   "valid_invariant": true,
+   "margin": 0.21160032790880834,
+   "patch_rtol": 1e-10,
+   "minimal": {
+    "R": 18,
+    "width": 7.951030944752802e-10,
+    "sites": 37
+   }
+  },
+  {
+   "M": 1.25,
+   "valid_invariant": true,
+   "margin": 0.21160032790880834,
+   "patch_rtol": 1e-09,
+   "minimal": {
+    "R": 18,
+    "width": 7.951028724306752e-10,
+    "sites": 37
+   }
+  }
+ ]
+}

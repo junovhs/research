@@ -1,0 +1,26 @@
+{
+ "rows": [
+  {
+   "rtol": 1e-09,
+   "R": 18,
+   "M": 1.19,
+   "width": 7.016388581249089e-10,
+   "contains_ref": true,
+   "envelope_scalar_updates": 1880192,
+   "full_specialist_scalar_updates": 13015040,
+   "full_error_vs_ref": 1.903555132964918e-09,
+   "ratio_env_over_full": 0.14446302124311566
+  },
+  {
+   "rtol": 1e-10,
+   "R": 18,
+   "M": 1.19,
+   "width": 7.016387471026064e-10,
+   "contains_ref": true,
+   "envelope_scalar_updates": 1881968,
+   "full_specialist_scalar_updates": 13021184,
+   "full_error_vs_ref": 3.203184106848056e-10,
+   "ratio_env_over_full": 0.14453125
+  }
+ ]
+}
