@@ -1,0 +1,4320 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "calibration": {
+      "needle": {
+        "id": "calibration",
+        "name": "GOODS-South ESO image center",
+        "ra_deg": 53.1364166667,
+        "dec_deg": -27.789,
+        "radius_deg": 0.1,
+        "locked": false,
+        "reference": "https://www.hq.eso.org/public/images/eso1013a/"
+      },
+      "gaia_manifest": {
+        "utc": "2026-11-06T21:03:54.456754+00:00",
+        "needle": "calibration",
+        "endpoint": "https://gaia.ari.uni-heidelberg.de/tap/sync",
+        "query": "SELECT TOP 10000 source_id,ra,dec,ref_epoch,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,bp_rp,ruwe,astrometric_params_solved,visibility_periods_used,phot_bp_rp_excess_factor,duplicated_source FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',53.1364166667,-27.789,0.1)) ORDER BY source_id",
+        "schema_version": 1,
+        "release": "Gaia DR3",
+        "table": "gaiadr3.gaia_source",
+        "field": {
+          "id": "calibration",
+          "name": "GOODS-South ESO image center",
+          "ra_deg": 53.1364166667,
+          "dec_deg": -27.789,
+          "radius_deg": 0.1,
+          "locked": false,
+          "reference": "https://www.hq.eso.org/public/images/eso1013a/"
+        },
+        "schema_reference": "https://gea.esac.esa.int/archive/documentation/GDR3/Gaia_archive/chap_datamodel/sec_dm_main_source_catalogue/ssec_dm_gaia_source.html",
+        "sha256": "bdfa59a6e59dd11a6f3addee14ead3917a48a5f720cc697bff8dd8ed912db77a",
+        "bytes": 15503,
+        "row_count": 99,
+        "possibly_truncated": false,
+        "code_revision": "f808fc01d1cb8ed455e0d9bedaf04e9c6e05c566",
+        "code_dirty": true,
+        "script_sha256": "16514eee8467b45874708fec8bfb9f839a77adae78d7f873bf51b402451e9de3",
+        "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+        "elapsed_seconds": 1.156,
+        "seed": 20261106,
+        "cache_file": "C:\\Users\\SpencerNunamakerTrav\\.cache\\research-needles\\f1b890394cb6f099f7b54421.csv",
+        "acknowledgement": "ESA Gaia mission / DPAC; https://www.cosmos.esa.int/gaia"
+      },
+      "allwise_manifest": {
+        "utc": "2026-11-06T21:09:38.952784+00:00",
+        "needle": "calibration",
+        "layer": "AllWISE",
+        "query": "SELECT TOP 10000 designation,ra,dec,w1mpro,w2mpro,w1sigmpro,w2sigmpro,w1snr,w2snr,cc_flags,ext_flg,nb,ph_qual FROM allwise_p3as_psd WHERE CONTAINS(POINT(ra,dec),CIRCLE(53.1364166667,-27.789,0.1))=1 ORDER BY designation",
+        "endpoint": "https://irsa.ipac.caltech.edu/TAP/sync",
+        "sha256": "b4adc9b4cf550e9e1945d3d0d3d68ee2ff03a4aa55745115cfb31382874c77ac",
+        "bytes": 49646,
+        "row_count": 546,
+        "code_revision": "75bcae7ee3bdefc1c59a39b4af18aaabbd1571f6",
+        "script_sha256": "484d89c9ef55ce1d775858c803f75ee0a2066ca4d323c7545d029839fe0924c3",
+        "code_dirty": true,
+        "possibly_truncated": false,
+        "cache_file": "C:\\Users\\SpencerNunamakerTrav\\.cache\\research-needles\\e967b9b0ac7785a19a5208bc.csv",
+        "elapsed_seconds": 4.188
+      },
+      "reference_manifest": {
+        "utc": "2026-11-06T21:12:32.659374+00:00",
+        "needle": "calibration",
+        "layer": "Gaia DR3 published AllWISE best neighbours",
+        "query": "SELECT TOP 10000 source_id,original_ext_source_id,angular_distance,number_of_neighbours,number_of_mates FROM gaiadr3.allwise_best_neighbour WHERE source_id IN (5057487375891547648,5057487375891617152,5057488819000739200,5057488849065016064,5057488849066912128,5057488990799018368,5057489403117085568,5057499058204605696,5057499161282786432,5057499225706000256,5057499333080499456,5057499363144965248,5057499367440725248,5057499431864621952,5057499436160774912,5057499470520722048,5057500088994710016,5057500123356552448,5057500260794371200,5057500325217643648,5057500363874718592,5057500497016356096,5057500501311601792,5057500634455286016,5057500638750498304,5057500844910226560,5057500947988126592,5057501046772168960,5057501115491648640,5057501188506431104,5057501188507344768,5057501188508381696,5057501222865692416,5057501222867084032,5057501257225844480,5057501325946295552,5057501360305996544,5057501566464426368,5057501596528000768,5057501630887740288,5057501665247484800,5057501703902510208,5057501768326676352,5057501837046157568,5057501905765640320,5057501940125385472,5057502043204594176,5057502081860190336,5057502111924074496,5057502219299457024,5057502219299589248,5057502288018933248,5057502318082683392,5057502459817757568,5057502528536162176,5057502592960426880,5057502700335956608,5057502734695295872,5057502734695530752,5057502769053752576,5057502769054389248,5057502769055268864,5057503353170824704,5057503417594114176,5057503451953856768,5057503451953861632,5057503456249287552,5057503456251067904,5057503589392824832,5057503658112292352,5057503765486714368,5057503864270364032,5057503864270738304,5057503868565391232,5057503868568043648,5057505101221319936,5057505174238092288,5057505204300546816,5057505242955492864,5057505242957566592,5057505346034709504,5057505376099239808,5057505552193107968,5057505552195155456,5057505586554846464,5057505655273292672,5057505685336897152,5057505689633069952,5057505754056375680,5057505758350993024,5057505758351567872,5057505758352507392,5057505861430782848,5057505960214809344,5057506136308121728,5057525068526600832,5057525137243427200,5057525893158221312,5057526168038127744) ORDER BY source_id",
+        "endpoint": "https://gaia.ari.uni-heidelberg.de/tap/sync",
+        "sha256": "f741bbca262a057f999aa2453bfbad161704f6a2255e08336261a88325c1fdd2",
+        "bytes": 4517,
+        "row_count": 78,
+        "code_revision": "75bcae7ee3bdefc1c59a39b4af18aaabbd1571f6",
+        "script_sha256": "4ae010d30b374c3b6aab9d35eb5eaa9d62801912d3c976baa2cae3a77e95f07c",
+        "code_dirty": true,
+        "possibly_truncated": false,
+        "cache_file": "C:\\Users\\SpencerNunamakerTrav\\.cache\\research-needles\\e10e77d41f99dd533bd8641c.csv",
+        "elapsed_seconds": 1.235
+      },
+      "gaia_screen": {
+        "schema_version": 1,
+        "needle": "calibration",
+        "rows": 99,
+        "seed": 20261106,
+        "attempted_probes": 8,
+        "negative_controls": 7,
+        "planned_family_size": 16,
+        "summary": {
+          "phot_g_mean_mag": {
+            "present": 98,
+            "missing": 1,
+            "median": 20.179226999999997,
+            "min": 13.877453,
+            "max": 22.0353
+          },
+          "bp_rp": {
+            "present": 97,
+            "missing": 2,
+            "median": 1.4362125,
+            "min": 0.27745628,
+            "max": 3.5406265
+          },
+          "ruwe": {
+            "present": 66,
+            "missing": 33,
+            "median": 1.0169038499999998,
+            "min": 0.9311492,
+            "max": 2.077432
+          },
+          "phot_bp_rp_excess_factor": {
+            "present": 97,
+            "missing": 2,
+            "median": 1.4117106,
+            "min": 1.1129303,
+            "max": 19.737997
+          },
+          "visibility_periods_used": {
+            "present": 99,
+            "missing": 0,
+            "median": 26.0,
+            "min": 1.0,
+            "max": 29.0
+          },
+          "parallax_snr": {
+            "present": 66,
+            "missing": 33,
+            "median": 2.9342882338755025,
+            "min": -1.3486587383318216,
+            "max": 171.6754819569021
+          },
+          "proper_motion": {
+            "present": 66,
+            "missing": 33,
+            "median": 8.333827822074348,
+            "min": 0.1604742240795533,
+            "max": 33.59367619684026
+          },
+          "missing_parallax": {
+            "present": 99,
+            "missing": 0,
+            "median": 0,
+            "min": 0,
+            "max": 1
+          },
+          "missing_color": {
+            "present": 99,
+            "missing": 0,
+            "median": 0,
+            "min": 0,
+            "max": 1
+          }
+        },
+        "probes": [
+          {
+            "id": "color_motion",
+            "x": "bp_rp",
+            "y": "proper_motion",
+            "conditioning": "magnitude",
+            "result": {
+              "status": "ok",
+              "n": 65,
+              "within_block_rank_correlation": 0.5086092321158052,
+              "permutation_p": 0.001,
+              "permutations": 999,
+              "blocks": 5,
+              "block_sizes": [
+                2,
+                2,
+                9,
+                30,
+                22
+              ],
+              "family_adjusted_p": 0.016,
+              "screening_flag": true
+            },
+            "negative_control": {
+              "status": "ok",
+              "n": 65,
+              "within_block_rank_correlation": 0.09314750866848034,
+              "permutation_p": 0.478,
+              "permutations": 999,
+              "blocks": 5,
+              "block_sizes": [
+                2,
+                2,
+                9,
+                30,
+                22
+              ],
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            }
+          },
+          {
+            "id": "color_parallax_snr",
+            "x": "bp_rp",
+            "y": "parallax_snr",
+            "conditioning": "magnitude",
+            "result": {
+              "status": "ok",
+              "n": 65,
+              "within_block_rank_correlation": 0.7648205825646124,
+              "permutation_p": 0.001,
+              "permutations": 999,
+              "blocks": 5,
+              "block_sizes": [
+                2,
+                2,
+                9,
+                30,
+                22
+              ],
+              "family_adjusted_p": 0.016,
+              "screening_flag": true
+            },
+            "negative_control": {
+              "status": "ok",
+              "n": 65,
+              "within_block_rank_correlation": -0.1075767902320088,
+              "permutation_p": 0.425,
+              "permutations": 999,
+              "blocks": 5,
+              "block_sizes": [
+                2,
+                2,
+                9,
+                30,
+                22
+              ],
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            }
+          },
+          {
+            "id": "fit_photometric_excess",
+            "x": "ruwe",
+            "y": "phot_bp_rp_excess_factor",
+            "conditioning": "magnitude_color",
+            "result": {
+              "status": "ok",
+              "n": 65,
+              "within_block_rank_correlation": 0.21649559370181803,
+              "permutation_p": 0.189,
+              "permutations": 999,
+              "blocks": 13,
+              "block_sizes": [
+                1,
+                1,
+                1,
+                1,
+                2,
+                6,
+                1,
+                6,
+                14,
+                10,
+                3,
+                14,
+                5
+              ],
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            },
+            "negative_control": {
+              "status": "ok",
+              "n": 65,
+              "within_block_rank_correlation": -0.15814006213184112,
+              "permutation_p": 0.309,
+              "permutations": 999,
+              "blocks": 13,
+              "block_sizes": [
+                1,
+                1,
+                1,
+                1,
+                2,
+                6,
+                1,
+                6,
+                14,
+                10,
+                3,
+                14,
+                5
+              ],
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            }
+          },
+          {
+            "id": "brightness_visibility",
+            "x": "phot_g_mean_mag",
+            "y": "visibility_periods_used",
+            "conditioning": "sky",
+            "result": {
+              "status": "ok",
+              "n": 98,
+              "within_block_rank_correlation": -0.8832844053032025,
+              "permutation_p": 0.001,
+              "permutations": 999,
+              "blocks": 4,
+              "block_sizes": [
+                25,
+                27,
+                18,
+                28
+              ],
+              "family_adjusted_p": 0.016,
+              "screening_flag": true
+            },
+            "negative_control": {
+              "status": "ok",
+              "n": 98,
+              "within_block_rank_correlation": -0.030704519224094496,
+              "permutation_p": 0.778,
+              "permutations": 999,
+              "blocks": 4,
+              "block_sizes": [
+                25,
+                27,
+                18,
+                28
+              ],
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            }
+          },
+          {
+            "id": "parallax_motion",
+            "x": "parallax_snr",
+            "y": "proper_motion",
+            "conditioning": "magnitude",
+            "result": {
+              "status": "ok",
+              "n": 66,
+              "within_block_rank_correlation": 0.5108355575169464,
+              "permutation_p": 0.001,
+              "permutations": 999,
+              "blocks": 5,
+              "block_sizes": [
+                2,
+                2,
+                9,
+                31,
+                22
+              ],
+              "family_adjusted_p": 0.016,
+              "screening_flag": true
+            },
+            "negative_control": {
+              "status": "ok",
+              "n": 66,
+              "within_block_rank_correlation": -0.02186115079463192,
+              "permutation_p": 0.885,
+              "permutations": 999,
+              "blocks": 5,
+              "block_sizes": [
+                2,
+                2,
+                9,
+                31,
+                22
+              ],
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            }
+          },
+          {
+            "id": "brightness_missing_parallax",
+            "x": "phot_g_mean_mag",
+            "y": "missing_parallax",
+            "conditioning": "sky",
+            "result": {
+              "status": "ok",
+              "n": 98,
+              "within_block_rank_correlation": 0.7820685018506152,
+              "permutation_p": 0.001,
+              "permutations": 999,
+              "blocks": 4,
+              "block_sizes": [
+                25,
+                27,
+                18,
+                28
+              ],
+              "family_adjusted_p": 0.016,
+              "screening_flag": true
+            },
+            "negative_control": {
+              "status": "ok",
+              "n": 98,
+              "within_block_rank_correlation": 0.06834629059709457,
+              "permutation_p": 0.497,
+              "permutations": 999,
+              "blocks": 4,
+              "block_sizes": [
+                25,
+                27,
+                18,
+                28
+              ],
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            }
+          },
+          {
+            "id": "brightness_missing_color",
+            "x": "phot_g_mean_mag",
+            "y": "missing_color",
+            "conditioning": "sky",
+            "result": {
+              "status": "ok",
+              "n": 98,
+              "within_block_rank_correlation": -0.051959189719612,
+              "permutation_p": 0.685,
+              "permutations": 999,
+              "blocks": 4,
+              "block_sizes": [
+                25,
+                27,
+                18,
+                28
+              ],
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            },
+            "negative_control": {
+              "status": "ok",
+              "n": 98,
+              "within_block_rank_correlation": -0.17289191339951496,
+              "permutation_p": 0.077,
+              "permutations": 999,
+              "blocks": 4,
+              "block_sizes": [
+                25,
+                27,
+                18,
+                28
+              ],
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            }
+          },
+          {
+            "id": "radial_density",
+            "null": "uniform surface density in the cone; selection/crowding can violate this",
+            "result": {
+              "status": "ok",
+              "n": 99,
+              "ks_statistic": 0.12775219663807003,
+              "permutation_p": 0.066,
+              "permutations": 999,
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            }
+          }
+        ],
+        "elapsed_seconds": 0.281,
+        "interpretation": "Exploratory screening only. Permutation exchangeability within coarse bins is an approximation; no calibrated physical probability or novelty claim. No confirmation data used.",
+        "selection": "No quality filtering; missingness retained. Two-magnitude bins condition selected relationships on depth; sky quadrants condition brightness tests. Magnitude is not distance. Faint-end completeness not measured."
+      },
+      "crossmatch": {
+        "radius_arcsec": 2.0,
+        "gaia_rows": 99,
+        "allwise_rows": 546,
+        "candidate_pairs": [
+          {
+            "source_id": "5057487375891617152",
+            "designation": "J033240.33-275249.4",
+            "separation_arcsec": 0.3198880843108875
+          },
+          {
+            "source_id": "5057488849065016064",
+            "designation": "J033245.94-275203.6",
+            "separation_arcsec": 0.2273567424008402
+          },
+          {
+            "source_id": "5057488990799018368",
+            "designation": "J033250.47-275100.1",
+            "separation_arcsec": 0.08618473803770556
+          },
+          {
+            "source_id": "5057489403117085568",
+            "designation": "J033254.68-275008.3",
+            "separation_arcsec": 0.21232187223208898
+          },
+          {
+            "source_id": "5057499058204605696",
+            "designation": "J033229.99-275230.7",
+            "separation_arcsec": 0.35760920792488154
+          },
+          {
+            "source_id": "5057499161282786432",
+            "designation": "J033232.86-275148.4",
+            "separation_arcsec": 0.24144586703773166
+          },
+          {
+            "source_id": "5057499225706000256",
+            "designation": "J033226.18-275222.1",
+            "separation_arcsec": 1.1886306154689212
+          },
+          {
+            "source_id": "5057499333080499456",
+            "designation": "J033223.39-275130.6",
+            "separation_arcsec": 0.5150616550253534
+          },
+          {
+            "source_id": "5057499363144965248",
+            "designation": "J033230.64-275109.0",
+            "separation_arcsec": 0.6485239580115407
+          },
+          {
+            "source_id": "5057499367440725248",
+            "designation": "J033230.92-275132.5",
+            "separation_arcsec": 0.4114998235195194
+          },
+          {
+            "source_id": "5057499431864621952",
+            "designation": "J033228.64-275029.6",
+            "separation_arcsec": 0.1836930375926905
+          },
+          {
+            "source_id": "5057499436160774912",
+            "designation": "J033227.19-275050.2",
+            "separation_arcsec": 1.109459814440574
+          },
+          {
+            "source_id": "5057499470520722048",
+            "designation": "J033232.60-275021.7",
+            "separation_arcsec": 0.7680699866164793
+          },
+          {
+            "source_id": "5057500088994710016",
+            "designation": "J033222.82-275053.4",
+            "separation_arcsec": 0.19825835433183106
+          },
+          {
+            "source_id": "5057500123356552448",
+            "designation": "J033216.91-275031.3",
+            "separation_arcsec": 0.5597006983402445
+          },
+          {
+            "source_id": "5057500260794371200",
+            "designation": "J033222.34-274925.8",
+            "separation_arcsec": 0.04100462600698246
+          },
+          {
+            "source_id": "5057500325217643648",
+            "designation": "J033215.37-275045.0",
+            "separation_arcsec": 0.18487163864584974
+          },
+          {
+            "source_id": "5057500363874718592",
+            "designation": "J033217.78-275006.6",
+            "separation_arcsec": 1.2070142789306924
+          },
+          {
+            "source_id": "5057500497016356096",
+            "designation": "J033224.93-274814.8",
+            "separation_arcsec": 0.07271181273264095
+          },
+          {
+            "source_id": "5057500634455286016",
+            "designation": "J033244.53-275101.3",
+            "separation_arcsec": 0.4376686898509857
+          },
+          {
+            "source_id": "5057500638750498304",
+            "designation": "J033243.77-275107.0",
+            "separation_arcsec": 0.165011144334947
+          },
+          {
+            "source_id": "5057500947988126592",
+            "designation": "J033232.66-274944.8",
+            "separation_arcsec": 0.07172206562964163
+          },
+          {
+            "source_id": "5057501115491648640",
+            "designation": "J033242.42-274759.0",
+            "separation_arcsec": 0.242734096794233
+          },
+          {
+            "source_id": "5057501188507344768",
+            "designation": "J033253.43-274829.6",
+            "separation_arcsec": 0.3284207248733234
+          },
+          {
+            "source_id": "5057501188508381696",
+            "designation": "J033256.33-274833.8",
+            "separation_arcsec": 0.10071005179010753
+          },
+          {
+            "source_id": "5057501222865692416",
+            "designation": "J033250.45-274833.3",
+            "separation_arcsec": 0.041381790516739556
+          },
+          {
+            "source_id": "5057501222867084032",
+            "designation": "J033250.45-274833.3",
+            "separation_arcsec": 0.9435865259239682
+          },
+          {
+            "source_id": "5057501325946295552",
+            "designation": "J033259.34-274638.3",
+            "separation_arcsec": 0.05196217430387804
+          },
+          {
+            "source_id": "5057501360305996544",
+            "designation": "J033253.44-274720.4",
+            "separation_arcsec": 0.14825575898638246
+          },
+          {
+            "source_id": "5057501566464426368",
+            "designation": "J033252.37-274626.4",
+            "separation_arcsec": 0.08929622806692819
+          },
+          {
+            "source_id": "5057501596528000768",
+            "designation": "J033254.54-274616.3",
+            "separation_arcsec": 0.03901055677828445
+          },
+          {
+            "source_id": "5057501630887740288",
+            "designation": "J033250.29-274606.7",
+            "separation_arcsec": 0.10093969011494122
+          },
+          {
+            "source_id": "5057501665247484800",
+            "designation": "J033253.07-274518.9",
+            "separation_arcsec": 0.026959096818009027
+          },
+          {
+            "source_id": "5057501703902510208",
+            "designation": "J033229.95-274839.3",
+            "separation_arcsec": 0.6759702172098856
+          },
+          {
+            "source_id": "5057501768326676352",
+            "designation": "J033228.33-274807.6",
+            "separation_arcsec": 0.07300264240838414
+          },
+          {
+            "source_id": "5057501837046157568",
+            "designation": "J033237.97-274742.0",
+            "separation_arcsec": 0.550644384752492
+          },
+          {
+            "source_id": "5057501905765640320",
+            "designation": "J033231.76-274658.4",
+            "separation_arcsec": 0.2285505828711643
+          },
+          {
+            "source_id": "5057502043204594176",
+            "designation": "J033223.64-274656.9",
+            "separation_arcsec": 0.1844465847103587
+          },
+          {
+            "source_id": "5057502111924074496",
+            "designation": "J033232.04-274633.1",
+            "separation_arcsec": 0.039743072151883864
+          },
+          {
+            "source_id": "5057502288018933248",
+            "designation": "J033243.81-274605.9",
+            "separation_arcsec": 0.28765755687772737
+          },
+          {
+            "source_id": "5057502318082683392",
+            "designation": "J033239.09-274602.3",
+            "separation_arcsec": 0.3158942814270993
+          },
+          {
+            "source_id": "5057502459817757568",
+            "designation": "J033244.79-274406.5",
+            "separation_arcsec": 0.035398869199129046
+          },
+          {
+            "source_id": "5057502528536162176",
+            "designation": "J033236.31-274459.8",
+            "separation_arcsec": 0.16029173508600972
+          },
+          {
+            "source_id": "5057502592960426880",
+            "designation": "J033231.46-274435.3",
+            "separation_arcsec": 0.10497870403203469
+          },
+          {
+            "source_id": "5057502700335956608",
+            "designation": "J033245.07-274331.9",
+            "separation_arcsec": 0.3948345287376397
+          },
+          {
+            "source_id": "5057502734695295872",
+            "designation": "J033239.16-274258.3",
+            "separation_arcsec": 0.2770396401328087
+          },
+          {
+            "source_id": "5057502734695530752",
+            "designation": "J033240.75-274318.4",
+            "separation_arcsec": 0.29634543688384823
+          },
+          {
+            "source_id": "5057502769053752576",
+            "designation": "J033240.25-274224.1",
+            "separation_arcsec": 1.402255979803177
+          },
+          {
+            "source_id": "5057502769054389248",
+            "designation": "J033242.93-274223.5",
+            "separation_arcsec": 0.3298155657428778
+          },
+          {
+            "source_id": "5057502769055268864",
+            "designation": "J033240.25-274224.1",
+            "separation_arcsec": 0.12015542633270833
+          },
+          {
+            "source_id": "5057503353170824704",
+            "designation": "J033210.09-274907.8",
+            "separation_arcsec": 0.2604254453385242
+          },
+          {
+            "source_id": "5057503417594114176",
+            "designation": "J033207.56-274840.6",
+            "separation_arcsec": 0.31863728198888625
+          },
+          {
+            "source_id": "5057503451953856768",
+            "designation": "J033209.44-274807.3",
+            "separation_arcsec": 0.38280574522944216
+          },
+          {
+            "source_id": "5057503451953861632",
+            "designation": "J033208.67-274734.6",
+            "separation_arcsec": 0.05672592586534792
+          },
+          {
+            "source_id": "5057503456251067904",
+            "designation": "J033209.63-274728.1",
+            "separation_arcsec": 0.3101692809859979
+          },
+          {
+            "source_id": "5057503589392824832",
+            "designation": "J033217.85-274628.1",
+            "separation_arcsec": 0.0910745951116069
+          },
+          {
+            "source_id": "5057503658112292352",
+            "designation": "J033207.67-274731.6",
+            "separation_arcsec": 0.1832838320231706
+          },
+          {
+            "source_id": "5057503864270364032",
+            "designation": "J033210.46-274506.6",
+            "separation_arcsec": 0.9742657473941977
+          },
+          {
+            "source_id": "5057503864270738304",
+            "designation": "J033209.95-274534.9",
+            "separation_arcsec": 0.46442865374141773
+          },
+          {
+            "source_id": "5057503868565391232",
+            "designation": "J033210.46-274506.6",
+            "separation_arcsec": 1.05773585780451
+          },
+          {
+            "source_id": "5057503868568043648",
+            "designation": "J033209.78-274442.7",
+            "separation_arcsec": 0.10101244939626541
+          },
+          {
+            "source_id": "5057505101221319936",
+            "designation": "J033219.95-274534.1",
+            "separation_arcsec": 0.07045017897140986
+          },
+          {
+            "source_id": "5057505174238092288",
+            "designation": "J033229.87-274424.5",
+            "separation_arcsec": 0.5057322440027608
+          },
+          {
+            "source_id": "5057505204300546816",
+            "designation": "J033222.31-274409.2",
+            "separation_arcsec": 0.35386418754735427
+          },
+          {
+            "source_id": "5057505242955492864",
+            "designation": "J033225.90-274342.0",
+            "separation_arcsec": 0.46000266997460315
+          },
+          {
+            "source_id": "5057505242957566592",
+            "designation": "J033225.10-274403.5",
+            "separation_arcsec": 0.08423433856530856
+          },
+          {
+            "source_id": "5057505346034709504",
+            "designation": "J033213.44-274447.8",
+            "separation_arcsec": 0.678225214175675
+          },
+          {
+            "source_id": "5057505376099239808",
+            "designation": "J033213.96-274406.2",
+            "separation_arcsec": 0.09941060999641677
+          },
+          {
+            "source_id": "5057505552193107968",
+            "designation": "J033228.81-274356.0",
+            "separation_arcsec": 0.1533625537276786
+          },
+          {
+            "source_id": "5057505552195155456",
+            "designation": "J033229.99-274405.1",
+            "separation_arcsec": 0.2793862850109181
+          },
+          {
+            "source_id": "5057505586554846464",
+            "designation": "J033233.46-274313.1",
+            "separation_arcsec": 0.06403765370452236
+          },
+          {
+            "source_id": "5057505655273292672",
+            "designation": "J033231.64-274208.1",
+            "separation_arcsec": 0.1752991691362228
+          },
+          {
+            "source_id": "5057505685336897152",
+            "designation": "J033236.02-274231.0",
+            "separation_arcsec": 0.46519828355584864
+          },
+          {
+            "source_id": "5057505689633069952",
+            "designation": "J033236.25-274301.9",
+            "separation_arcsec": 0.800475357267635
+          },
+          {
+            "source_id": "5057505754056375680",
+            "designation": "J033233.21-274221.3",
+            "separation_arcsec": 0.16685487146713365
+          },
+          {
+            "source_id": "5057505758350993024",
+            "designation": "J033232.31-274203.0",
+            "separation_arcsec": 0.44621000181190024
+          },
+          {
+            "source_id": "5057505758352507392",
+            "designation": "J033233.58-274201.8",
+            "separation_arcsec": 1.1478146313131732
+          },
+          {
+            "source_id": "5057505960214809344",
+            "designation": "J033230.56-274144.1",
+            "separation_arcsec": 1.4566140181316356
+          },
+          {
+            "source_id": "5057525068526600832",
+            "designation": "J033257.13-274534.7",
+            "separation_arcsec": 0.19965602569376217
+          },
+          {
+            "source_id": "5057525137243427200",
+            "designation": "J033255.98-274418.3",
+            "separation_arcsec": 0.19502359756433418
+          },
+          {
+            "source_id": "5057525893158221312",
+            "designation": "J033252.21-274324.7",
+            "separation_arcsec": 0.31080127264423607
+          },
+          {
+            "source_id": "5057526168038127744",
+            "designation": "J033246.82-274212.9",
+            "separation_arcsec": 0.9009839282776815
+          }
+        ],
+        "matched_gaia": 82,
+        "matched_allwise": 79,
+        "gaia_match_fraction": 0.8282828282828283,
+        "median_offset_arcsec": 0.2515797710663786,
+        "ambiguous_gaia": [],
+        "shared_allwise": [
+          "J033250.45-274833.3",
+          "J033210.46-274506.6",
+          "J033240.25-274224.1"
+        ],
+        "unmatched_gaia": [
+          "5057487375891547648",
+          "5057488819000739200",
+          "5057488849066912128",
+          "5057500501311601792",
+          "5057500844910226560",
+          "5057501046772168960",
+          "5057501188506431104",
+          "5057501257225844480",
+          "5057501940125385472",
+          "5057502081860190336",
+          "5057502219299457024",
+          "5057502219299589248",
+          "5057503456249287552",
+          "5057503765486714368",
+          "5057505758351567872",
+          "5057505861430782848",
+          "5057506136308121728"
+        ],
+        "unmatched_allwise": [
+          "J033206.32-274708.4",
+          "J033206.45-274729.1",
+          "J033206.56-274623.7",
+          "J033206.81-274643.3",
+          "J033207.00-274753.7",
+          "J033207.58-274926.6",
+          "J033208.16-274628.5",
+          "J033208.26-274753.4",
+          "J033208.54-274648.7",
+          "J033208.54-274910.9",
+          "J033208.66-274503.3",
+          "J033210.43-274754.8",
+          "J033210.57-274703.1",
+          "J033210.72-274807.6",
+          "J033210.73-274628.0",
+          "J033210.85-274857.8",
+          "J033210.92-274722.6",
+          "J033210.93-274415.4",
+          "J033211.21-274533.8",
+          "J033211.41-275004.4",
+          "J033211.43-274650.3",
+          "J033211.50-274815.9",
+          "J033211.51-274713.0",
+          "J033211.60-274554.4",
+          "J033211.91-274644.6",
+          "J033212.18-274621.2",
+          "J033212.25-274529.7",
+          "J033212.28-274513.8",
+          "J033212.37-274353.8",
+          "J033212.43-274835.8",
+          "J033212.51-274729.7",
+          "J033212.58-274328.1",
+          "J033212.61-275105.5",
+          "J033212.90-274925.0",
+          "J033212.97-274638.3",
+          "J033213.02-274946.5",
+          "J033213.38-275033.5",
+          "J033213.60-274951.7",
+          "J033213.68-274931.7",
+          "J033213.71-274753.6",
+          "J033213.83-274525.9",
+          "J033214.04-275101.4",
+          "J033214.11-275124.4",
+          "J033214.15-275014.7",
+          "J033214.31-274336.1",
+          "J033214.32-274713.8",
+          "J033214.38-274455.9",
+          "J033214.42-274540.8",
+          "J033214.48-274624.7",
+          "J033214.70-275104.8",
+          "J033214.90-274434.6",
+          "J033214.96-275005.2",
+          "J033215.01-275127.2",
+          "J033215.16-274336.4",
+          "J033215.54-274536.4",
+          "J033215.56-274631.4",
+          "J033215.80-274713.7",
+          "J033215.92-274749.4",
+          "J033215.95-274423.8",
+          "J033216.00-274859.9",
+          "J033216.09-274942.7",
+          "J033216.43-274448.8",
+          "J033216.53-274727.6",
+          "J033216.73-274324.9",
+          "J033216.78-274750.3",
+          "J033217.15-274303.9",
+          "J033217.20-275113.4",
+          "J033217.26-274921.3",
+          "J033217.42-274806.5",
+          "J033217.54-274811.3",
+          "J033217.55-274712.0",
+          "J033217.57-274437.2",
+          "J033217.64-274551.6",
+          "J033217.87-275059.3",
+          "J033218.00-274719.2",
+          "J033218.05-274953.6",
+          "J033218.31-274233.5",
+          "J033218.45-274556.1",
+          "J033218.55-274833.3",
+          "J033218.57-275150.2",
+          "J033218.68-275211.5",
+          "J033218.69-274920.2",
+          "J033218.74-275129.0",
+          "J033218.75-274733.5",
+          "J033218.77-274414.6",
+          "J033218.80-274745.5",
+          "J033218.83-274628.7",
+          "J033218.85-274529.7",
+          "J033219.16-274448.3",
+          "J033219.22-274632.2",
+          "J033219.36-274815.6",
+          "J033219.38-274702.0",
+          "J033219.42-275218.5",
+          "J033219.47-274217.3",
+          "J033219.63-274304.6",
+          "J033219.67-275023.9",
+          "J033219.87-274831.6",
+          "J033219.89-274721.5",
+          "J033220.15-274423.8",
+          "J033220.21-275233.7",
+          "J033220.23-274850.8",
+          "J033220.26-274819.1",
+          "J033220.26-275222.1",
+          "J033220.29-274554.5",
+          "J033220.46-274732.4",
+          "J033220.58-274507.8",
+          "J033220.68-274717.5",
+          "J033220.69-274446.0",
+          "J033220.70-275025.0",
+          "J033220.71-274452.7",
+          "J033220.71-275142.8",
+          "J033220.76-274234.0",
+          "J033220.92-274705.7",
+          "J033221.21-275102.3",
+          "J033221.26-275032.2",
+          "J033221.28-274436.0",
+          "J033221.28-275205.0",
+          "J033221.37-274536.4",
+          "J033221.51-275133.1",
+          "J033221.62-274225.3",
+          "J033221.65-274242.5",
+          "J033221.99-274656.3",
+          "J033222.17-275102.0",
+          "J033222.35-274813.8",
+          "J033222.55-274950.2",
+          "J033222.60-274425.9",
+          "J033222.60-275232.5",
+          "J033222.70-275223.1",
+          "J033222.98-274331.1",
+          "J033223.17-275246.4",
+          "J033223.18-274612.4",
+          "J033223.27-275102.6",
+          "J033223.31-274852.0",
+          "J033223.40-274316.7",
+          "J033223.60-274601.0",
+          "J033223.65-274938.0",
+          "J033223.74-274412.4",
+          "J033223.93-274710.3",
+          "J033223.97-275258.3",
+          "J033224.03-275039.0",
+          "J033224.05-274910.3",
+          "J033224.18-274211.7",
+          "J033224.35-274343.3",
+          "J033224.65-274620.4",
+          "J033224.65-274851.6",
+          "J033224.74-275046.8",
+          "J033224.86-274706.8",
+          "J033225.05-275249.2",
+          "J033225.14-274219.5",
+          "J033225.21-275010.0",
+          "J033225.35-274617.3",
+          "J033225.45-275154.6",
+          "J033225.48-274328.0",
+          "J033225.75-274936.6",
+          "J033225.82-274431.2",
+          "J033225.85-275020.0",
+          "J033225.96-275245.9",
+          "J033226.03-274236.9",
+          "J033226.21-275110.8",
+          "J033226.27-274223.4",
+          "J033226.30-274536.0",
+          "J033226.32-274550.1",
+          "J033226.38-274442.7",
+          "J033226.39-274515.1",
+          "J033226.47-274212.3",
+          "J033226.55-274156.8",
+          "J033226.61-275002.7",
+          "J033226.63-274649.5",
+          "J033226.65-274759.3",
+          "J033226.67-274134.9",
+          "J033226.72-274339.8",
+          "J033226.84-274146.0",
+          "J033226.84-274528.2",
+          "J033226.94-274241.0",
+          "J033227.18-274416.4",
+          "J033227.32-274205.1",
+          "J033227.38-274824.4",
+          "J033227.38-275016.8",
+          "J033227.50-274430.5",
+          "J033227.55-274603.4",
+          "J033227.58-274145.3",
+          "J033227.61-274939.5",
+          "J033227.71-275041.0",
+          "J033227.78-274136.1",
+          "J033227.89-275140.4",
+          "J033227.90-275220.8",
+          "J033227.99-275235.5",
+          "J033228.00-274639.5",
+          "J033228.08-275201.5",
+          "J033228.38-274426.6",
+          "J033228.44-274703.7",
+          "J033228.56-274828.2",
+          "J033228.72-275230.8",
+          "J033228.80-274756.3",
+          "J033228.84-274621.8",
+          "J033228.88-274129.8",
+          "J033228.98-274908.5",
+          "J033229.04-274255.6",
+          "J033229.05-274923.8",
+          "J033229.22-274707.7",
+          "J033229.28-274611.5",
+          "J033229.35-275048.9",
+          "J033229.40-275109.4",
+          "J033229.51-274227.6",
+          "J033229.55-274812.6",
+          "J033229.64-274242.7",
+          "J033229.91-274756.6",
+          "J033229.93-274300.9",
+          "J033230.03-274319.0",
+          "J033230.03-274347.6",
+          "J033230.04-274726.9",
+          "J033230.07-274523.1",
+          "J033230.07-275140.3",
+          "J033230.08-275100.6",
+          "J033230.25-274503.4",
+          "J033230.38-275306.3",
+          "J033230.50-274242.4",
+          "J033230.50-275255.2",
+          "J033230.51-275005.3",
+          "J033230.51-275015.7",
+          "J033230.56-274518.7",
+          "J033230.73-274307.5",
+          "J033230.81-274620.8",
+          "J033230.88-274316.6",
+          "J033230.88-274648.2",
+          "J033231.10-274227.1",
+          "J033231.17-274534.2",
+          "J033231.31-274724.4",
+          "J033231.37-275319.1",
+          "J033231.40-274323.8",
+          "J033231.47-274945.6",
+          "J033231.51-275029.0",
+          "J033231.71-275004.7",
+          "J033231.72-274852.7",
+          "J033231.74-275305.0",
+          "J033231.80-274956.8",
+          "J033232.03-274451.7",
+          "J033232.18-275315.2",
+          "J033232.19-274845.7",
+          "J033232.20-274535.2",
+          "J033232.61-275248.9",
+          "J033232.68-275011.7",
+          "J033232.75-275102.2",
+          "J033232.84-274608.1",
+          "J033232.88-274857.7",
+          "J033232.92-274546.6",
+          "J033233.01-274437.1",
+          "J033233.02-275030.8",
+          "J033233.10-275124.1",
+          "J033233.29-275314.6",
+          "J033233.40-275205.0",
+          "J033233.41-274139.3",
+          "J033233.48-275225.6",
+          "J033233.54-275249.4",
+          "J033233.80-274600.6",
+          "J033233.84-274410.7",
+          "J033233.93-274238.1",
+          "J033234.04-275029.5",
+          "J033234.06-274255.5",
+          "J033234.10-274713.1",
+          "J033234.15-274937.7",
+          "J033234.17-274554.0",
+          "J033234.37-274350.5",
+          "J033234.43-274225.2",
+          "J033234.53-274848.8",
+          "J033234.67-274408.2",
+          "J033234.80-275023.9",
+          "J033234.91-274642.5",
+          "J033235.45-274420.5",
+          "J033235.50-274438.7",
+          "J033235.58-274627.2",
+          "J033235.58-275308.0",
+          "J033235.59-274310.4",
+          "J033235.61-274944.0",
+          "J033235.68-275102.0",
+          "J033235.76-274916.9",
+          "J033235.77-274759.1",
+          "J033235.91-274241.3",
+          "J033235.94-274812.4",
+          "J033236.09-275118.2",
+          "J033236.16-275036.5",
+          "J033236.19-274932.1",
+          "J033236.23-275205.9",
+          "J033236.30-274250.1",
+          "J033236.38-274543.1",
+          "J033236.46-275005.1",
+          "J033236.54-274630.6",
+          "J033236.59-275153.0",
+          "J033236.71-274407.0",
+          "J033236.75-275208.5",
+          "J033237.16-275236.5",
+          "J033237.19-274608.4",
+          "J033237.23-275127.8",
+          "J033237.29-274729.7",
+          "J033237.31-274334.2",
+          "J033237.35-274126.4",
+          "J033237.49-274838.4",
+          "J033237.59-274406.3",
+          "J033237.68-274416.0",
+          "J033237.74-275212.5",
+          "J033237.78-275000.9",
+          "J033237.87-274215.9",
+          "J033238.06-274142.6",
+          "J033238.14-274432.8",
+          "J033238.15-274513.0",
+          "J033238.33-274455.4",
+          "J033238.37-275028.3",
+          "J033238.48-274702.5",
+          "J033238.51-274311.6",
+          "J033238.57-274632.0",
+          "J033238.80-274448.9",
+          "J033238.80-274732.4",
+          "J033238.81-274956.6",
+          "J033238.81-275045.5",
+          "J033238.83-274649.5",
+          "J033238.90-274929.3",
+          "J033239.00-274420.3",
+          "J033239.01-274243.4",
+          "J033239.15-274844.8",
+          "J033239.18-275222.8",
+          "J033239.21-274758.5",
+          "J033239.28-274532.2",
+          "J033239.40-275015.4",
+          "J033239.45-275031.9",
+          "J033239.48-275301.4",
+          "J033239.55-274928.9",
+          "J033239.59-274909.8",
+          "J033239.74-275155.7",
+          "J033239.79-274712.5",
+          "J033239.81-274610.8",
+          "J033240.01-274419.4",
+          "J033240.03-274755.4",
+          "J033240.24-274955.9",
+          "J033240.32-274151.3",
+          "J033240.35-274455.8",
+          "J033240.36-274338.6",
+          "J033240.50-274400.6",
+          "J033240.65-274731.0",
+          "J033240.79-274616.2",
+          "J033241.10-274853.5",
+          "J033241.15-274917.0",
+          "J033241.15-275215.5",
+          "J033241.18-274930.0",
+          "J033241.36-274458.9",
+          "J033241.43-274717.2",
+          "J033241.45-274439.6",
+          "J033241.47-274533.6",
+          "J033241.62-275247.5",
+          "J033241.63-275157.7",
+          "J033241.66-274152.2",
+          "J033241.71-274327.7",
+          "J033241.75-275100.1",
+          "J033241.77-274619.6",
+          "J033241.95-274216.1",
+          "J033242.29-274950.6",
+          "J033242.37-274238.4",
+          "J033242.43-274706.8",
+          "J033242.44-275024.9",
+          "J033242.79-274605.7",
+          "J033242.81-275159.7",
+          "J033242.84-275136.3",
+          "J033242.86-274329.2",
+          "J033242.99-274650.2",
+          "J033243.06-274846.1",
+          "J033243.14-274242.5",
+          "J033243.20-274457.1",
+          "J033243.25-274756.7",
+          "J033243.30-274915.0",
+          "J033243.43-274355.2",
+          "J033243.52-274634.4",
+          "J033243.75-275232.0",
+          "J033243.95-274202.2",
+          "J033243.96-274232.8",
+          "J033244.08-274542.0",
+          "J033244.11-275142.7",
+          "J033244.25-275126.8",
+          "J033244.29-274913.0",
+          "J033244.42-274819.3",
+          "J033244.57-275011.4",
+          "J033244.67-274203.3",
+          "J033244.71-274922.3",
+          "J033244.84-275028.8",
+          "J033244.89-274727.4",
+          "J033245.07-274542.1",
+          "J033245.18-274940.0",
+          "J033245.31-275230.5",
+          "J033245.40-274248.7",
+          "J033245.59-274555.4",
+          "J033245.70-274407.0",
+          "J033245.75-274813.8",
+          "J033245.91-275220.3",
+          "J033246.31-274251.7",
+          "J033246.34-274912.7",
+          "J033246.60-274709.6",
+          "J033246.84-274513.0",
+          "J033246.97-274346.4",
+          "J033247.13-274408.6",
+          "J033247.16-275147.2",
+          "J033247.17-275106.1",
+          "J033247.30-274246.9",
+          "J033247.40-274626.5",
+          "J033247.74-275038.3",
+          "J033247.89-274233.0",
+          "J033247.98-274433.9",
+          "J033248.02-274346.8",
+          "J033248.11-274845.2",
+          "J033248.39-274721.1",
+          "J033248.44-274553.6",
+          "J033248.46-274306.0",
+          "J033248.55-274504.3",
+          "J033248.58-274935.0",
+          "J033248.64-274626.2",
+          "J033248.80-274234.7",
+          "J033248.93-274419.1",
+          "J033249.00-275015.8",
+          "J033249.09-274521.2",
+          "J033249.16-274436.4",
+          "J033249.43-274828.5",
+          "J033249.57-274630.1",
+          "J033249.85-274425.9",
+          "J033250.38-274707.1",
+          "J033250.66-275008.3",
+          "J033250.73-274302.7",
+          "J033251.27-274429.4",
+          "J033251.34-274514.0",
+          "J033251.49-274758.5",
+          "J033251.65-275017.7",
+          "J033251.75-274952.0",
+          "J033251.83-274459.8",
+          "J033251.85-274436.1",
+          "J033252.01-274841.3",
+          "J033252.06-274426.0",
+          "J033252.19-275108.7",
+          "J033252.28-274542.7",
+          "J033252.33-275051.8",
+          "J033252.34-275002.3",
+          "J033252.35-274600.5",
+          "J033252.40-274411.0",
+          "J033252.87-275116.0",
+          "J033252.93-274459.9",
+          "J033252.98-275105.2",
+          "J033253.02-275045.6",
+          "J033253.10-274543.6",
+          "J033253.19-274334.3",
+          "J033253.72-274401.7",
+          "J033254.23-274902.9",
+          "J033254.40-274703.9",
+          "J033254.47-274537.0",
+          "J033254.66-274448.6",
+          "J033255.00-274505.9",
+          "J033255.13-274954.6",
+          "J033255.33-274733.4",
+          "J033255.56-274753.6",
+          "J033255.96-274912.3",
+          "J033255.99-274433.0",
+          "J033256.26-274716.4",
+          "J033256.45-274545.8",
+          "J033257.07-274457.0",
+          "J033257.23-274939.6",
+          "J033257.47-274514.1",
+          "J033257.58-274552.1",
+          "J033257.62-274825.1",
+          "J033257.84-274543.9",
+          "J033258.60-274730.8",
+          "J033258.61-274719.7",
+          "J033258.73-274828.0",
+          "J033258.89-274806.0"
+        ],
+        "interior_unshifted": {
+          "matched_gaia": 69,
+          "denominator": 82
+        },
+        "shifted_controls": [
+          {
+            "offset_arcsec": [
+              30,
+              0
+            ],
+            "matched_gaia": 2,
+            "denominator": 82
+          },
+          {
+            "offset_arcsec": [
+              -30,
+              0
+            ],
+            "matched_gaia": 0,
+            "denominator": 82
+          },
+          {
+            "offset_arcsec": [
+              0,
+              30
+            ],
+            "matched_gaia": 1,
+            "denominator": 82
+          },
+          {
+            "offset_arcsec": [
+              0,
+              -30
+            ],
+            "matched_gaia": 0,
+            "denominator": 82
+          }
+        ],
+        "caveat": "Geometric candidates, not object identities. Gaia epoch 2016 versus AllWISE ~2010; no proper-motion propagation. Resolution, depth, blending and upper limits can explain nonmatches. AllWISE adds infrared wavelength coverage, not a universal fainter optical limit."
+      },
+      "published_calibration": {
+        "published_pairs": 78,
+        "recovered_pairs": 77,
+        "missed_published_pairs": [
+          {
+            "source_id": "5057506136308121728",
+            "original_ext_source_id": "J033212.58-274328.1",
+            "angular_distance": "2.5111117",
+            "number_of_neighbours": "1",
+            "number_of_mates": "0"
+          }
+        ],
+        "examples": [
+          {
+            "source_id": "5057487375891617152",
+            "original_ext_source_id": "J033240.33-275249.4",
+            "angular_distance": "0.3198881",
+            "number_of_neighbours": "1",
+            "number_of_mates": "0"
+          },
+          {
+            "source_id": "5057488849065016064",
+            "original_ext_source_id": "J033245.94-275203.6",
+            "angular_distance": "0.053276718",
+            "number_of_neighbours": "1",
+            "number_of_mates": "0"
+          },
+          {
+            "source_id": "5057488990799018368",
+            "original_ext_source_id": "J033250.47-275100.1",
+            "angular_distance": "0.07807631",
+            "number_of_neighbours": "1",
+            "number_of_mates": "0"
+          },
+          {
+            "source_id": "5057489403117085568",
+            "original_ext_source_id": "J033254.68-275008.3",
+            "angular_distance": "0.19719718",
+            "number_of_neighbours": "1",
+            "number_of_mates": "0"
+          },
+          {
+            "source_id": "5057499058204605696",
+            "original_ext_source_id": "J033229.99-275230.7",
+            "angular_distance": "0.3369269",
+            "number_of_neighbours": "1",
+            "number_of_mates": "0"
+          }
+        ],
+        "meaning": "Reproduces published catalog associations; this validates a crossmatch, not a new physical finding or a full deep-field rediscovery."
+      },
+      "highest_ruwe_inspection": [
+        {
+          "source_id": "5057500363874718592",
+          "g": 20.736921,
+          "bp_rp": 2.0892906,
+          "ruwe": 2.077432,
+          "photometric_excess": 2.2141528,
+          "infrared_candidates": [
+            {
+              "source_id": "5057500363874718592",
+              "designation": "J033217.78-275006.6",
+              "separation_arcsec": 1.2070142789306924,
+              "photometry": {
+                "w1mpro": "16.650",
+                "w2mpro": "16.238",
+                "w1sigmpro": "0.060",
+                "w2sigmpro": "0.136",
+                "w1snr": "18.1",
+                "w2snr": "8.0",
+                "cc_flags": "0000",
+                "ext_flg": "0",
+                "nb": "1",
+                "ph_qual": "ABUU"
+              }
+            }
+          ]
+        },
+        {
+          "source_id": "5057505242957566592",
+          "g": 20.72485,
+          "bp_rp": 1.4086056,
+          "ruwe": 1.8665624,
+          "photometric_excess": 7.791173,
+          "infrared_candidates": [
+            {
+              "source_id": "5057505242957566592",
+              "designation": "J033225.10-274403.5",
+              "separation_arcsec": 0.08423433856530856,
+              "photometry": {
+                "w1mpro": "15.358",
+                "w2mpro": "15.361",
+                "w1sigmpro": "0.032",
+                "w2sigmpro": "0.073",
+                "w1snr": "33.4",
+                "w2snr": "14.9",
+                "cc_flags": "0000",
+                "ext_flg": "0",
+                "nb": "1",
+                "ph_qual": "AAUU"
+              }
+            }
+          ]
+        },
+        {
+          "source_id": "5057501222865692416",
+          "g": 13.877453,
+          "bp_rp": 0.8204937,
+          "ruwe": 1.4521389,
+          "photometric_excess": 1.2298597,
+          "infrared_candidates": [
+            {
+              "source_id": "5057501222865692416",
+              "designation": "J033250.45-274833.3",
+              "separation_arcsec": 0.041381790516739556,
+              "photometry": {
+                "w1mpro": "12.311",
+                "w2mpro": "12.350",
+                "w1sigmpro": "0.024",
+                "w2sigmpro": "0.023",
+                "w1snr": "45.4",
+                "w2snr": "46.8",
+                "cc_flags": "0000",
+                "ext_flg": "0",
+                "nb": "1",
+                "ph_qual": "AABC"
+              }
+            }
+          ]
+        },
+        {
+          "source_id": "5057525893158221312",
+          "g": 20.553846,
+          "bp_rp": 1.976841,
+          "ruwe": 1.3210886,
+          "photometric_excess": 1.660212,
+          "infrared_candidates": [
+            {
+              "source_id": "5057525893158221312",
+              "designation": "J033252.21-274324.7",
+              "separation_arcsec": 0.31080127264423607,
+              "photometry": {
+                "w1mpro": "16.493",
+                "w2mpro": "16.374",
+                "w1sigmpro": "0.054",
+                "w2sigmpro": "0.155",
+                "w1snr": "20.0",
+                "w2snr": "7.0",
+                "cc_flags": "0000",
+                "ext_flg": "0",
+                "nb": "1",
+                "ph_qual": "ABUU"
+              }
+            }
+          ]
+        },
+        {
+          "source_id": "5057500638750498304",
+          "g": 20.30192,
+          "bp_rp": 2.2115993,
+          "ruwe": 1.1163982,
+          "photometric_excess": 1.593442,
+          "infrared_candidates": [
+            {
+              "source_id": "5057500638750498304",
+              "designation": "J033243.77-275107.0",
+              "separation_arcsec": 0.165011144334947,
+              "photometry": {
+                "w1mpro": "16.338",
+                "w2mpro": "16.227",
+                "w1sigmpro": "0.051",
+                "w2sigmpro": "0.138",
+                "w1snr": "21.2",
+                "w2snr": "7.9",
+                "cc_flags": "0000",
+                "ext_flg": "0",
+                "nb": "1",
+                "ph_qual": "ABUU"
+              }
+            }
+          ]
+        },
+        {
+          "source_id": "5057501115491648640",
+          "g": 19.752783,
+          "bp_rp": 2.503683,
+          "ruwe": 1.1113678,
+          "photometric_excess": 1.4683009,
+          "infrared_candidates": [
+            {
+              "source_id": "5057501115491648640",
+              "designation": "J033242.42-274759.0",
+              "separation_arcsec": 0.242734096794233,
+              "photometry": {
+                "w1mpro": "15.894",
+                "w2mpro": "15.654",
+                "w1sigmpro": "0.040",
+                "w2sigmpro": "0.091",
+                "w1snr": "26.9",
+                "w2snr": "11.9",
+                "cc_flags": "0000",
+                "ext_flg": "0",
+                "nb": "1",
+                "ph_qual": "AAUU"
+              }
+            }
+          ]
+        },
+        {
+          "source_id": "5057487375891547648",
+          "g": 20.795334,
+          "bp_rp": 0.8544426,
+          "ruwe": 1.0995978,
+          "photometric_excess": 1.409229,
+          "infrared_candidates": []
+        },
+        {
+          "source_id": "5057503765486714368",
+          "g": 20.87484,
+          "bp_rp": 1.1759472,
+          "ruwe": 1.0800382,
+          "photometric_excess": 1.665691,
+          "infrared_candidates": []
+        },
+        {
+          "source_id": "5057501257225844480",
+          "g": 20.934538,
+          "bp_rp": 1.2230377,
+          "ruwe": 1.0748535,
+          "photometric_excess": 1.5627165,
+          "infrared_candidates": []
+        },
+        {
+          "source_id": "5057500088994710016",
+          "g": 20.433357,
+          "bp_rp": 1.6243076,
+          "ruwe": 1.069175,
+          "photometric_excess": 1.4064947,
+          "infrared_candidates": [
+            {
+              "source_id": "5057500088994710016",
+              "designation": "J033222.82-275053.4",
+              "separation_arcsec": 0.19825835433183106,
+              "photometry": {
+                "w1mpro": "17.365",
+                "w2mpro": "17.718",
+                "w1sigmpro": "0.104",
+                "w2sigmpro": "0.496",
+                "w1snr": "10.4",
+                "w2snr": "2.2",
+                "cc_flags": "0000",
+                "ext_flg": "0",
+                "nb": "1",
+                "ph_qual": "ACUU"
+              }
+            }
+          ]
+        }
+      ],
+      "infrared_followup": {
+        "status": "adaptive_exploration",
+        "included": 59,
+        "excluded": {
+          "no_candidate": 17,
+          "ambiguous_or_shared": 6,
+          "missing_or_low_snr": 17,
+          "missing_optical": 0
+        },
+        "tests": [
+          {
+            "x": "ruwe",
+            "y": "W1-W2",
+            "result": {
+              "status": "ok",
+              "n": 41,
+              "within_block_rank_correlation": -0.13965759778430356,
+              "permutation_p": 0.445,
+              "permutations": 999,
+              "blocks": 9,
+              "block_sizes": [
+                1,
+                1,
+                6,
+                1,
+                1,
+                11,
+                10,
+                5,
+                5
+              ],
+              "descriptive_20_test_adjusted_p": 1
+            }
+          },
+          {
+            "x": "phot_bp_rp_excess_factor",
+            "y": "W1-W2",
+            "result": {
+              "status": "ok",
+              "n": 59,
+              "within_block_rank_correlation": -0.12966120510575313,
+              "permutation_p": 0.381,
+              "permutations": 999,
+              "blocks": 11,
+              "block_sizes": [
+                1,
+                1,
+                6,
+                1,
+                1,
+                11,
+                10,
+                1,
+                21,
+                5,
+                1
+              ],
+              "descriptive_20_test_adjusted_p": 1
+            }
+          }
+        ],
+        "interpretation": "Two follow-up tests per field selected after Gaia screening; 20 total scientific tests including the original 16. Adjusted p is descriptive, not independent confirmation. SNR>=5 in both WISE bands and one-to-one candidates used for color tests; excluded/flagged sources remain in the raw catalog and match record."
+      },
+      "elapsed_seconds": 0.734,
+      "script_sha256": "e18d54cb8aabf33874c46d2a5b70e359d5f6b4f64637cc0507c90523a11b9974"
+    },
+    "exploration": {
+      "needle": {
+        "id": "exploration",
+        "name": "Seeded southern exploration",
+        "ra_deg": 317.36184508,
+        "dec_deg": -59.20212048,
+        "radius_deg": 0.1,
+        "locked": false
+      },
+      "gaia_manifest": {
+        "utc": "2026-11-06T21:03:55.769856+00:00",
+        "needle": "exploration",
+        "endpoint": "https://gaia.ari.uni-heidelberg.de/tap/sync",
+        "query": "SELECT TOP 10000 source_id,ra,dec,ref_epoch,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,bp_rp,ruwe,astrometric_params_solved,visibility_periods_used,phot_bp_rp_excess_factor,duplicated_source FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',317.36184508,-59.20212048,0.1)) ORDER BY source_id",
+        "schema_version": 1,
+        "release": "Gaia DR3",
+        "table": "gaiadr3.gaia_source",
+        "field": {
+          "id": "exploration",
+          "name": "Seeded southern exploration",
+          "ra_deg": 317.36184508,
+          "dec_deg": -59.20212048,
+          "radius_deg": 0.1,
+          "locked": false
+        },
+        "schema_reference": "https://gea.esac.esa.int/archive/documentation/GDR3/Gaia_archive/chap_datamodel/sec_dm_main_source_catalogue/ssec_dm_gaia_source.html",
+        "sha256": "f8c4454e3813eb9dc68b7ce29590096ad6c39935486bfc36471dbac9160e96ab",
+        "bytes": 58930,
+        "row_count": 344,
+        "possibly_truncated": false,
+        "code_revision": "f808fc01d1cb8ed455e0d9bedaf04e9c6e05c566",
+        "code_dirty": true,
+        "script_sha256": "16514eee8467b45874708fec8bfb9f839a77adae78d7f873bf51b402451e9de3",
+        "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+        "elapsed_seconds": 1.484,
+        "seed": 20261106,
+        "cache_file": "C:\\Users\\SpencerNunamakerTrav\\.cache\\research-needles\\204f3fb8eb91ddc7d0eda08a.csv",
+        "acknowledgement": "ESA Gaia mission / DPAC; https://www.cosmos.esa.int/gaia"
+      },
+      "allwise_manifest": {
+        "utc": "2026-11-06T21:10:24.177924+00:00",
+        "needle": "exploration",
+        "layer": "AllWISE",
+        "query": "SELECT TOP 10000 designation,ra,dec,w1mpro,w2mpro,w1sigmpro,w2sigmpro,w1snr,w2snr,cc_flags,ext_flg,nb,ph_qual FROM allwise_p3as_psd WHERE CONTAINS(POINT(ra,dec),CIRCLE(317.36184508,-59.20212048,0.1))=1 ORDER BY designation",
+        "endpoint": "https://irsa.ipac.caltech.edu/TAP/sync",
+        "sha256": "adabe757b82611a552f072dce27e76e6726e1c4fbb202df20b014e4a299b39ef",
+        "bytes": 56744,
+        "row_count": 616,
+        "code_revision": "75bcae7ee3bdefc1c59a39b4af18aaabbd1571f6",
+        "script_sha256": "9597b32aff68ac1ee7371acc42bf8f3680b3fa48836eab3c4240548949220924",
+        "code_dirty": true,
+        "possibly_truncated": false,
+        "cache_file": "C:\\Users\\SpencerNunamakerTrav\\.cache\\research-needles\\13fd5319ba655f3c19e1298d.csv",
+        "elapsed_seconds": 12.187
+      },
+      "reference_manifest": {
+        "utc": "2026-11-06T21:12:35.691600+00:00",
+        "needle": "exploration",
+        "layer": "Gaia DR3 published AllWISE best neighbours",
+        "query": "SELECT TOP 10000 source_id,original_ext_source_id,angular_distance,number_of_neighbours,number_of_mates FROM gaiadr3.allwise_best_neighbour WHERE source_id IN (6453072746016622976,6453072746017574272,6453073119677593984,6453073123974088320,6453073154037344512,6453073158334276352,6453074047390496384,6453074051686721536,6453074116109983872,6453074116109984512,6453074184829451008,6453074189126442112,6453074223485373696,6453074257845078016,6453074287908674048,6453074287908680064,6453074287908832384,6453074292204817152,6453074292205654912,6453074360925135488,6453074395284869504,6453074395285016320,6453074670161937792,6453074872024236544,6453074940743725952,6453074945040697344,6453074945040698112,6453075009463187072,6453075009463194240,6453075009463194752,6453075043822922624,6453075043822930304,6453075043822931072,6453075048119907200,6453075048119908608,6453075078182680320,6453075078182680704,6453075082478797184,6453075082480237952,6453075082480247040,6453075112542413696,6453075112542414720,6453075116838568960,6453075116839528832,6453075146902162176,6453075151199115136,6453075181261900160,6453075185557976448,6453075185558044416,6453075185558391680,6453075185559408256,6453075215621644288,6453075215621647616,6453075249981366400,6453075249981370368,6453075254278341120,6453075288637226368,6453075288637259904,6453075288638076672,6453075322997818880,6453075357356702720,6453075357356734848,6453075357357618176,6453075357358101120,6453075357358101504,6453075391716017664,6453075426075566336,6453075426077027072,6453075529155431936,6453075529156230656,6453075559219003264,6453075593578738304,6453075593578739200,6453075593578739584,6453075593578741760,6453075627938483840,6453075627938630400,6453075662298224768,6453075696657979264,6453075765377458432,6453075804033518592,6453075804034139904,6453075868456664064,6453075868456672128,6453075872752894592,6453075902816411008,6453075902816417792,6453075907112733312,6453075907112913152,6453075941473090304,6453075941473169408,6453075971535899648,6453076005895632512,6453076010191764864,6453076010192568576,6453076010192569728,6453076040255378816,6453076040255383680,6453076074615099776,6453076074615102720,6453076108974842880,6453076108974847488,6453076108974850688,6453076108974850816,6453076143334587520,6453076147631517184,6453076147632136320,6453076177694232320,6453076181989769216,6453076212054073088,6453076212055633408,6453076216350990464,6453076315133301248,6453076349493024000,6453076349493026816,6453076383852775168,6453076418212507648,6453076418212511744,6453076418212622208,6453076422508558592,6453076452572256640,6453076486931994624,6453076521291734528,6453076521291739264,6453076521291741568,6453076525588637568,6453076555651479552,6453076559947657088,6453076559947751808,6453076559948940544,6453076590011225216,6453076590011225344,6453076594307394304,6453076628667055360,6453076628668010496,6453076658730667392,6453076663027601408,6453076697386464896,6453076697387343360,6453076697387493888,6453076766106815104,6453076796169632512,6453076796169634816,6453076800466084864,6453076830529373696,6453076834826293120,6453076864889007744,6453076903544312576,6453076933608587648,6453076937904666496,6453076937904912256,6453076937905512448,6453076937905512576,6453076937905512704,6453076967968324608,6453077006624359808,6453077006624388352,6453077036687811712,6453077036687813632,6453077040984724096,6453077040984724736,6453077040984724992,6453077075343820544,6453077075344461312,6453077105407294592,6453077105407294848,6453077105407299328,6453077109703574528,6453077139767038080,6453077144063128448,6453077144063941248,6453077178423672960,6453077242846247040,6453077242846250368,6453077247143150848,6453077277205999360,6453077281502887168,6453077311565731840,6453077311565732352,6453077311565824768,6453077315862623744,6453077345925475328,6453077350220879616,6453077350222361344,6453077350222361472,6453077380285218560,6453077414644823552,6453077418941646976,6453077449004681344,6453077453300317952,6453077483364434176,6453077487659845632,6453077487660724736,6453077487661319040,6453077487661319680,6453077517724170240,6453077522021062400,6453077556380798080,6453077586443652224,6453077586443653632,6453077590740532608,6453077620803391744,6453077625099464576,6453077625099649664,6453077625100270720,6453077625100875264,6453077655163135616,6453077659459202816,6453077689522882304,6453086691774258816,6453086730429523968,6453086966652175488,6453086966652176640,6453086966652178816,6453086970949132032,6453087069731389440,6453087104091128064,6453087108387224320,6453087108388213376,6453087138450871040,6453087138450873472,6453087138450875520,6453087142747821568,6453087172810610560,6453087207170255872,6453087207170356736,6453087245826144128,6453087245826209280,6453087275889837952,6453087280185914240,6453087314546507776,6453087348905390848,6453087378969055104,6453087383265162240,6453087413328787328,6453087413328787456,6453087417624295296,6453087417625731072,6453087417625731328,6453087482048275328,6453087482048277760,6453087486345496576,6453087516408019584,6453087516408019712,6453087520704115072,6453087520704940544,6453087550767762048,6453087585127505664,6453087585127505920,6453087585127507968,6453087585127509504,6453087589424418304,6453087589424418688,6453088207898274048,6453088207900304128,6453088306682010240,6453088306682102784,6453088310978927488,6453088310978927616,6453088341041761024,6453088345337385472,6453088414058142208,6453088723295171328,6453088723295776768,6453088723295778048,6453088753358600704,6453088753358601472,6453088753358603264,6453088757655513984,6453088787718436992,6453088822078087936,6453088826374139520,6453088856437823616,6453088860734728704,6453088890797566336,6453088929453387392,6453088959517053568,6453088993876776832,6453088998172830976,6453089028236391808,6453089028236521856,6453089066892307072,6453089101252904064,6453089131315749888,6453089169971555328,6453089169972376064,6453089169972441728,6453089200035084544,6453089204332117120,6453089204332180352,6453089234394968320,6453089234394970880,6453089238690395008,6453089238690397184,6453089238690580736,6453089238690970240,6453089238691067136,6453089238691853056,6453089268754779136,6453089337474180480,6453089337474182400,6453089341771064064,6453089341771064448,6453089341771064576,6453089371833929984,6453089376130067328,6453089376130801024,6453089406193663232,6453089406196547072,6453089410491147136,6453089410491160704,6453089444849400960,6453089474913145344,6453089474913146368,6453089479210013696,6453089543632617344,6453089547928034176,6453089547929495680,6453089582288750080,6453089616648974976,6453089646711838336,6453089818510374528,6453089818510514048,6453089818510515456,6453089818510516224,6453089887229996416,6453089891526889984,6453089990309219328,6453451630851404160,6453451837010460416,6453452657347547008,6453452657347835648,6453452657347839744,6453452661643292672,6453452661643292928,6453452726067318400,6453452726067322496,6453452730363658752,6453452936521197568,6453452936521624192,6453452936522089216,6453453005240673152,6453453005240673664,6453453005241566208) ORDER BY source_id",
+        "endpoint": "https://gaia.ari.uni-heidelberg.de/tap/sync",
+        "sha256": "92bb5479d2e66df8ec4791a9f2e59a07e0b158e5b33039df5218fef9f25ca874",
+        "bytes": 12052,
+        "row_count": 210,
+        "code_revision": "75bcae7ee3bdefc1c59a39b4af18aaabbd1571f6",
+        "script_sha256": "4ae010d30b374c3b6aab9d35eb5eaa9d62801912d3c976baa2cae3a77e95f07c",
+        "code_dirty": true,
+        "possibly_truncated": false,
+        "cache_file": "C:\\Users\\SpencerNunamakerTrav\\.cache\\research-needles\\850a570fbe8b152a2af6585f.csv",
+        "elapsed_seconds": 1.453
+      },
+      "gaia_screen": {
+        "schema_version": 1,
+        "needle": "exploration",
+        "rows": 344,
+        "seed": 20261106,
+        "attempted_probes": 8,
+        "negative_controls": 7,
+        "planned_family_size": 16,
+        "summary": {
+          "phot_g_mean_mag": {
+            "present": 343,
+            "missing": 1,
+            "median": 19.554934,
+            "min": 11.238241,
+            "max": 21.734299
+          },
+          "bp_rp": {
+            "present": 340,
+            "missing": 4,
+            "median": 1.2729043999999998,
+            "min": -0.2776661,
+            "max": 3.1286297
+          },
+          "ruwe": {
+            "present": 300,
+            "missing": 44,
+            "median": 1.0182639500000001,
+            "min": 0.882462,
+            "max": 17.135931
+          },
+          "phot_bp_rp_excess_factor": {
+            "present": 340,
+            "missing": 4,
+            "median": 1.2899582500000002,
+            "min": 1.0615531,
+            "max": 12.618097
+          },
+          "visibility_periods_used": {
+            "present": 344,
+            "missing": 0,
+            "median": 22.0,
+            "min": 4.0,
+            "max": 25.0
+          },
+          "parallax_snr": {
+            "present": 300,
+            "missing": 44,
+            "median": 2.1877224043384125,
+            "min": -2.495101134154711,
+            "max": 125.6952136565914
+          },
+          "proper_motion": {
+            "present": 300,
+            "missing": 44,
+            "median": 8.99984265995645,
+            "min": 0.07953661788578248,
+            "max": 55.08153870452051
+          },
+          "missing_parallax": {
+            "present": 344,
+            "missing": 0,
+            "median": 0.0,
+            "min": 0,
+            "max": 1
+          },
+          "missing_color": {
+            "present": 344,
+            "missing": 0,
+            "median": 0.0,
+            "min": 0,
+            "max": 1
+          }
+        },
+        "probes": [
+          {
+            "id": "color_motion",
+            "x": "bp_rp",
+            "y": "proper_motion",
+            "conditioning": "magnitude",
+            "result": {
+              "status": "ok",
+              "n": 298,
+              "within_block_rank_correlation": 0.3976284374969061,
+              "permutation_p": 0.001,
+              "permutations": 999,
+              "blocks": 6,
+              "block_sizes": [
+                2,
+                6,
+                26,
+                64,
+                110,
+                90
+              ],
+              "family_adjusted_p": 0.016,
+              "screening_flag": true
+            },
+            "negative_control": {
+              "status": "ok",
+              "n": 298,
+              "within_block_rank_correlation": -0.01440059763504828,
+              "permutation_p": 0.809,
+              "permutations": 999,
+              "blocks": 6,
+              "block_sizes": [
+                2,
+                6,
+                26,
+                64,
+                110,
+                90
+              ],
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            }
+          },
+          {
+            "id": "color_parallax_snr",
+            "x": "bp_rp",
+            "y": "parallax_snr",
+            "conditioning": "magnitude",
+            "result": {
+              "status": "ok",
+              "n": 298,
+              "within_block_rank_correlation": 0.6029124952670115,
+              "permutation_p": 0.001,
+              "permutations": 999,
+              "blocks": 6,
+              "block_sizes": [
+                2,
+                6,
+                26,
+                64,
+                110,
+                90
+              ],
+              "family_adjusted_p": 0.016,
+              "screening_flag": true
+            },
+            "negative_control": {
+              "status": "ok",
+              "n": 298,
+              "within_block_rank_correlation": 0.08681534111601577,
+              "permutation_p": 0.135,
+              "permutations": 999,
+              "blocks": 6,
+              "block_sizes": [
+                2,
+                6,
+                26,
+                64,
+                110,
+                90
+              ],
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            }
+          },
+          {
+            "id": "fit_photometric_excess",
+            "x": "ruwe",
+            "y": "phot_bp_rp_excess_factor",
+            "conditioning": "magnitude_color",
+            "result": {
+              "status": "ok",
+              "n": 298,
+              "within_block_rank_correlation": 0.21347352162905137,
+              "permutation_p": 0.002,
+              "permutations": 999,
+              "blocks": 17,
+              "block_sizes": [
+                1,
+                1,
+                5,
+                1,
+                16,
+                10,
+                29,
+                27,
+                7,
+                1,
+                28,
+                55,
+                25,
+                2,
+                23,
+                52,
+                15
+              ],
+              "family_adjusted_p": 0.032,
+              "screening_flag": true
+            },
+            "negative_control": {
+              "status": "ok",
+              "n": 298,
+              "within_block_rank_correlation": -0.024300051321417833,
+              "permutation_p": 0.71,
+              "permutations": 999,
+              "blocks": 17,
+              "block_sizes": [
+                1,
+                1,
+                5,
+                1,
+                16,
+                10,
+                29,
+                27,
+                7,
+                1,
+                28,
+                55,
+                25,
+                2,
+                23,
+                52,
+                15
+              ],
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            }
+          },
+          {
+            "id": "brightness_visibility",
+            "x": "phot_g_mean_mag",
+            "y": "visibility_periods_used",
+            "conditioning": "sky",
+            "result": {
+              "status": "ok",
+              "n": 343,
+              "within_block_rank_correlation": -0.7668341668567462,
+              "permutation_p": 0.001,
+              "permutations": 999,
+              "blocks": 4,
+              "block_sizes": [
+                89,
+                90,
+                75,
+                89
+              ],
+              "family_adjusted_p": 0.016,
+              "screening_flag": true
+            },
+            "negative_control": {
+              "status": "ok",
+              "n": 343,
+              "within_block_rank_correlation": 0.10538912777881296,
+              "permutation_p": 0.051,
+              "permutations": 999,
+              "blocks": 4,
+              "block_sizes": [
+                89,
+                90,
+                75,
+                89
+              ],
+              "family_adjusted_p": 0.816,
+              "screening_flag": false
+            }
+          },
+          {
+            "id": "parallax_motion",
+            "x": "parallax_snr",
+            "y": "proper_motion",
+            "conditioning": "magnitude",
+            "result": {
+              "status": "ok",
+              "n": 299,
+              "within_block_rank_correlation": 0.2716380259584472,
+              "permutation_p": 0.001,
+              "permutations": 999,
+              "blocks": 6,
+              "block_sizes": [
+                2,
+                6,
+                26,
+                64,
+                111,
+                90
+              ],
+              "family_adjusted_p": 0.016,
+              "screening_flag": true
+            },
+            "negative_control": {
+              "status": "ok",
+              "n": 299,
+              "within_block_rank_correlation": -0.08180398646173012,
+              "permutation_p": 0.151,
+              "permutations": 999,
+              "blocks": 6,
+              "block_sizes": [
+                2,
+                6,
+                26,
+                64,
+                111,
+                90
+              ],
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            }
+          },
+          {
+            "id": "brightness_missing_parallax",
+            "x": "phot_g_mean_mag",
+            "y": "missing_parallax",
+            "conditioning": "sky",
+            "result": {
+              "status": "ok",
+              "n": 343,
+              "within_block_rank_correlation": 0.5679452699945207,
+              "permutation_p": 0.001,
+              "permutations": 999,
+              "blocks": 4,
+              "block_sizes": [
+                89,
+                90,
+                75,
+                89
+              ],
+              "family_adjusted_p": 0.016,
+              "screening_flag": true
+            },
+            "negative_control": {
+              "status": "ok",
+              "n": 343,
+              "within_block_rank_correlation": -0.03253508353379999,
+              "permutation_p": 0.57,
+              "permutations": 999,
+              "blocks": 4,
+              "block_sizes": [
+                89,
+                90,
+                75,
+                89
+              ],
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            }
+          },
+          {
+            "id": "brightness_missing_color",
+            "x": "phot_g_mean_mag",
+            "y": "missing_color",
+            "conditioning": "sky",
+            "result": {
+              "status": "ok",
+              "n": 343,
+              "within_block_rank_correlation": 0.02821058487985034,
+              "permutation_p": 0.619,
+              "permutations": 999,
+              "blocks": 4,
+              "block_sizes": [
+                89,
+                90,
+                75,
+                89
+              ],
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            },
+            "negative_control": {
+              "status": "ok",
+              "n": 343,
+              "within_block_rank_correlation": -0.05990366997056173,
+              "permutation_p": 0.267,
+              "permutations": 999,
+              "blocks": 4,
+              "block_sizes": [
+                89,
+                90,
+                75,
+                89
+              ],
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            }
+          },
+          {
+            "id": "radial_density",
+            "null": "uniform surface density in the cone; selection/crowding can violate this",
+            "result": {
+              "status": "ok",
+              "n": 344,
+              "ks_statistic": 0.024210422841449863,
+              "permutation_p": 0.986,
+              "permutations": 999,
+              "family_adjusted_p": 1,
+              "screening_flag": false
+            }
+          }
+        ],
+        "elapsed_seconds": 1.032,
+        "interpretation": "Exploratory screening only. Permutation exchangeability within coarse bins is an approximation; no calibrated physical probability or novelty claim. No confirmation data used.",
+        "selection": "No quality filtering; missingness retained. Two-magnitude bins condition selected relationships on depth; sky quadrants condition brightness tests. Magnitude is not distance. Faint-end completeness not measured."
+      },
+      "crossmatch": {
+        "radius_arcsec": 2.0,
+        "gaia_rows": 344,
+        "allwise_rows": 616,
+        "candidate_pairs": [
+          {
+            "source_id": "6453073154037344512",
+            "designation": "J211010.17-591403.5",
+            "separation_arcsec": 0.1422901335089339
+          },
+          {
+            "source_id": "6453073158334276352",
+            "designation": "J211008.27-591452.9",
+            "separation_arcsec": 0.10395373099752697
+          },
+          {
+            "source_id": "6453074047390496384",
+            "designation": "J210938.68-591754.2",
+            "separation_arcsec": 0.09723594274556438
+          },
+          {
+            "source_id": "6453074116109983872",
+            "designation": "J210940.00-591701.2",
+            "separation_arcsec": 0.07979443157947105
+          },
+          {
+            "source_id": "6453074116109984512",
+            "designation": "J210938.52-591700.6",
+            "separation_arcsec": 0.1739441853738577
+          },
+          {
+            "source_id": "6453074184829451008",
+            "designation": "J210927.09-591752.8",
+            "separation_arcsec": 0.09977930694820727
+          },
+          {
+            "source_id": "6453074189126442112",
+            "designation": "J210923.93-591737.6",
+            "separation_arcsec": 0.14210146304053609
+          },
+          {
+            "source_id": "6453074257845078016",
+            "designation": "J210922.78-591706.7",
+            "separation_arcsec": 0.39411576900502876
+          },
+          {
+            "source_id": "6453074287908674048",
+            "designation": "J210931.11-591715.3",
+            "separation_arcsec": 0.11316916002392063
+          },
+          {
+            "source_id": "6453074287908680064",
+            "designation": "J210928.41-591642.4",
+            "separation_arcsec": 0.21511461676926114
+          },
+          {
+            "source_id": "6453074287908832384",
+            "designation": "J210927.74-591700.8",
+            "separation_arcsec": 0.1761207027962366
+          },
+          {
+            "source_id": "6453074292205654912",
+            "designation": "J210928.43-591722.0",
+            "separation_arcsec": 0.16130972135679872
+          },
+          {
+            "source_id": "6453074360925135488",
+            "designation": "J210921.62-591628.0",
+            "separation_arcsec": 0.09695192387583863
+          },
+          {
+            "source_id": "6453074395284869504",
+            "designation": "J210928.92-591611.9",
+            "separation_arcsec": 0.03214774593403262
+          },
+          {
+            "source_id": "6453074872024236544",
+            "designation": "J210902.95-591629.8",
+            "separation_arcsec": 0.2746918870043332
+          },
+          {
+            "source_id": "6453074940743725952",
+            "designation": "J210853.93-591536.9",
+            "separation_arcsec": 0.3631629051913805
+          },
+          {
+            "source_id": "6453074945040697344",
+            "designation": "J210858.19-591555.1",
+            "separation_arcsec": 0.18713670337124688
+          },
+          {
+            "source_id": "6453074945040698112",
+            "designation": "J210856.40-591538.6",
+            "separation_arcsec": 0.1941159285881383
+          },
+          {
+            "source_id": "6453075009463187072",
+            "designation": "J210918.84-591640.8",
+            "separation_arcsec": 0.13157502615125055
+          },
+          {
+            "source_id": "6453075009463194240",
+            "designation": "J210915.69-591610.6",
+            "separation_arcsec": 0.12978768402105575
+          },
+          {
+            "source_id": "6453075009463194752",
+            "designation": "J210917.04-591605.1",
+            "separation_arcsec": 0.21144023410719165
+          },
+          {
+            "source_id": "6453075043822930304",
+            "designation": "J210907.82-591622.3",
+            "separation_arcsec": 0.3293794795489881
+          },
+          {
+            "source_id": "6453075043822931072",
+            "designation": "J210905.94-591619.9",
+            "separation_arcsec": 0.944136228148628
+          },
+          {
+            "source_id": "6453075048119907200",
+            "designation": "J210909.39-591607.3",
+            "separation_arcsec": 0.061013785347911846
+          },
+          {
+            "source_id": "6453075048119908608",
+            "designation": "J210907.39-591637.0",
+            "separation_arcsec": 0.3594592569426529
+          },
+          {
+            "source_id": "6453075078182680320",
+            "designation": "J210912.44-591525.4",
+            "separation_arcsec": 0.1795379287674667
+          },
+          {
+            "source_id": "6453075082478797184",
+            "designation": "J210912.63-591621.3",
+            "separation_arcsec": 0.5780255915387078
+          },
+          {
+            "source_id": "6453075082480247040",
+            "designation": "J210914.87-591559.5",
+            "separation_arcsec": 0.13405568348648236
+          },
+          {
+            "source_id": "6453075112542413696",
+            "designation": "J210919.64-591544.4",
+            "separation_arcsec": 0.22409778077602957
+          },
+          {
+            "source_id": "6453075116838568960",
+            "designation": "J210923.37-591542.0",
+            "separation_arcsec": 0.6938020013870874
+          },
+          {
+            "source_id": "6453075116839528832",
+            "designation": "J210919.10-591524.7",
+            "separation_arcsec": 0.6159505863536955
+          },
+          {
+            "source_id": "6453075146902162176",
+            "designation": "J210921.22-591459.3",
+            "separation_arcsec": 0.05785495389077309
+          },
+          {
+            "source_id": "6453075151199115136",
+            "designation": "J210926.83-591500.0",
+            "separation_arcsec": 1.7008031619338781
+          },
+          {
+            "source_id": "6453075185558044416",
+            "designation": "J210917.14-591454.3",
+            "separation_arcsec": 0.0720055964419107
+          },
+          {
+            "source_id": "6453075215621644288",
+            "designation": "J210920.64-591438.4",
+            "separation_arcsec": 0.12827095913903724
+          },
+          {
+            "source_id": "6453075215621647616",
+            "designation": "J210919.83-591416.4",
+            "separation_arcsec": 1.1046676210390602
+          },
+          {
+            "source_id": "6453075249981366400",
+            "designation": "J210901.03-591554.9",
+            "separation_arcsec": 0.8021633842790528
+          },
+          {
+            "source_id": "6453075249981370368",
+            "designation": "J210905.35-591535.7",
+            "separation_arcsec": 0.09331750981153734
+          },
+          {
+            "source_id": "6453075254278341120",
+            "designation": "J210903.17-591524.8",
+            "separation_arcsec": 0.2775724442241499
+          },
+          {
+            "source_id": "6453075288637259904",
+            "designation": "J210906.95-591534.3",
+            "separation_arcsec": 1.693202365770149
+          },
+          {
+            "source_id": "6453075322997818880",
+            "designation": "J210859.01-591519.5",
+            "separation_arcsec": 0.056819110112705115
+          },
+          {
+            "source_id": "6453075357356734848",
+            "designation": "J210903.48-591354.9",
+            "separation_arcsec": 0.9768885507486844
+          },
+          {
+            "source_id": "6453075357357618176",
+            "designation": "J210902.31-591416.3",
+            "separation_arcsec": 0.4574555103663172
+          },
+          {
+            "source_id": "6453075357358101120",
+            "designation": "J210904.83-591429.9",
+            "separation_arcsec": 0.19564335965629798
+          },
+          {
+            "source_id": "6453075391716017664",
+            "designation": "J210912.75-591451.9",
+            "separation_arcsec": 1.3213679600984816
+          },
+          {
+            "source_id": "6453075426075566336",
+            "designation": "J210914.38-591345.4",
+            "separation_arcsec": 0.3161696503053623
+          },
+          {
+            "source_id": "6453075426077027072",
+            "designation": "J210916.47-591308.3",
+            "separation_arcsec": 0.08965167030475103
+          },
+          {
+            "source_id": "6453075529156230656",
+            "designation": "J210943.41-591650.8",
+            "separation_arcsec": 0.6202413802126444
+          },
+          {
+            "source_id": "6453075559219003264",
+            "designation": "J210949.23-591616.2",
+            "separation_arcsec": 0.22966329017556011
+          },
+          {
+            "source_id": "6453075593578738304",
+            "designation": "J210938.30-591635.6",
+            "separation_arcsec": 0.1409239679568842
+          },
+          {
+            "source_id": "6453075593578739200",
+            "designation": "J210943.51-591631.2",
+            "separation_arcsec": 0.028547338692261347
+          },
+          {
+            "source_id": "6453075593578741760",
+            "designation": "J210938.58-591619.5",
+            "separation_arcsec": 1.5140788915242827
+          },
+          {
+            "source_id": "6453075627938483840",
+            "designation": "J210947.70-591601.6",
+            "separation_arcsec": 0.3140016713575668
+          },
+          {
+            "source_id": "6453075627938630400",
+            "designation": "J210946.11-591603.6",
+            "separation_arcsec": 0.22230142330686284
+          },
+          {
+            "source_id": "6453075662298224768",
+            "designation": "J210954.41-591542.0",
+            "separation_arcsec": 0.2682687343338299
+          },
+          {
+            "source_id": "6453075696657979264",
+            "designation": "J210956.73-591434.3",
+            "separation_arcsec": 0.3591809546622377
+          },
+          {
+            "source_id": "6453075765377458432",
+            "designation": "J210952.76-591423.4",
+            "separation_arcsec": 0.09759568860787934
+          },
+          {
+            "source_id": "6453075804034139904",
+            "designation": "J210937.56-591528.8",
+            "separation_arcsec": 0.04589958290065325
+          },
+          {
+            "source_id": "6453075868456664064",
+            "designation": "J210929.10-591511.9",
+            "separation_arcsec": 0.43104570513294954
+          },
+          {
+            "source_id": "6453075868456672128",
+            "designation": "J210932.39-591439.5",
+            "separation_arcsec": 0.09563878484761364
+          },
+          {
+            "source_id": "6453075902816417792",
+            "designation": "J210934.91-591357.9",
+            "separation_arcsec": 0.42974975138907473
+          },
+          {
+            "source_id": "6453075907112913152",
+            "designation": "J210936.45-591459.9",
+            "separation_arcsec": 0.750277631288694
+          },
+          {
+            "source_id": "6453075941473090304",
+            "designation": "J210945.36-591457.0",
+            "separation_arcsec": 0.04517022891960959
+          },
+          {
+            "source_id": "6453075941473169408",
+            "designation": "J210942.96-591423.2",
+            "separation_arcsec": 0.26981955815479036
+          },
+          {
+            "source_id": "6453076005895632512",
+            "designation": "J210941.92-591358.4",
+            "separation_arcsec": 0.07950669929601371
+          },
+          {
+            "source_id": "6453076010191764864",
+            "designation": "J210940.46-591344.0",
+            "separation_arcsec": 0.12103743793693071
+          },
+          {
+            "source_id": "6453076010192568576",
+            "designation": "J210942.02-591339.6",
+            "separation_arcsec": 0.07680849846546609
+          },
+          {
+            "source_id": "6453076010192569728",
+            "designation": "J210938.61-591330.4",
+            "separation_arcsec": 1.0784465944146315
+          },
+          {
+            "source_id": "6453076040255378816",
+            "designation": "J210945.10-591315.2",
+            "separation_arcsec": 0.4045422316460595
+          },
+          {
+            "source_id": "6453076040255383680",
+            "designation": "J210944.32-591246.9",
+            "separation_arcsec": 0.2334270374014346
+          },
+          {
+            "source_id": "6453076074615099776",
+            "designation": "J211001.23-591436.8",
+            "separation_arcsec": 0.49547875748064396
+          },
+          {
+            "source_id": "6453076108974842880",
+            "designation": "J211005.30-591412.4",
+            "separation_arcsec": 0.5693287566321495
+          },
+          {
+            "source_id": "6453076108974850688",
+            "designation": "J211006.40-591333.2",
+            "separation_arcsec": 1.3530693066109585
+          },
+          {
+            "source_id": "6453076147631517184",
+            "designation": "J210959.14-591350.0",
+            "separation_arcsec": 0.05343017433548186
+          },
+          {
+            "source_id": "6453076147632136320",
+            "designation": "J210954.81-591359.2",
+            "separation_arcsec": 0.02464647563014594
+          },
+          {
+            "source_id": "6453076177694232320",
+            "designation": "J211000.66-591303.2",
+            "separation_arcsec": 0.060082054628470695
+          },
+          {
+            "source_id": "6453076212054073088",
+            "designation": "J211009.15-591250.0",
+            "separation_arcsec": 0.2780430910245099
+          },
+          {
+            "source_id": "6453076216350990464",
+            "designation": "J211010.53-591308.5",
+            "separation_arcsec": 0.35597981016732105
+          },
+          {
+            "source_id": "6453076315133301248",
+            "designation": "J211011.31-591137.5",
+            "separation_arcsec": 0.6568158265497648
+          },
+          {
+            "source_id": "6453076349493024000",
+            "designation": "J210949.78-591311.8",
+            "separation_arcsec": 1.31418706899648
+          },
+          {
+            "source_id": "6453076349493026816",
+            "designation": "J210948.63-591257.7",
+            "separation_arcsec": 0.11093607414184617
+          },
+          {
+            "source_id": "6453076383852775168",
+            "designation": "J210956.79-591204.8",
+            "separation_arcsec": 0.670217670623102
+          },
+          {
+            "source_id": "6453076418212507648",
+            "designation": "J210945.98-591235.4",
+            "separation_arcsec": 1.0348323643181085
+          },
+          {
+            "source_id": "6453076418212511744",
+            "designation": "J210950.36-591215.0",
+            "separation_arcsec": 1.3367779612606199
+          },
+          {
+            "source_id": "6453076418212622208",
+            "designation": "J210947.90-591149.0",
+            "separation_arcsec": 0.7829924918995992
+          },
+          {
+            "source_id": "6453076452572256640",
+            "designation": "J210952.86-591129.3",
+            "separation_arcsec": 0.09819168581828544
+          },
+          {
+            "source_id": "6453076521291734528",
+            "designation": "J211002.79-591116.5",
+            "separation_arcsec": 0.15713323959334494
+          },
+          {
+            "source_id": "6453076521291741568",
+            "designation": "J211002.93-591040.5",
+            "separation_arcsec": 0.21477997659848763
+          },
+          {
+            "source_id": "6453076525588637568",
+            "designation": "J211006.38-591044.1",
+            "separation_arcsec": 0.03284366450629349
+          },
+          {
+            "source_id": "6453076555651479552",
+            "designation": "J210956.87-591045.2",
+            "separation_arcsec": 1.127302699434494
+          },
+          {
+            "source_id": "6453076559947751808",
+            "designation": "J210956.87-591045.2",
+            "separation_arcsec": 1.9364489136565308
+          },
+          {
+            "source_id": "6453076559948940544",
+            "designation": "J210953.31-591100.6",
+            "separation_arcsec": 0.0322493440031932
+          },
+          {
+            "source_id": "6453076628668010496",
+            "designation": "J210926.40-591440.1",
+            "separation_arcsec": 0.44898959101200436
+          },
+          {
+            "source_id": "6453076663027601408",
+            "designation": "J210930.73-591356.0",
+            "separation_arcsec": 0.04842033266316252
+          },
+          {
+            "source_id": "6453076697386464896",
+            "designation": "J210923.27-591402.7",
+            "separation_arcsec": 0.20111380443701954
+          },
+          {
+            "source_id": "6453076697387343360",
+            "designation": "J210924.11-591333.2",
+            "separation_arcsec": 0.3387531526066842
+          },
+          {
+            "source_id": "6453076697387493888",
+            "designation": "J210923.40-591309.0",
+            "separation_arcsec": 0.7638415675546663
+          },
+          {
+            "source_id": "6453076766106815104",
+            "designation": "J210936.21-591309.5",
+            "separation_arcsec": 0.2460917749348432
+          },
+          {
+            "source_id": "6453076796169632512",
+            "designation": "J210942.54-591220.8",
+            "separation_arcsec": 0.3813135319700271
+          },
+          {
+            "source_id": "6453076796169634816",
+            "designation": "J210936.35-591216.9",
+            "separation_arcsec": 0.23834442643905565
+          },
+          {
+            "source_id": "6453076800466084864",
+            "designation": "J210939.55-591140.6",
+            "separation_arcsec": 0.3998505027489231
+          },
+          {
+            "source_id": "6453076834826293120",
+            "designation": "J210931.46-591225.8",
+            "separation_arcsec": 0.19448085489689784
+          },
+          {
+            "source_id": "6453076903544312576",
+            "designation": "J210921.00-591255.4",
+            "separation_arcsec": 0.07734639560288263
+          },
+          {
+            "source_id": "6453076933608587648",
+            "designation": "J210923.39-591224.6",
+            "separation_arcsec": 0.6669460571530472
+          },
+          {
+            "source_id": "6453076937905512448",
+            "designation": "J210923.95-591243.1",
+            "separation_arcsec": 0.11369271262680226
+          },
+          {
+            "source_id": "6453076937905512704",
+            "designation": "J210922.96-591210.1",
+            "separation_arcsec": 1.2769464309974354
+          },
+          {
+            "source_id": "6453076967968324608",
+            "designation": "J210913.43-591231.8",
+            "separation_arcsec": 0.44623854569415283
+          },
+          {
+            "source_id": "6453077036687811712",
+            "designation": "J210929.86-591123.6",
+            "separation_arcsec": 0.12153414145481756
+          },
+          {
+            "source_id": "6453077040984724096",
+            "designation": "J210929.27-591153.5",
+            "separation_arcsec": 0.03290652209084046
+          },
+          {
+            "source_id": "6453077040984724992",
+            "designation": "J210927.62-591155.8",
+            "separation_arcsec": 0.37633385255345503
+          },
+          {
+            "source_id": "6453077075344461312",
+            "designation": "J210932.32-591049.5",
+            "separation_arcsec": 0.03586837682748744
+          },
+          {
+            "source_id": "6453077105407294592",
+            "designation": "J210926.19-591050.3",
+            "separation_arcsec": 0.2972533987593196
+          },
+          {
+            "source_id": "6453077105407299328",
+            "designation": "J210923.83-591026.0",
+            "separation_arcsec": 0.2630342391388594
+          },
+          {
+            "source_id": "6453077109703574528",
+            "designation": "J210925.19-591032.8",
+            "separation_arcsec": 0.3789117419192091
+          },
+          {
+            "source_id": "6453077139767038080",
+            "designation": "J210929.52-591023.9",
+            "separation_arcsec": 0.1770817219429989
+          },
+          {
+            "source_id": "6453077144063941248",
+            "designation": "J210925.65-591008.6",
+            "separation_arcsec": 0.11054533230080872
+          },
+          {
+            "source_id": "6453077178423672960",
+            "designation": "J210942.34-591200.5",
+            "separation_arcsec": 0.1151650595068143
+          },
+          {
+            "source_id": "6453077242846247040",
+            "designation": "J210938.65-591051.5",
+            "separation_arcsec": 0.807130373689634
+          },
+          {
+            "source_id": "6453077242846250368",
+            "designation": "J210939.82-591030.3",
+            "separation_arcsec": 0.5436216529280112
+          },
+          {
+            "source_id": "6453077247143150848",
+            "designation": "J210940.29-591121.6",
+            "separation_arcsec": 0.12762347281831335
+          },
+          {
+            "source_id": "6453077277205999360",
+            "designation": "J210943.04-590932.4",
+            "separation_arcsec": 0.33665953544879734
+          },
+          {
+            "source_id": "6453077281502887168",
+            "designation": "J210944.58-591012.7",
+            "separation_arcsec": 0.06454281810339402
+          },
+          {
+            "source_id": "6453077311565731840",
+            "designation": "J210953.39-590957.8",
+            "separation_arcsec": 0.2877421655181663
+          },
+          {
+            "source_id": "6453077311565732352",
+            "designation": "J210951.68-590957.8",
+            "separation_arcsec": 1.1885724930528985
+          },
+          {
+            "source_id": "6453077311565824768",
+            "designation": "J210949.25-590954.6",
+            "separation_arcsec": 0.16356117331338904
+          },
+          {
+            "source_id": "6453077315862623744",
+            "designation": "J210950.83-590936.7",
+            "separation_arcsec": 0.17115687246393022
+          },
+          {
+            "source_id": "6453077345925475328",
+            "designation": "J210958.54-590930.3",
+            "separation_arcsec": 0.5832570997677087
+          },
+          {
+            "source_id": "6453077350220879616",
+            "designation": "J210952.98-590927.4",
+            "separation_arcsec": 1.023486335884165
+          },
+          {
+            "source_id": "6453077350222361344",
+            "designation": "J210953.07-590902.7",
+            "separation_arcsec": 0.08932753459314462
+          },
+          {
+            "source_id": "6453077350222361472",
+            "designation": "J210952.98-590927.4",
+            "separation_arcsec": 0.06483410176457263
+          },
+          {
+            "source_id": "6453077380285218560",
+            "designation": "J210946.00-590904.9",
+            "separation_arcsec": 0.057818679780417014
+          },
+          {
+            "source_id": "6453077414644823552",
+            "designation": "J210950.87-590844.2",
+            "separation_arcsec": 0.17166137665733477
+          },
+          {
+            "source_id": "6453077453300317952",
+            "designation": "J210936.74-591007.5",
+            "separation_arcsec": 1.438694082805252
+          },
+          {
+            "source_id": "6453077483364434176",
+            "designation": "J210940.48-590906.5",
+            "separation_arcsec": 0.11395349042632065
+          },
+          {
+            "source_id": "6453077487659845632",
+            "designation": "J210938.96-590942.3",
+            "separation_arcsec": 0.9260429876143773
+          },
+          {
+            "source_id": "6453077487661319040",
+            "designation": "J210941.09-590938.2",
+            "separation_arcsec": 0.7607113951126687
+          },
+          {
+            "source_id": "6453077487661319680",
+            "designation": "J210938.96-590942.3",
+            "separation_arcsec": 0.3710855142123007
+          },
+          {
+            "source_id": "6453077522021062400",
+            "designation": "J210927.52-590929.0",
+            "separation_arcsec": 0.04177745931707966
+          },
+          {
+            "source_id": "6453077556380798080",
+            "designation": "J210934.69-590814.7",
+            "separation_arcsec": 0.10440230814074353
+          },
+          {
+            "source_id": "6453077586443653632",
+            "designation": "J210943.72-590832.5",
+            "separation_arcsec": 0.17810668351991496
+          },
+          {
+            "source_id": "6453077590740532608",
+            "designation": "J210944.36-590850.5",
+            "separation_arcsec": 0.10302591798725809
+          },
+          {
+            "source_id": "6453077620803391744",
+            "designation": "J210946.76-590833.9",
+            "separation_arcsec": 0.32293001271830973
+          },
+          {
+            "source_id": "6453077625100270720",
+            "designation": "J210944.94-590817.3",
+            "separation_arcsec": 0.09732463036241398
+          },
+          {
+            "source_id": "6453077625100875264",
+            "designation": "J210947.42-590739.7",
+            "separation_arcsec": 0.5056729988718561
+          },
+          {
+            "source_id": "6453077655163135616",
+            "designation": "J210940.05-590753.2",
+            "separation_arcsec": 0.30720337621138744
+          },
+          {
+            "source_id": "6453086691774258816",
+            "designation": "J210851.37-591451.3",
+            "separation_arcsec": 0.034538467251268676
+          },
+          {
+            "source_id": "6453086966652175488",
+            "designation": "J210842.35-591401.0",
+            "separation_arcsec": 0.3516327258317358
+          },
+          {
+            "source_id": "6453086966652178816",
+            "designation": "J210846.88-591340.9",
+            "separation_arcsec": 0.17302629423866614
+          },
+          {
+            "source_id": "6453086970949132032",
+            "designation": "J210841.94-591329.8",
+            "separation_arcsec": 0.20901400107275742
+          },
+          {
+            "source_id": "6453087069731389440",
+            "designation": "J210856.94-591401.1",
+            "separation_arcsec": 0.9416151974797584
+          },
+          {
+            "source_id": "6453087104091128064",
+            "designation": "J210900.00-591358.0",
+            "separation_arcsec": 0.6532015927264556
+          },
+          {
+            "source_id": "6453087108387224320",
+            "designation": "J210900.15-591408.1",
+            "separation_arcsec": 0.577623729769319
+          },
+          {
+            "source_id": "6453087138450871040",
+            "designation": "J210849.72-591336.1",
+            "separation_arcsec": 0.2822790168227535
+          },
+          {
+            "source_id": "6453087138450873472",
+            "designation": "J210851.19-591324.7",
+            "separation_arcsec": 0.16997871940603415
+          },
+          {
+            "source_id": "6453087138450875520",
+            "designation": "J210851.26-591313.0",
+            "separation_arcsec": 0.07485783393380045
+          },
+          {
+            "source_id": "6453087142747821568",
+            "designation": "J210850.52-591351.0",
+            "separation_arcsec": 0.3642646901210548
+          },
+          {
+            "source_id": "6453087207170255872",
+            "designation": "J210905.75-591316.6",
+            "separation_arcsec": 0.21593533208635063
+          },
+          {
+            "source_id": "6453087207170356736",
+            "designation": "J210903.70-591243.8",
+            "separation_arcsec": 0.04552090941231833
+          },
+          {
+            "source_id": "6453087275889837952",
+            "designation": "J210859.86-591226.6",
+            "separation_arcsec": 0.10020951696376576
+          },
+          {
+            "source_id": "6453087314546507776",
+            "designation": "J210904.33-591145.0",
+            "separation_arcsec": 0.05585101027342806
+          },
+          {
+            "source_id": "6453087348905390848",
+            "designation": "J210846.10-591242.3",
+            "separation_arcsec": 0.08333430500831998
+          },
+          {
+            "source_id": "6453087383265162240",
+            "designation": "J210851.29-591142.7",
+            "separation_arcsec": 1.0440173163543796
+          },
+          {
+            "source_id": "6453087417625731072",
+            "designation": "J210841.93-591235.1",
+            "separation_arcsec": 0.1535792603998199
+          },
+          {
+            "source_id": "6453087482048277760",
+            "designation": "J210852.29-591126.4",
+            "separation_arcsec": 0.2466972657324974
+          },
+          {
+            "source_id": "6453087516408019712",
+            "designation": "J210858.43-591101.0",
+            "separation_arcsec": 0.025660375680665506
+          },
+          {
+            "source_id": "6453087520704940544",
+            "designation": "J210857.56-591031.3",
+            "separation_arcsec": 0.05427428944231841
+          },
+          {
+            "source_id": "6453087585127505664",
+            "designation": "J210852.70-591011.9",
+            "separation_arcsec": 0.47334571989325697
+          },
+          {
+            "source_id": "6453087585127505920",
+            "designation": "J210855.70-591009.1",
+            "separation_arcsec": 0.20951196432290164
+          },
+          {
+            "source_id": "6453087585127509504",
+            "designation": "J210856.34-590950.5",
+            "separation_arcsec": 0.07059603463446891
+          },
+          {
+            "source_id": "6453087589424418304",
+            "designation": "J210854.74-590928.5",
+            "separation_arcsec": 0.057713519704174356
+          },
+          {
+            "source_id": "6453087589424418688",
+            "designation": "J210853.83-591004.1",
+            "separation_arcsec": 0.1744686466193511
+          },
+          {
+            "source_id": "6453088207900304128",
+            "designation": "J210844.54-591105.4",
+            "separation_arcsec": 0.11206756870392688
+          },
+          {
+            "source_id": "6453088306682102784",
+            "designation": "J210844.15-591020.6",
+            "separation_arcsec": 0.41442472921935775
+          },
+          {
+            "source_id": "6453088310978927488",
+            "designation": "J210847.12-590958.1",
+            "separation_arcsec": 0.1050832294485573
+          },
+          {
+            "source_id": "6453088310978927616",
+            "designation": "J210846.78-591044.0",
+            "separation_arcsec": 0.1201163657049534
+          },
+          {
+            "source_id": "6453088341041761024",
+            "designation": "J210849.07-590907.0",
+            "separation_arcsec": 0.17385639122861146
+          },
+          {
+            "source_id": "6453088345337385472",
+            "designation": "J210848.51-590924.7",
+            "separation_arcsec": 0.46934584556239256
+          },
+          {
+            "source_id": "6453088414058142208",
+            "designation": "J210847.74-590851.4",
+            "separation_arcsec": 0.11446909978089892
+          },
+          {
+            "source_id": "6453088723295776768",
+            "designation": "J210911.80-591144.7",
+            "separation_arcsec": 0.1598806995543732
+          },
+          {
+            "source_id": "6453088723295778048",
+            "designation": "J210909.39-591142.2",
+            "separation_arcsec": 0.15507410255519566
+          },
+          {
+            "source_id": "6453088757655513984",
+            "designation": "J210915.94-591026.8",
+            "separation_arcsec": 0.10823598006782109
+          },
+          {
+            "source_id": "6453088787718436992",
+            "designation": "J210910.04-591100.0",
+            "separation_arcsec": 0.16002141810511494
+          },
+          {
+            "source_id": "6453088822078087936",
+            "designation": "J210913.95-590958.7",
+            "separation_arcsec": 0.7241173252148762
+          },
+          {
+            "source_id": "6453088856437823616",
+            "designation": "J210917.64-591011.5",
+            "separation_arcsec": 0.2212424906510385
+          },
+          {
+            "source_id": "6453088890797566336",
+            "designation": "J210920.84-590946.1",
+            "separation_arcsec": 0.03981072361209502
+          },
+          {
+            "source_id": "6453088959517053568",
+            "designation": "J210920.99-590839.1",
+            "separation_arcsec": 0.27973579001802457
+          },
+          {
+            "source_id": "6453088993876776832",
+            "designation": "J210901.58-591021.1",
+            "separation_arcsec": 0.19034512499616305
+          },
+          {
+            "source_id": "6453088998172830976",
+            "designation": "J210901.84-591000.4",
+            "separation_arcsec": 0.40621968885253773
+          },
+          {
+            "source_id": "6453089028236521856",
+            "designation": "J210906.02-590944.6",
+            "separation_arcsec": 0.11474432196715784
+          },
+          {
+            "source_id": "6453089066892307072",
+            "designation": "J210856.96-590913.5",
+            "separation_arcsec": 0.22586877588307674
+          },
+          {
+            "source_id": "6453089101252904064",
+            "designation": "J210902.72-590910.5",
+            "separation_arcsec": 0.07151635241295559
+          },
+          {
+            "source_id": "6453089131315749888",
+            "designation": "J210909.38-590815.1",
+            "separation_arcsec": 0.2787752213089387
+          },
+          {
+            "source_id": "6453089169972376064",
+            "designation": "J210911.39-590751.1",
+            "separation_arcsec": 0.10382403344685905
+          },
+          {
+            "source_id": "6453089169972441728",
+            "designation": "J210911.92-590815.3",
+            "separation_arcsec": 0.11079094490312309
+          },
+          {
+            "source_id": "6453089200035084544",
+            "designation": "J210906.43-590725.9",
+            "separation_arcsec": 0.6886639831312368
+          },
+          {
+            "source_id": "6453089204332117120",
+            "designation": "J210905.93-590756.4",
+            "separation_arcsec": 0.2233292506122447
+          },
+          {
+            "source_id": "6453089204332180352",
+            "designation": "J210907.99-590746.3",
+            "separation_arcsec": 1.0860919459072085
+          },
+          {
+            "source_id": "6453089234394970880",
+            "designation": "J210908.82-590722.2",
+            "separation_arcsec": 0.8110669661845191
+          },
+          {
+            "source_id": "6453089238690970240",
+            "designation": "J210909.03-590654.4",
+            "separation_arcsec": 0.2355664016889482
+          },
+          {
+            "source_id": "6453089238691853056",
+            "designation": "J210910.64-590702.6",
+            "separation_arcsec": 0.13523581764802062
+          },
+          {
+            "source_id": "6453089337474182400",
+            "designation": "J210922.87-590748.0",
+            "separation_arcsec": 0.1802604183561381
+          },
+          {
+            "source_id": "6453089341771064064",
+            "designation": "J210922.59-590815.4",
+            "separation_arcsec": 0.3454483709729404
+          },
+          {
+            "source_id": "6453089341771064448",
+            "designation": "J210922.24-590726.5",
+            "separation_arcsec": 0.09063895730893547
+          },
+          {
+            "source_id": "6453089341771064576",
+            "designation": "J210921.67-590756.9",
+            "separation_arcsec": 0.0957983877040792
+          },
+          {
+            "source_id": "6453089371833929984",
+            "designation": "J210925.78-590637.0",
+            "separation_arcsec": 0.17338566116970444
+          },
+          {
+            "source_id": "6453089376130801024",
+            "designation": "J210925.01-590728.1",
+            "separation_arcsec": 0.0672976838304862
+          },
+          {
+            "source_id": "6453089406193663232",
+            "designation": "J210937.46-590712.4",
+            "separation_arcsec": 0.22661479717436658
+          },
+          {
+            "source_id": "6453089406196547072",
+            "designation": "J210934.35-590706.1",
+            "separation_arcsec": 1.2102739036107941
+          },
+          {
+            "source_id": "6453089410491147136",
+            "designation": "J210934.44-590713.5",
+            "separation_arcsec": 0.03355526674982766
+          },
+          {
+            "source_id": "6453089410491160704",
+            "designation": "J210933.51-590734.5",
+            "separation_arcsec": 0.5103137318319197
+          },
+          {
+            "source_id": "6453089444849400960",
+            "designation": "J210941.06-590643.9",
+            "separation_arcsec": 0.47480871693326826
+          },
+          {
+            "source_id": "6453089474913146368",
+            "designation": "J210927.82-590628.4",
+            "separation_arcsec": 0.3854935997940947
+          },
+          {
+            "source_id": "6453089479210013696",
+            "designation": "J210929.43-590649.6",
+            "separation_arcsec": 0.04732012945612907
+          },
+          {
+            "source_id": "6453089547928034176",
+            "designation": "J210918.50-590722.4",
+            "separation_arcsec": 0.919285431458205
+          },
+          {
+            "source_id": "6453089547929495680",
+            "designation": "J210918.50-590722.4",
+            "separation_arcsec": 0.5291086648358994
+          },
+          {
+            "source_id": "6453089616648974976",
+            "designation": "J210911.41-590636.4",
+            "separation_arcsec": 0.1572181470492892
+          },
+          {
+            "source_id": "6453089818510374528",
+            "designation": "J210851.83-590851.0",
+            "separation_arcsec": 0.047547346418875015
+          },
+          {
+            "source_id": "6453089818510516224",
+            "designation": "J210856.08-590827.4",
+            "separation_arcsec": 0.5483383034257009
+          },
+          {
+            "source_id": "6453089887229996416",
+            "designation": "J210853.22-590800.4",
+            "separation_arcsec": 0.7364737990825122
+          },
+          {
+            "source_id": "6453089891526889984",
+            "designation": "J210852.77-590810.5",
+            "separation_arcsec": 0.19850069915914914
+          },
+          {
+            "source_id": "6453089990309219328",
+            "designation": "J210907.62-590653.6",
+            "separation_arcsec": 0.04087941412543094
+          },
+          {
+            "source_id": "6453451837010460416",
+            "designation": "J211007.22-591002.8",
+            "separation_arcsec": 0.08762935895085035
+          },
+          {
+            "source_id": "6453452657347547008",
+            "designation": "J210958.13-590912.7",
+            "separation_arcsec": 0.9406852509266184
+          },
+          {
+            "source_id": "6453452657347835648",
+            "designation": "J210958.43-590854.7",
+            "separation_arcsec": 0.12901732620885395
+          },
+          {
+            "source_id": "6453452730363658752",
+            "designation": "J210955.98-590806.6",
+            "separation_arcsec": 0.22498896860845505
+          },
+          {
+            "source_id": "6453452936521197568",
+            "designation": "J210946.96-590717.4",
+            "separation_arcsec": 0.13191361911109523
+          },
+          {
+            "source_id": "6453452936522089216",
+            "designation": "J210951.66-590745.0",
+            "separation_arcsec": 0.06116322718758442
+          },
+          {
+            "source_id": "6453453005241566208",
+            "designation": "J210945.65-590641.9",
+            "separation_arcsec": 0.3174198205321756
+          }
+        ],
+        "matched_gaia": 228,
+        "matched_allwise": 224,
+        "gaia_match_fraction": 0.6627906976744186,
+        "median_offset_arcsec": 0.20926298269782953,
+        "ambiguous_gaia": [],
+        "shared_allwise": [
+          "J210956.87-591045.2",
+          "J210952.98-590927.4",
+          "J210918.50-590722.4",
+          "J210938.96-590942.3"
+        ],
+        "unmatched_gaia": [
+          "6453072746016622976",
+          "6453072746017574272",
+          "6453073119677593984",
+          "6453073123974088320",
+          "6453074051686721536",
+          "6453074223485373696",
+          "6453074292204817152",
+          "6453074395285016320",
+          "6453074670161937792",
+          "6453075043822922624",
+          "6453075078182680704",
+          "6453075082480237952",
+          "6453075112542414720",
+          "6453075181261900160",
+          "6453075185557976448",
+          "6453075185558391680",
+          "6453075185559408256",
+          "6453075288637226368",
+          "6453075288638076672",
+          "6453075357356702720",
+          "6453075357358101504",
+          "6453075529155431936",
+          "6453075593578739584",
+          "6453075804033518592",
+          "6453075872752894592",
+          "6453075902816411008",
+          "6453075907112733312",
+          "6453075971535899648",
+          "6453076074615102720",
+          "6453076108974847488",
+          "6453076108974850816",
+          "6453076143334587520",
+          "6453076181989769216",
+          "6453076212055633408",
+          "6453076422508558592",
+          "6453076486931994624",
+          "6453076521291739264",
+          "6453076559947657088",
+          "6453076590011225216",
+          "6453076590011225344",
+          "6453076594307394304",
+          "6453076628667055360",
+          "6453076658730667392",
+          "6453076830529373696",
+          "6453076864889007744",
+          "6453076937904666496",
+          "6453076937904912256",
+          "6453076937905512576",
+          "6453077006624359808",
+          "6453077006624388352",
+          "6453077036687813632",
+          "6453077040984724736",
+          "6453077075343820544",
+          "6453077105407294848",
+          "6453077144063128448",
+          "6453077418941646976",
+          "6453077449004681344",
+          "6453077487660724736",
+          "6453077517724170240",
+          "6453077586443652224",
+          "6453077625099464576",
+          "6453077625099649664",
+          "6453077659459202816",
+          "6453077689522882304",
+          "6453086730429523968",
+          "6453086966652176640",
+          "6453087108388213376",
+          "6453087172810610560",
+          "6453087245826144128",
+          "6453087245826209280",
+          "6453087280185914240",
+          "6453087378969055104",
+          "6453087413328787328",
+          "6453087413328787456",
+          "6453087417624295296",
+          "6453087417625731328",
+          "6453087482048275328",
+          "6453087486345496576",
+          "6453087516408019584",
+          "6453087520704115072",
+          "6453087550767762048",
+          "6453087585127507968",
+          "6453088207898274048",
+          "6453088306682010240",
+          "6453088723295171328",
+          "6453088753358600704",
+          "6453088753358601472",
+          "6453088753358603264",
+          "6453088826374139520",
+          "6453088860734728704",
+          "6453088929453387392",
+          "6453089028236391808",
+          "6453089169971555328",
+          "6453089234394968320",
+          "6453089238690395008",
+          "6453089238690397184",
+          "6453089238690580736",
+          "6453089238691067136",
+          "6453089268754779136",
+          "6453089337474180480",
+          "6453089376130067328",
+          "6453089474913145344",
+          "6453089543632617344",
+          "6453089582288750080",
+          "6453089646711838336",
+          "6453089818510514048",
+          "6453089818510515456",
+          "6453451630851404160",
+          "6453452657347839744",
+          "6453452661643292672",
+          "6453452661643292928",
+          "6453452726067318400",
+          "6453452726067322496",
+          "6453452936521624192",
+          "6453453005240673152",
+          "6453453005240673664"
+        ],
+        "unmatched_allwise": [
+          "J210841.72-591043.2",
+          "J210841.75-591255.7",
+          "J210842.63-591053.8",
+          "J210842.74-591103.9",
+          "J210843.11-591306.5",
+          "J210843.62-591012.9",
+          "J210844.04-591346.2",
+          "J210844.70-591217.6",
+          "J210844.72-591415.2",
+          "J210844.96-591153.9",
+          "J210845.05-591336.2",
+          "J210845.19-591135.6",
+          "J210845.26-591158.0",
+          "J210846.56-591109.8",
+          "J210846.79-591140.3",
+          "J210846.99-591438.7",
+          "J210847.33-591317.3",
+          "J210848.16-591114.1",
+          "J210848.20-591149.8",
+          "J210848.28-591059.7",
+          "J210848.56-590950.4",
+          "J210848.68-591003.9",
+          "J210848.98-591431.6",
+          "J210849.11-591315.8",
+          "J210849.53-591521.3",
+          "J210849.78-590935.0",
+          "J210850.44-591250.9",
+          "J210850.80-590824.6",
+          "J210850.85-591036.3",
+          "J210851.17-591057.9",
+          "J210851.52-591233.8",
+          "J210851.76-591537.6",
+          "J210851.94-590929.5",
+          "J210852.48-591206.4",
+          "J210853.23-591234.5",
+          "J210853.67-590858.3",
+          "J210853.83-590909.7",
+          "J210854.03-591508.2",
+          "J210854.12-591543.2",
+          "J210854.29-591325.2",
+          "J210854.32-591241.3",
+          "J210854.32-591620.5",
+          "J210854.75-591451.1",
+          "J210854.76-590914.0",
+          "J210854.98-590831.0",
+          "J210855.15-591441.3",
+          "J210855.66-591147.5",
+          "J210855.71-591320.0",
+          "J210856.26-591518.3",
+          "J210856.33-591424.4",
+          "J210856.50-591314.6",
+          "J210856.66-591446.4",
+          "J210857.10-591204.9",
+          "J210857.14-591627.3",
+          "J210857.39-591350.7",
+          "J210857.88-590902.3",
+          "J210858.91-591306.4",
+          "J210859.04-590742.5",
+          "J210859.53-591047.2",
+          "J210859.57-591343.4",
+          "J210859.62-591002.2",
+          "J210859.85-590941.5",
+          "J210900.28-590840.3",
+          "J210900.44-590908.4",
+          "J210900.75-591520.5",
+          "J210900.92-590933.6",
+          "J210901.10-591031.9",
+          "J210901.83-591307.6",
+          "J210902.16-590943.0",
+          "J210902.67-590716.3",
+          "J210902.91-591559.5",
+          "J210903.11-591058.1",
+          "J210903.28-591314.1",
+          "J210903.61-591113.1",
+          "J210903.93-591021.5",
+          "J210904.27-591002.4",
+          "J210904.58-590831.0",
+          "J210904.81-591208.0",
+          "J210905.25-591021.8",
+          "J210905.35-591439.5",
+          "J210905.43-591010.3",
+          "J210905.43-591631.5",
+          "J210905.57-590647.0",
+          "J210905.62-590708.1",
+          "J210906.04-591232.5",
+          "J210906.13-591416.1",
+          "J210906.26-591311.8",
+          "J210906.68-591257.4",
+          "J210906.68-591445.4",
+          "J210907.47-590830.3",
+          "J210907.56-591721.0",
+          "J210907.65-591233.5",
+          "J210907.65-591428.8",
+          "J210907.66-590810.8",
+          "J210907.69-590711.0",
+          "J210908.04-591156.8",
+          "J210908.23-591323.9",
+          "J210908.51-591214.9",
+          "J210909.62-590918.8",
+          "J210909.69-590940.6",
+          "J210909.80-590833.4",
+          "J210909.91-591337.2",
+          "J210910.21-591351.5",
+          "J210910.50-591527.3",
+          "J210910.52-591700.7",
+          "J210910.65-590847.2",
+          "J210910.68-591637.1",
+          "J210911.05-591041.4",
+          "J210911.15-591208.3",
+          "J210911.44-591416.0",
+          "J210911.52-591158.5",
+          "J210911.88-590652.0",
+          "J210911.88-591012.3",
+          "J210911.93-591536.6",
+          "J210912.38-591433.2",
+          "J210912.50-591103.4",
+          "J210912.62-591646.0",
+          "J210912.73-590908.4",
+          "J210912.79-591338.2",
+          "J210912.88-590933.1",
+          "J210913.27-590812.8",
+          "J210913.27-591320.6",
+          "J210913.47-590918.7",
+          "J210913.51-591654.9",
+          "J210913.69-591524.5",
+          "J210914.46-591509.5",
+          "J210914.59-590834.5",
+          "J210914.65-591050.2",
+          "J210914.82-591640.0",
+          "J210915.03-591654.6",
+          "J210915.46-591628.8",
+          "J210915.60-591721.6",
+          "J210915.80-591537.2",
+          "J210916.45-591118.3",
+          "J210916.46-591553.2",
+          "J210916.51-590705.7",
+          "J210916.53-591322.8",
+          "J210916.57-591650.7",
+          "J210916.76-591746.1",
+          "J210916.77-591507.8",
+          "J210916.94-591133.8",
+          "J210916.98-590653.5",
+          "J210917.13-591634.7",
+          "J210917.15-591207.3",
+          "J210917.19-591618.5",
+          "J210917.45-591034.9",
+          "J210918.19-591541.7",
+          "J210918.30-591625.6",
+          "J210918.44-590935.8",
+          "J210918.49-591000.1",
+          "J210918.56-590643.5",
+          "J210919.22-591015.2",
+          "J210919.30-591214.6",
+          "J210919.35-591800.7",
+          "J210919.44-591620.5",
+          "J210919.48-591344.1",
+          "J210919.77-591053.0",
+          "J210919.91-591707.3",
+          "J210920.42-591318.2",
+          "J210920.50-591336.5",
+          "J210920.71-591527.4",
+          "J210920.85-590620.5",
+          "J210920.98-591403.9",
+          "J210921.22-590659.2",
+          "J210921.69-591802.5",
+          "J210921.98-590910.9",
+          "J210922.22-591106.0",
+          "J210922.43-591654.2",
+          "J210922.47-591332.3",
+          "J210922.68-590844.7",
+          "J210922.99-591459.7",
+          "J210923.38-590634.6",
+          "J210923.39-591716.8",
+          "J210923.46-591551.0",
+          "J210923.56-591010.1",
+          "J210923.84-591642.2",
+          "J210924.09-591601.7",
+          "J210924.13-590621.0",
+          "J210924.18-590656.2",
+          "J210924.28-591443.6",
+          "J210924.29-591536.3",
+          "J210924.74-590805.4",
+          "J210925.05-591132.4",
+          "J210925.11-591206.3",
+          "J210925.12-591451.0",
+          "J210925.24-590858.5",
+          "J210925.48-591426.9",
+          "J210925.55-591745.5",
+          "J210925.75-590648.0",
+          "J210925.85-591546.2",
+          "J210926.06-591724.7",
+          "J210926.18-590915.9",
+          "J210926.57-591422.7",
+          "J210926.75-591110.4",
+          "J210926.97-590812.0",
+          "J210927.07-590614.7",
+          "J210927.75-591123.3",
+          "J210927.82-591315.5",
+          "J210927.83-590850.4",
+          "J210928.30-591406.5",
+          "J210928.40-591519.5",
+          "J210928.82-591440.5",
+          "J210928.84-590953.0",
+          "J210929.54-590759.4",
+          "J210929.58-590834.3",
+          "J210929.58-591326.2",
+          "J210929.61-591317.4",
+          "J210929.76-591733.4",
+          "J210929.88-591132.3",
+          "J210929.96-591448.7",
+          "J210931.23-590708.5",
+          "J210931.31-590742.3",
+          "J210931.31-591657.5",
+          "J210931.37-590806.8",
+          "J210931.41-591136.1",
+          "J210931.52-591206.7",
+          "J210931.79-591740.0",
+          "J210931.98-591323.5",
+          "J210932.16-590748.1",
+          "J210932.36-590626.3",
+          "J210932.54-591508.5",
+          "J210933.06-591229.7",
+          "J210933.15-591517.7",
+          "J210933.34-590901.7",
+          "J210933.55-590641.3",
+          "J210934.10-591744.9",
+          "J210934.24-591314.7",
+          "J210934.35-591250.8",
+          "J210934.56-591433.2",
+          "J210934.80-591229.3",
+          "J210934.99-590725.2",
+          "J210934.99-591115.4",
+          "J210935.30-591612.7",
+          "J210935.39-591036.6",
+          "J210935.74-590937.3",
+          "J210935.82-591418.5",
+          "J210935.89-590747.1",
+          "J210936.31-591537.3",
+          "J210936.46-591613.7",
+          "J210937.06-591201.8",
+          "J210937.17-591722.3",
+          "J210937.19-591628.2",
+          "J210937.62-591442.0",
+          "J210937.69-591432.6",
+          "J210938.04-591000.0",
+          "J210938.06-590726.5",
+          "J210938.17-591418.0",
+          "J210938.31-591112.2",
+          "J210938.49-591547.8",
+          "J210938.82-590840.7",
+          "J210938.96-591318.8",
+          "J210939.07-591233.1",
+          "J210939.17-591737.4",
+          "J210939.24-591438.2",
+          "J210939.47-590831.0",
+          "J210939.83-591219.8",
+          "J210940.24-590850.0",
+          "J210940.34-591234.5",
+          "J210940.41-591729.1",
+          "J210940.45-590958.8",
+          "J210940.90-591512.3",
+          "J210940.97-591537.3",
+          "J210940.98-591502.8",
+          "J210941.12-590842.6",
+          "J210941.21-591153.2",
+          "J210941.37-590817.9",
+          "J210941.44-591631.8",
+          "J210942.06-591029.2",
+          "J210942.11-591551.9",
+          "J210942.25-591736.5",
+          "J210942.33-591500.3",
+          "J210942.38-590740.2",
+          "J210942.42-590954.9",
+          "J210942.45-590945.4",
+          "J210942.47-590857.7",
+          "J210942.58-591436.5",
+          "J210942.94-591231.0",
+          "J210943.26-591533.1",
+          "J210943.46-591028.2",
+          "J210943.93-591452.6",
+          "J210944.11-591116.4",
+          "J210944.51-591056.5",
+          "J210944.56-591736.0",
+          "J210944.75-590736.6",
+          "J210944.90-591517.8",
+          "J210944.91-591040.6",
+          "J210945.04-590934.6",
+          "J210945.20-591328.8",
+          "J210945.44-591653.6",
+          "J210945.71-591702.7",
+          "J210945.75-591203.4",
+          "J210945.92-590951.2",
+          "J210946.75-591423.7",
+          "J210946.90-590658.4",
+          "J210947.28-590817.3",
+          "J210947.58-591627.2",
+          "J210947.65-590649.5",
+          "J210947.75-591113.9",
+          "J210948.13-591256.8",
+          "J210948.26-591713.9",
+          "J210948.73-591329.8",
+          "J210948.97-591020.3",
+          "J210948.98-591444.1",
+          "J210949.11-591241.5",
+          "J210949.13-590724.0",
+          "J210949.37-590914.0",
+          "J210949.43-591529.2",
+          "J210949.87-591325.7",
+          "J210949.94-591224.4",
+          "J210950.75-591300.4",
+          "J210950.89-591128.7",
+          "J210950.96-591618.9",
+          "J210951.27-591345.3",
+          "J210951.34-591026.7",
+          "J210951.35-591421.2",
+          "J210951.59-591405.6",
+          "J210951.71-591253.3",
+          "J210952.04-591354.9",
+          "J210952.18-591516.9",
+          "J210952.37-591214.9",
+          "J210952.37-591639.3",
+          "J210952.47-591340.8",
+          "J210953.26-591506.7",
+          "J210953.51-591519.7",
+          "J210953.67-591015.4",
+          "J210953.88-590746.6",
+          "J210954.54-591649.5",
+          "J210954.81-591159.5",
+          "J210954.88-591455.1",
+          "J210955.07-590950.3",
+          "J210955.20-591311.3",
+          "J210955.30-591023.6",
+          "J210955.37-591010.0",
+          "J210955.40-591436.2",
+          "J210955.83-591224.2",
+          "J210956.13-591121.5",
+          "J210956.33-591627.6",
+          "J210956.36-591539.5",
+          "J210956.47-591411.5",
+          "J210956.69-591022.5",
+          "J210956.72-590748.4",
+          "J210956.97-591315.5",
+          "J210957.09-591141.7",
+          "J210957.21-591524.4",
+          "J210957.25-591252.0",
+          "J210957.44-591514.1",
+          "J210957.91-591232.1",
+          "J210957.95-590954.3",
+          "J210958.78-591415.0",
+          "J210958.92-591054.2",
+          "J210959.87-591123.0",
+          "J210959.90-590909.8",
+          "J211000.05-591226.7",
+          "J211000.22-590816.5",
+          "J211000.50-591116.5",
+          "J211000.59-591329.3",
+          "J211000.68-591515.3",
+          "J211000.74-591214.3",
+          "J211001.24-591604.3",
+          "J211001.36-591400.2",
+          "J211001.42-591155.0",
+          "J211001.68-591052.2",
+          "J211001.69-591238.6",
+          "J211002.48-590929.2",
+          "J211003.14-591325.7",
+          "J211003.38-591211.5",
+          "J211003.81-590914.9",
+          "J211003.96-591009.9",
+          "J211004.06-591533.4",
+          "J211004.28-591406.1",
+          "J211004.53-591510.3",
+          "J211004.55-591418.3",
+          "J211005.17-591111.7",
+          "J211005.61-591241.4",
+          "J211005.64-591344.4",
+          "J211005.69-590939.6",
+          "J211006.30-590923.0",
+          "J211006.77-590942.0",
+          "J211007.35-591427.1",
+          "J211008.44-591208.7",
+          "J211008.80-591325.6",
+          "J211008.85-591057.6",
+          "J211008.95-591029.2",
+          "J211009.02-591041.5",
+          "J211010.98-591036.3",
+          "J211011.20-591111.0",
+          "J211011.40-591327.4",
+          "J211011.49-591206.2",
+          "J211011.52-591059.1",
+          "J211012.26-591233.5",
+          "J211012.60-591311.4",
+          "J211013.65-591202.7"
+        ],
+        "interior_unshifted": {
+          "matched_gaia": 196,
+          "denominator": 282
+        },
+        "shifted_controls": [
+          {
+            "offset_arcsec": [
+              30,
+              0
+            ],
+            "matched_gaia": 4,
+            "denominator": 282
+          },
+          {
+            "offset_arcsec": [
+              -30,
+              0
+            ],
+            "matched_gaia": 5,
+            "denominator": 282
+          },
+          {
+            "offset_arcsec": [
+              0,
+              30
+            ],
+            "matched_gaia": 8,
+            "denominator": 282
+          },
+          {
+            "offset_arcsec": [
+              0,
+              -30
+            ],
+            "matched_gaia": 4,
+            "denominator": 282
+          }
+        ],
+        "caveat": "Geometric candidates, not object identities. Gaia epoch 2016 versus AllWISE ~2010; no proper-motion propagation. Resolution, depth, blending and upper limits can explain nonmatches. AllWISE adds infrared wavelength coverage, not a universal fainter optical limit."
+      },
+      "published_calibration": {
+        "published_pairs": 210,
+        "recovered_pairs": 208,
+        "missed_published_pairs": [
+          {
+            "source_id": "6453077144063128448",
+            "original_ext_source_id": "J210928.84-590953.0",
+            "angular_distance": "2.0200307",
+            "number_of_neighbours": "1",
+            "number_of_mates": "0"
+          },
+          {
+            "source_id": "6453087108388213376",
+            "original_ext_source_id": "J210858.91-591306.4",
+            "angular_distance": "2.0505543",
+            "number_of_neighbours": "1",
+            "number_of_mates": "0"
+          }
+        ],
+        "examples": [
+          {
+            "source_id": "6453073154037344512",
+            "original_ext_source_id": "J211010.17-591403.5",
+            "angular_distance": "0.038396813",
+            "number_of_neighbours": "1",
+            "number_of_mates": "0"
+          },
+          {
+            "source_id": "6453073158334276352",
+            "original_ext_source_id": "J211008.27-591452.9",
+            "angular_distance": "0.08373131",
+            "number_of_neighbours": "1",
+            "number_of_mates": "0"
+          },
+          {
+            "source_id": "6453074047390496384",
+            "original_ext_source_id": "J210938.68-591754.2",
+            "angular_distance": "0.09723594",
+            "number_of_neighbours": "1",
+            "number_of_mates": "0"
+          },
+          {
+            "source_id": "6453074116109983872",
+            "original_ext_source_id": "J210940.00-591701.2",
+            "angular_distance": "0.068098076",
+            "number_of_neighbours": "1",
+            "number_of_mates": "0"
+          },
+          {
+            "source_id": "6453074116109984512",
+            "original_ext_source_id": "J210938.52-591700.6",
+            "angular_distance": "0.18406129",
+            "number_of_neighbours": "1",
+            "number_of_mates": "0"
+          }
+        ],
+        "meaning": "Reproduces published catalog associations; this validates a crossmatch, not a new physical finding or a full deep-field rediscovery."
+      },
+      "highest_ruwe_inspection": [
+        {
+          "source_id": "6453076177694232320",
+          "g": 11.391919,
+          "bp_rp": 0.6831503,
+          "ruwe": 17.135931,
+          "photometric_excess": 1.1982491,
+          "infrared_candidates": [
+            {
+              "source_id": "6453076177694232320",
+              "designation": "J211000.66-591303.2",
+              "separation_arcsec": 0.060082054628470695,
+              "photometry": {
+                "w1mpro": "10.182",
+                "w2mpro": "10.191",
+                "w1sigmpro": "0.023",
+                "w2sigmpro": "0.020",
+                "w1snr": "47.9",
+                "w2snr": "54.1",
+                "cc_flags": "0000",
+                "ext_flg": "0",
+                "nb": "1",
+                "ph_qual": "AAAU"
+              }
+            }
+          ]
+        },
+        {
+          "source_id": "6453089238691853056",
+          "g": 15.977307,
+          "bp_rp": 0.8519392,
+          "ruwe": 9.996168,
+          "photometric_excess": 1.3027226,
+          "infrared_candidates": [
+            {
+              "source_id": "6453089238691853056",
+              "designation": "J210910.64-590702.6",
+              "separation_arcsec": 0.13523581764802062,
+              "photometry": {
+                "w1mpro": "14.192",
+                "w2mpro": "14.158",
+                "w1sigmpro": "0.027",
+                "w2sigmpro": "0.045",
+                "w1snr": "40.0",
+                "w2snr": "24.3",
+                "cc_flags": "0000",
+                "ext_flg": "0",
+                "nb": "1",
+                "ph_qual": "AAUU"
+              }
+            }
+          ]
+        },
+        {
+          "source_id": "6453077522021062400",
+          "g": 12.249009,
+          "bp_rp": 0.7827482,
+          "ruwe": 3.248849,
+          "photometric_excess": 1.1935745,
+          "infrared_candidates": [
+            {
+              "source_id": "6453077522021062400",
+              "designation": "J210927.52-590929.0",
+              "separation_arcsec": 0.04177745931707966,
+              "photometry": {
+                "w1mpro": "10.882",
+                "w2mpro": "10.918",
+                "w1sigmpro": "0.024",
+                "w2sigmpro": "0.020",
+                "w1snr": "45.8",
+                "w2snr": "53.1",
+                "cc_flags": "0000",
+                "ext_flg": "0",
+                "nb": "1",
+                "ph_qual": "AAAU"
+              }
+            }
+          ]
+        },
+        {
+          "source_id": "6453089406196547072",
+          "g": 20.646175,
+          "bp_rp": 1.6892223,
+          "ruwe": 2.5789201,
+          "photometric_excess": 5.112308,
+          "infrared_candidates": [
+            {
+              "source_id": "6453089406196547072",
+              "designation": "J210934.35-590706.1",
+              "separation_arcsec": 1.2102739036107941,
+              "photometry": {
+                "w1mpro": "14.681",
+                "w2mpro": "14.447",
+                "w1sigmpro": "0.034",
+                "w2sigmpro": "0.055",
+                "w1snr": "31.9",
+                "w2snr": "19.8",
+                "cc_flags": "0000",
+                "ext_flg": "0",
+                "nb": "2",
+                "ph_qual": "AAUU"
+              }
+            }
+          ]
+        },
+        {
+          "source_id": "6453086966652178816",
+          "g": 17.935598,
+          "bp_rp": 1.3723679,
+          "ruwe": 2.2651548,
+          "photometric_excess": 1.3997148,
+          "infrared_candidates": [
+            {
+              "source_id": "6453086966652178816",
+              "designation": "J210846.88-591340.9",
+              "separation_arcsec": 0.17302629423866614,
+              "photometry": {
+                "w1mpro": "15.318",
+                "w2mpro": "15.395",
+                "w1sigmpro": "0.037",
+                "w2sigmpro": "0.084",
+                "w1snr": "29.6",
+                "w2snr": "12.9",
+                "cc_flags": "0000",
+                "ext_flg": "0",
+                "nb": "1",
+                "ph_qual": "AAUU"
+              }
+            }
+          ]
+        },
+        {
+          "source_id": "6453089234394970880",
+          "g": 19.342632,
+          "bp_rp": 2.3901882,
+          "ruwe": 1.9322762,
+          "photometric_excess": 1.6872731,
+          "infrared_candidates": [
+            {
+              "source_id": "6453089234394970880",
+              "designation": "J210908.82-590722.2",
+              "separation_arcsec": 0.8110669661845191,
+              "photometry": {
+                "w1mpro": "15.267",
+                "w2mpro": "15.236",
+                "w1sigmpro": "0.037",
+                "w2sigmpro": "0.077",
+                "w1snr": "29.4",
+                "w2snr": "14.1",
+                "cc_flags": "0000",
+                "ext_flg": "0",
+                "nb": "1",
+                "ph_qual": "AAUU"
+              }
+            }
+          ]
+        },
+        {
+          "source_id": "6453452936522089216",
+          "g": 14.424931,
+          "bp_rp": 0.99297905,
+          "ruwe": 1.6899171,
+          "photometric_excess": 1.2174426,
+          "infrared_candidates": [
+            {
+              "source_id": "6453452936522089216",
+              "designation": "J210951.66-590745.0",
+              "separation_arcsec": 0.06116322718758442,
+              "photometry": {
+                "w1mpro": "12.637",
+                "w2mpro": "12.666",
+                "w1sigmpro": "0.023",
+                "w2sigmpro": "0.024",
+                "w1snr": "46.8",
+                "w2snr": "44.6",
+                "cc_flags": "dd00",
+                "ext_flg": "0",
+                "nb": "1",
+                "ph_qual": "AAUU"
+              }
+            }
+          ]
+        },
+        {
+          "source_id": "6453074116109983872",
+          "g": 20.880175,
+          "bp_rp": 1.5393257,
+          "ruwe": 1.6894056,
+          "photometric_excess": 3.7330499,
+          "infrared_candidates": [
+            {
+              "source_id": "6453074116109983872",
+              "designation": "J210940.00-591701.2",
+              "separation_arcsec": 0.07979443157947105,
+              "photometry": {
+                "w1mpro": "15.638",
+                "w2mpro": "15.577",
+                "w1sigmpro": "0.042",
+                "w2sigmpro": "0.109",
+                "w1snr": "25.8",
+                "w2snr": "9.9",
+                "cc_flags": "0000",
+                "ext_flg": "0",
+                "nb": "1",
+                "ph_qual": "ABUU"
+              }
+            }
+          ]
+        },
+        {
+          "source_id": "6453077345925475328",
+          "g": 19.740822,
+          "bp_rp": 1.3977013,
+          "ruwe": 1.5989913,
+          "photometric_excess": 1.3908107,
+          "infrared_candidates": [
+            {
+              "source_id": "6453077345925475328",
+              "designation": "J210958.54-590930.3",
+              "separation_arcsec": 0.5832570997677087,
+              "photometry": {
+                "w1mpro": "17.483",
+                "w2mpro": "17.081",
+                "w1sigmpro": "0.152",
+                "w2sigmpro": "",
+                "w1snr": "7.2",
+                "w2snr": "0.7",
+                "cc_flags": "0000",
+                "ext_flg": "0",
+                "nb": "1",
+                "ph_qual": "BUUU"
+              }
+            }
+          ]
+        },
+        {
+          "source_id": "6453077487661319680",
+          "g": 14.188254,
+          "bp_rp": 0.85756683,
+          "ruwe": 1.4271749,
+          "photometric_excess": 1.3767301,
+          "infrared_candidates": [
+            {
+              "source_id": "6453077487661319680",
+              "designation": "J210938.96-590942.3",
+              "separation_arcsec": 0.3710855142123007,
+              "photometry": {
+                "w1mpro": "12.378",
+                "w2mpro": "12.410",
+                "w1sigmpro": "0.023",
+                "w2sigmpro": "0.024",
+                "w1snr": "47.0",
+                "w2snr": "45.8",
+                "cc_flags": "0000",
+                "ext_flg": "0",
+                "nb": "1",
+                "ph_qual": "AABU"
+              }
+            }
+          ]
+        }
+      ],
+      "infrared_followup": {
+        "status": "adaptive_exploration",
+        "included": 145,
+        "excluded": {
+          "no_candidate": 116,
+          "ambiguous_or_shared": 8,
+          "missing_or_low_snr": 75,
+          "missing_optical": 0
+        },
+        "tests": [
+          {
+            "x": "ruwe",
+            "y": "W1-W2",
+            "result": {
+              "status": "ok",
+              "n": 134,
+              "within_block_rank_correlation": -0.045217266278562415,
+              "permutation_p": 0.636,
+              "permutations": 999,
+              "blocks": 17,
+              "block_sizes": [
+                1,
+                1,
+                5,
+                1,
+                15,
+                10,
+                18,
+                26,
+                6,
+                1,
+                2,
+                15,
+                20,
+                2,
+                2,
+                5,
+                4
+              ],
+              "descriptive_20_test_adjusted_p": 1
+            }
+          },
+          {
+            "x": "phot_bp_rp_excess_factor",
+            "y": "W1-W2",
+            "result": {
+              "status": "ok",
+              "n": 145,
+              "within_block_rank_correlation": 0.027495629438818354,
+              "permutation_p": 0.762,
+              "permutations": 999,
+              "blocks": 17,
+              "block_sizes": [
+                1,
+                1,
+                5,
+                1,
+                15,
+                10,
+                18,
+                26,
+                6,
+                1,
+                2,
+                15,
+                20,
+                2,
+                3,
+                15,
+                4
+              ],
+              "descriptive_20_test_adjusted_p": 1
+            }
+          }
+        ],
+        "interpretation": "Two follow-up tests per field selected after Gaia screening; 20 total scientific tests including the original 16. Adjusted p is descriptive, not independent confirmation. SNR>=5 in both WISE bands and one-to-one candidates used for color tests; excluded/flagged sources remain in the raw catalog and match record."
+      },
+      "elapsed_seconds": 2.531,
+      "script_sha256": "e18d54cb8aabf33874c46d2a5b70e359d5f6b4f64637cc0507c90523a11b9974"
+    }
+  },
+  "interpretation": "Exploratory field notebook. No discovery or novelty claim. Confirmation needle remains untouched.",
+  "acknowledgements": [
+    "ESA Gaia / DPAC",
+    "AllWISE: joint UCLA/JPL-Caltech project, funded by NASA; data served by NASA/IPAC IRSA"
+  ]
+}
