@@ -1,12 +1,27 @@
-# Mandatory entrypoint: Dynamics Transfer Lab
+# Instructions for research and coding agents
 
-Scope: ONLY the repository **junovhs/research** (this repository). Its default branch `main` is protected research history; make every change on a short-lived branch and open a pull request into `main`. This is a research-only tree with a narrow owner-approved exception for small reproducible research source/configuration/raw evidence (see mandatory rules). **Never write to junovhs/fractodactyl** (the lab's original home and a separate application project) or any other repository unless the owner separately authorizes that specific task. Never force-push, delete or rewrite historical research, or add application/renderer code here.
+Read CONSTITUTION.md, OWNERSHIP.md, STATE.md and config/budget.json first. Then do the next useful executable task. Do not start by rewriting the plan.
 
-BEFORE any research, calculation, planning based on the lab, or repository write:
-1. Read every Markdown file directly inside AGENTS-READ-THIS/ in filename order, from start to end, without skimming, skipping sections or using a summary as a substitute.
-2. Follow its full research contract and its writeback checklist.
-3. Use AGENTS-READ-THIS/02-LIVE-STATE.md as the ONLY current source of research priority and status; the other top-level Markdown docs are optional historical/reference snapshots.
+## Work style
 
-For an ordinary executed exploratory session the routine narrative writeback is one new RESULTS/R-NNN.md evidence record and one update to AGENTS-READ-THIS/02-LIVE-STATE.md, with minimal durable source-bound EVIDENCE/R-NNN/ files as appropriate, delivered as one pull request that must pass the `lab-checks` CI before merge. Formal confirmation additionally requires a pretest P/PA pair per the mandatory checklist. **Event-driven exception:** update MAP.md only when documented evidence materially changes the research lineage (distinct new direction, decisive closure/overturn, enabling milestone, or connection of separate lines); never merely because a P/R ID was added. Exploratory evidence can trigger a clearly provisional map change without formal confirmation. See the exact test and same-commit rule in AGENTS-READ-THIS/03-WRITEBACK-CHECKLIST.md. Never routinely synchronize README, INDEX, MAP, FRONTIER, GOAL, METHOD or SOURCES. If the mandatory folder is missing or unreadable, stop rather than assuming you know the current rules.
+- Test fast and fail fast. Start with a small cached sample and the cheapest discriminator. Keep at most three active investigations. Park expensive or inconclusive ideas with one sentence explaining why.
+- Preserve open exploration. Do not quietly turn this project into a fixed object detector, a favorite-theory verifier, or a hunt for large anomaly scores.
+- Use the owner's subscription coding tools interactively. Ordinary scripts consume saved JSON/CSV/Parquet; they do not depend on paid LLM APIs. Do not automate browser logins or repurpose subscription credentials into an unsupported API.
+- Execute on the owner's machine or approved GitHub workflows, not ChatGPT's internal environment. No GPU or continuously running process is assumed.
+- Make one small end-to-end vertical slice work before building abstractions. Default to Python, files and the standard library; add numerical dependencies when the first experiment needs them. Use Rust only after profiling.
 
-AGENTS.md and CLAUDE.md must remain byte-for-byte identical (CI enforces this). Apply the decision/challenge gate and verify source-bound evidence and run fingerprints before promoting claims. CI checks objective evidence integrity only; it cannot judge whether the mathematics or the scientific conclusion is right. Always check the repository and branch and verify any commit by reading it back.
+## Scientific discipline
+
+Keep measurements, interpretations and novelty claims separate. Verify sources rather than inheriting factual claims from past chat. Flag proposed ideas as proposals and software benchmarks as benchmarks.
+
+Record every attempted test, not just winners. Screening scores are not calibrated probabilities. Treat data-quality flags, missingness, uncertainty, sky position, magnitude, selection and instrument metadata as possible explanations, not automatic reasons to discard data.
+
+For a survivor, freeze a minimal claim and rejection criterion before accessing a new confirmation sample. Compare with appropriate controls; account for the number and dependence of tests. Do not repeatedly tune against the same holdout and call it independent validation.
+
+Respect archive rate limits and retry/backoff guidance. Many local probes should reuse a few queries. Do not download an entire catalog to avoid learning its query interface.
+
+## Boundaries
+
+Routine work inside the budget needs no approval. Stop and report before spending money, increasing limits, running long unattended workloads, contacting researchers, publishing a discovery claim, or changing account settings. Never upload secrets, model-session cookies, personal data or large raw datasets.
+
+Use a small PR when main is protected. Run the real checks; never fabricate passing status. At handoff, update STATE.md and link the actual result or failure. Do not claim a test ran because you wrote it.
