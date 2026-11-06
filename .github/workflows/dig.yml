@@ -1,0 +1,43 @@
+name: Bounded needle dig
+on:
+  workflow_dispatch:
+    inputs:
+      needle:
+        description: Open field to dig (confirmation is sealed)
+        type: choice
+        options: [calibration, exploration]
+        default: calibration
+permissions:
+  contents: read
+concurrency:
+  group: needle-research
+  cancel-in-progress: false
+jobs:
+  dig:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      NEEDLE_CACHE: ${{ runner.temp }}/needle-cache
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -v
+      - run: python tools/check_project.py
+      - name: Fetch bounded Gaia circle
+        env:
+          NEEDLE: ${{ inputs.needle }}
+        run: python tools/dig.py gaia --needle "$NEEDLE" --output data/gaia-manifest.json
+      - name: Verify offline replay
+        env:
+          NEEDLE: ${{ inputs.needle }}
+        run: python tools/dig.py gaia --needle "$NEEDLE" --offline
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: needle-${{ inputs.needle }}-${{ github.run_id }}
+          path: |
+            data/
+            ${{ runner.temp }}/needle-cache/
+          retention-days: 7
