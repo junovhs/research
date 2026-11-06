@@ -1,0 +1,674 @@
+{
+  "schema_version": 1,
+  "seed": 20261106,
+  "method": "Alien-inspired proposals and keyword co-mention counts; no learned Alien model, novelty estimator or paid model API.",
+  "coherence_scale": {
+    "0": "no defensible rationale",
+    "1": "plausible but weak or mostly selection",
+    "2": "direct physical/measurement rationale; session judgment, not a probability"
+  },
+  "availability_caveat": "Counts measure arXiv metadata query coverage, not whether a question was asked. Synonyms, full-text omissions, corpus scope and terminology can hide prior work. Zero is not a novelty claim; errors are unknown.",
+  "known_related_prior_work": [
+    {
+      "url": "https://arxiv.org/abs/2012.01916",
+      "topic": "Gaia photometric calibration and crowding; related to Q02 despite its zero keyword count."
+    },
+    {
+      "url": "https://gea.esac.esa.int/archive/documentation/GDR3/Catalogue_consolidation/chap_crossmatch/sec_crossmatch_algorithm/",
+      "topic": "Official Gaia crossmatch limitations, multiplicity and resolution; related to Q03 and match-offset questions."
+    }
+  ],
+  "selection_rule": "Two highest-coherence proposals, lower successful co-mention count first, then one seeded random baseline. Unknown availability is not zero. Selection used open data and is exploratory.",
+  "proposals": [
+    {
+      "id": "Q01",
+      "x": "ruwe",
+      "y": "nearest_gaia_arcsec",
+      "coherence": 2,
+      "question": "Does astrometric fit quality track local neighbour spacing?",
+      "rationale": "Nearby resolved sources can identify crowding; unresolved companions remain a different explanation.",
+      "baseline": false,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND ((all:RUWE OR all:\"astrometric excess noise\")) AND ((all:Gaia AND (all:crowding OR all:\"nearest neighbour\" OR all:\"nearest neighbor\")))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:RUWE OR all:\"astrometric excess noise\")) AND ((all:Gaia AND (all:crowding OR all:\"nearest neighbour\" OR all:\"nearest neighbor\")))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3ARUWE+OR+all%3A%22astrometric+excess+noise%22%29%29+AND+%28%28all%3AGaia+AND+%28all%3Acrowding+OR+all%3A%22nearest+neighbour%22+OR+all%3A%22nearest+neighbor%22%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:16:25.756399+00:00",
+        "count": 1,
+        "status": "ok",
+        "sha256": "3dff31c13746499bd29ce6c5eb2281e543376d81421b5783e6b509d52738d433",
+        "bytes": 4265,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 66,
+        "exploration": 299
+      }
+    },
+    {
+      "id": "Q02",
+      "x": "phot_bp_rp_excess_factor",
+      "y": "nearest_gaia_arcsec",
+      "coherence": 2,
+      "question": "Does flux excess track neighbour spacing within brightness bins?",
+      "rationale": "Blending can alter aperture fluxes; optical color remains a possible confounder.",
+      "baseline": false,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND ((all:Gaia AND (all:\"flux excess\" OR all:\"photometric excess\"))) AND ((all:Gaia AND (all:crowding OR all:\"nearest neighbour\" OR all:\"nearest neighbor\")))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:Gaia AND (all:\"flux excess\" OR all:\"photometric excess\"))) AND ((all:Gaia AND (all:crowding OR all:\"nearest neighbour\" OR all:\"nearest neighbor\")))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3AGaia+AND+%28all%3A%22flux+excess%22+OR+all%3A%22photometric+excess%22%29%29%29+AND+%28%28all%3AGaia+AND+%28all%3Acrowding+OR+all%3A%22nearest+neighbour%22+OR+all%3A%22nearest+neighbor%22%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:16:28.857215+00:00",
+        "count": 0,
+        "status": "ok",
+        "sha256": "9d05a789059b09dc17986ba80f15a679398658bc6e1132985fa0a27c06bfed91",
+        "bytes": 1035,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 97,
+        "exploration": 340
+      }
+    },
+    {
+      "id": "Q03",
+      "x": "phot_g_mean_mag",
+      "y": "no_ir_candidate",
+      "coherence": 2,
+      "question": "Does Gaia-to-WISE nonmatching grow toward faint Gaia magnitudes?",
+      "rationale": "Different detection limits should predict nonmatching before invoking unusual spectra.",
+      "baseline": false,
+      "conditioning": "sky_quadrants",
+      "search_query": "cat:astro-ph* AND ((all:Gaia AND (all:magnitude OR all:brightness))) AND ((all:Gaia AND all:WISE AND (all:unmatched OR all:incompleteness)))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:Gaia AND (all:magnitude OR all:brightness))) AND ((all:Gaia AND all:WISE AND (all:unmatched OR all:incompleteness)))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3AGaia+AND+%28all%3Amagnitude+OR+all%3Abrightness%29%29%29+AND+%28%28all%3AGaia+AND+all%3AWISE+AND+%28all%3Aunmatched+OR+all%3Aincompleteness%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:16:31.958657+00:00",
+        "count": 0,
+        "status": "ok",
+        "sha256": "dd265638ccf7ac8bdc6b0a0fe3565547d9dc37d1249a28134669ae1f21dbec18",
+        "bytes": 957,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 98,
+        "exploration": 343
+      }
+    },
+    {
+      "id": "Q04",
+      "x": "ruwe",
+      "y": "wise_color",
+      "coherence": 2,
+      "question": "Do poor astrometric fits coincide with red WISE colors?",
+      "rationale": "Dust/emission and multiplicity are distinct possibilities; IR colors are not dust diagnoses.",
+      "baseline": false,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND ((all:RUWE OR all:\"astrometric excess noise\")) AND ((all:WISE AND (all:color OR all:colour OR all:\"infrared excess\")))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:RUWE OR all:\"astrometric excess noise\")) AND ((all:WISE AND (all:color OR all:colour OR all:\"infrared excess\")))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3ARUWE+OR+all%3A%22astrometric+excess+noise%22%29%29+AND+%28%28all%3AWISE+AND+%28all%3Acolor+OR+all%3Acolour+OR+all%3A%22infrared+excess%22%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:16:35.058967+00:00",
+        "count": 1,
+        "status": "ok",
+        "sha256": "48ed21d2309547e2d2ff4c779a206c2c304cb55ebd39678700513a2484f2762c",
+        "bytes": 4178,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 41,
+        "exploration": 134
+      }
+    },
+    {
+      "id": "Q05",
+      "x": "phot_bp_rp_excess_factor",
+      "y": "wise_color",
+      "coherence": 2,
+      "question": "Does optical flux excess accompany IR color excess?",
+      "rationale": "Blended optical flux and genuine emission can imitate each other.",
+      "baseline": false,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND ((all:Gaia AND (all:\"flux excess\" OR all:\"photometric excess\"))) AND ((all:WISE AND (all:color OR all:colour OR all:\"infrared excess\")))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:Gaia AND (all:\"flux excess\" OR all:\"photometric excess\"))) AND ((all:WISE AND (all:color OR all:colour OR all:\"infrared excess\")))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3AGaia+AND+%28all%3A%22flux+excess%22+OR+all%3A%22photometric+excess%22%29%29%29+AND+%28%28all%3AWISE+AND+%28all%3Acolor+OR+all%3Acolour+OR+all%3A%22infrared+excess%22%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:16:38.160396+00:00",
+        "count": 0,
+        "status": "ok",
+        "sha256": "ccd08f7955e727afe70504a9cc6ae13c683e0155ae9bd0f4b9ed5d4ece2f2d05",
+        "bytes": 997,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 59,
+        "exploration": 145
+      }
+    },
+    {
+      "id": "Q06",
+      "x": "proper_motion",
+      "y": "match_offset",
+      "coherence": 2,
+      "question": "Do match offsets increase with proper motion?",
+      "rationale": "Gaia/WISE epoch differences predict displacement; offsets alone are not new motion measurements.",
+      "baseline": false,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND (all:\"proper motion\") AND ((all:Gaia AND all:WISE AND (all:offset OR all:crossmatch)))",
+      "literature": {
+        "query": "cat:astro-ph* AND (all:\"proper motion\") AND ((all:Gaia AND all:WISE AND (all:offset OR all:crossmatch)))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28all%3A%22proper+motion%22%29+AND+%28%28all%3AGaia+AND+all%3AWISE+AND+%28all%3Aoffset+OR+all%3Acrossmatch%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:16:41.261888+00:00",
+        "count": 0,
+        "status": "ok",
+        "sha256": "8e30aa973026119e6ff8aeaad2527f0b6286e525255ad517fd81275d9f682da9",
+        "bytes": 886,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 53,
+        "exploration": 207
+      }
+    },
+    {
+      "id": "Q07",
+      "x": "nearest_gaia_arcsec",
+      "y": "wise_blend",
+      "coherence": 2,
+      "question": "Are WISE deblending components associated with close Gaia neighbours?",
+      "rationale": "WISE resolution may merge optical sources.",
+      "baseline": false,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND ((all:Gaia AND (all:crowding OR all:\"nearest neighbour\" OR all:\"nearest neighbor\"))) AND ((all:WISE AND (all:blend OR all:blending)))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:Gaia AND (all:crowding OR all:\"nearest neighbour\" OR all:\"nearest neighbor\"))) AND ((all:WISE AND (all:blend OR all:blending)))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3AGaia+AND+%28all%3Acrowding+OR+all%3A%22nearest+neighbour%22+OR+all%3A%22nearest+neighbor%22%29%29%29+AND+%28%28all%3AWISE+AND+%28all%3Ablend+OR+all%3Ablending%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:16:44.362984+00:00",
+        "count": 1,
+        "status": "ok",
+        "sha256": "918efe1631e769d0db6de26da67b6c81fe69e83581394452a0880cb3743d0a4d",
+        "bytes": 3752,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 76,
+        "exploration": 220
+      }
+    },
+    {
+      "id": "Q08",
+      "x": "phot_bp_rp_excess_factor",
+      "y": "wise_extended",
+      "coherence": 2,
+      "question": "Does optical flux excess track the WISE extension flag?",
+      "rationale": "Extended sources can violate stellar aperture assumptions.",
+      "baseline": false,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND ((all:Gaia AND (all:\"flux excess\" OR all:\"photometric excess\"))) AND ((all:WISE AND (all:extended OR all:galaxy)))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:Gaia AND (all:\"flux excess\" OR all:\"photometric excess\"))) AND ((all:WISE AND (all:extended OR all:galaxy)))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3AGaia+AND+%28all%3A%22flux+excess%22+OR+all%3A%22photometric+excess%22%29%29%29+AND+%28%28all%3AWISE+AND+%28all%3Aextended+OR+all%3Agalaxy%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:16:47.463132+00:00",
+        "count": 0,
+        "status": "ok",
+        "sha256": "8f4b5a0bfe7b2bfa95ebbd92afad1208447e51250c6f5b66b8ba8279bc41a982",
+        "bytes": 947,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 76,
+        "exploration": 220
+      }
+    },
+    {
+      "id": "Q09",
+      "x": "bp_rp",
+      "y": "no_ir_candidate",
+      "coherence": 2,
+      "question": "Do nonmatches depend on optical color within brightness bins?",
+      "rationale": "Spectral energy distributions and band-dependent limits can shape completeness.",
+      "baseline": false,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND ((all:Gaia AND (all:colour OR all:color))) AND ((all:Gaia AND all:WISE AND (all:unmatched OR all:incompleteness)))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:Gaia AND (all:colour OR all:color))) AND ((all:Gaia AND all:WISE AND (all:unmatched OR all:incompleteness)))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3AGaia+AND+%28all%3Acolour+OR+all%3Acolor%29%29%29+AND+%28%28all%3AGaia+AND+all%3AWISE+AND+%28all%3Aunmatched+OR+all%3Aincompleteness%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:16:50.564006+00:00",
+        "count": 1,
+        "status": "ok",
+        "sha256": "88bd146394822330a6968fb71d93f044823ca0aaac67cd55bbbd962d8c17ff25",
+        "bytes": 4096,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 97,
+        "exploration": 340
+      }
+    },
+    {
+      "id": "Q10",
+      "x": "parallax_snr",
+      "y": "wise_color",
+      "coherence": 1,
+      "question": "Does IR color vary with parallax significance at fixed optical color?",
+      "rationale": "Stellar populations and distance/precision selection can both contribute; significance is not distance.",
+      "baseline": false,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND ((all:parallax AND (all:uncertainty OR all:precision))) AND ((all:WISE AND (all:color OR all:colour OR all:\"infrared excess\")))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:parallax AND (all:uncertainty OR all:precision))) AND ((all:WISE AND (all:color OR all:colour OR all:\"infrared excess\")))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3Aparallax+AND+%28all%3Auncertainty+OR+all%3Aprecision%29%29%29+AND+%28%28all%3AWISE+AND+%28all%3Acolor+OR+all%3Acolour+OR+all%3A%22infrared+excess%22%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:16:53.665685+00:00",
+        "count": 15,
+        "status": "ok",
+        "sha256": "122eebf464285e4a3ae929467c72de0407dc70fdf53912b94c90faca99785a85",
+        "bytes": 3419,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 41,
+        "exploration": 134
+      }
+    },
+    {
+      "id": "Q11",
+      "x": "visibility_periods_used",
+      "y": "no_ir_candidate",
+      "coherence": 1,
+      "question": "Does infrared nonmatching track Gaia observation coverage?",
+      "rationale": "A relation could reflect sky/selection structure rather than physics.",
+      "baseline": false,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND ((all:Gaia AND (all:\"visibility periods\" OR all:\"scanning law\"))) AND ((all:Gaia AND all:WISE AND (all:unmatched OR all:incompleteness)))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:Gaia AND (all:\"visibility periods\" OR all:\"scanning law\"))) AND ((all:Gaia AND all:WISE AND (all:unmatched OR all:incompleteness)))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3AGaia+AND+%28all%3A%22visibility+periods%22+OR+all%3A%22scanning+law%22%29%29%29+AND+%28%28all%3AGaia+AND+all%3AWISE+AND+%28all%3Aunmatched+OR+all%3Aincompleteness%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:16:56.766991+00:00",
+        "count": 0,
+        "status": "ok",
+        "sha256": "63b0063d9eb6d0a7fe2306c62100524b6c2f7ba40243ddddc574b6c0f676b64c",
+        "bytes": 995,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 98,
+        "exploration": 343
+      }
+    },
+    {
+      "id": "Q12",
+      "x": "ruwe",
+      "y": "visibility_periods_used",
+      "coherence": 2,
+      "question": "Does poor astrometric fit depend on observation coverage?",
+      "rationale": "Small or structured temporal sampling can distort fits.",
+      "baseline": false,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND ((all:RUWE OR all:\"astrometric excess noise\")) AND ((all:Gaia AND (all:\"visibility periods\" OR all:\"scanning law\")))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:RUWE OR all:\"astrometric excess noise\")) AND ((all:Gaia AND (all:\"visibility periods\" OR all:\"scanning law\")))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3ARUWE+OR+all%3A%22astrometric+excess+noise%22%29%29+AND+%28%28all%3AGaia+AND+%28all%3A%22visibility+periods%22+OR+all%3A%22scanning+law%22%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:16:59.867879+00:00",
+        "count": 2,
+        "status": "ok",
+        "sha256": "2ce5595577f5e1a710a45ae5226895b79d36c1ad79472319e04bc9b32b6cd08c",
+        "bytes": 3406,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 66,
+        "exploration": 299
+      }
+    },
+    {
+      "id": "Q13",
+      "x": "wise_w1",
+      "y": "match_offset",
+      "coherence": 2,
+      "question": "Are infrared-faint counterparts less precisely centered?",
+      "rationale": "Measurement uncertainty should increase at lower signal-to-noise.",
+      "baseline": false,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND ((all:WISE AND (all:magnitude OR all:brightness))) AND ((all:Gaia AND all:WISE AND (all:offset OR all:crossmatch)))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:WISE AND (all:magnitude OR all:brightness))) AND ((all:Gaia AND all:WISE AND (all:offset OR all:crossmatch)))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3AWISE+AND+%28all%3Amagnitude+OR+all%3Abrightness%29%29%29+AND+%28%28all%3AGaia+AND+all%3AWISE+AND+%28all%3Aoffset+OR+all%3Acrossmatch%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:17:02.968621+00:00",
+        "count": 2,
+        "status": "ok",
+        "sha256": "9b8cd6308eaf4580b70aaec40a37e2ed632c3f4405f0876ea29434d2bc1755ce",
+        "bytes": 3740,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 76,
+        "exploration": 220
+      }
+    },
+    {
+      "id": "Q14",
+      "x": "proper_motion",
+      "y": "wise_color",
+      "coherence": 1,
+      "question": "Do optical-color-matched motion populations differ in IR color?",
+      "rationale": "Population mixtures and selection dominate plausible explanations.",
+      "baseline": false,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND (all:\"proper motion\") AND ((all:WISE AND (all:color OR all:colour OR all:\"infrared excess\")))",
+      "literature": {
+        "query": "cat:astro-ph* AND (all:\"proper motion\") AND ((all:WISE AND (all:color OR all:colour OR all:\"infrared excess\")))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28all%3A%22proper+motion%22%29+AND+%28%28all%3AWISE+AND+%28all%3Acolor+OR+all%3Acolour+OR+all%3A%22infrared+excess%22%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:17:06.069050+00:00",
+        "count": 69,
+        "status": "ok",
+        "sha256": "e5472dd8f3346d5e22b0e25ce9d800d027da9cefd19dcabdec1f7d894dbd6e5c",
+        "bytes": 2990,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 41,
+        "exploration": 134
+      }
+    },
+    {
+      "id": "Q15",
+      "x": "bp_rp",
+      "y": "wise_blend",
+      "coherence": 1,
+      "question": "Are different optical colors associated with WISE deblending?",
+      "rationale": "Crowding, background galaxies and color-dependent detectability may compete.",
+      "baseline": false,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND ((all:Gaia AND (all:colour OR all:color))) AND ((all:WISE AND (all:blend OR all:blending)))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:Gaia AND (all:colour OR all:color))) AND ((all:WISE AND (all:blend OR all:blending)))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3AGaia+AND+%28all%3Acolour+OR+all%3Acolor%29%29%29+AND+%28%28all%3AWISE+AND+%28all%3Ablend+OR+all%3Ablending%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:17:09.169896+00:00",
+        "count": 1,
+        "status": "ok",
+        "sha256": "1e8c82f863b2be6a18c7be467208c742fb2d2a1d989d97e116f26129459a16bd",
+        "bytes": 4168,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 76,
+        "exploration": 220
+      }
+    },
+    {
+      "id": "Q16",
+      "x": "parallax_snr",
+      "y": "no_ir_candidate",
+      "coherence": 1,
+      "question": "Does missing infrared coverage depend on parallax precision?",
+      "rationale": "Likely a depth/stellar-population selection relation; useful as a baseline.",
+      "baseline": false,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND ((all:parallax AND (all:uncertainty OR all:precision))) AND ((all:Gaia AND all:WISE AND (all:unmatched OR all:incompleteness)))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:parallax AND (all:uncertainty OR all:precision))) AND ((all:Gaia AND all:WISE AND (all:unmatched OR all:incompleteness)))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3Aparallax+AND+%28all%3Auncertainty+OR+all%3Aprecision%29%29%29+AND+%28%28all%3AGaia+AND+all%3AWISE+AND+%28all%3Aunmatched+OR+all%3Aincompleteness%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:17:12.270072+00:00",
+        "count": 0,
+        "status": "ok",
+        "sha256": "40fe95b28cf99753c4968de04293f59068b173dfd1645ff3705295f745d9673c",
+        "bytes": 967,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 66,
+        "exploration": 299
+      }
+    },
+    {
+      "id": "Q17",
+      "x": "match_offset",
+      "y": "nearest_gaia_arcsec",
+      "coherence": 1,
+      "question": "Random baseline: compare match_offset with nearest_gaia_arcsec.",
+      "rationale": "A runnable selection/systematics comparison; no specific causal mechanism asserted.",
+      "baseline": true,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND ((all:Gaia AND all:WISE AND (all:offset OR all:crossmatch))) AND ((all:Gaia AND (all:crowding OR all:\"nearest neighbour\" OR all:\"nearest neighbor\")))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:Gaia AND all:WISE AND (all:offset OR all:crossmatch))) AND ((all:Gaia AND (all:crowding OR all:\"nearest neighbour\" OR all:\"nearest neighbor\")))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3AGaia+AND+all%3AWISE+AND+%28all%3Aoffset+OR+all%3Acrossmatch%29%29%29+AND+%28%28all%3AGaia+AND+%28all%3Acrowding+OR+all%3A%22nearest+neighbour%22+OR+all%3A%22nearest+neighbor%22%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:17:15.370763+00:00",
+        "count": 0,
+        "status": "ok",
+        "sha256": "34873a787547807df840983c3a24649b1af5cf78403f0a99dc8f761a86a62b1a",
+        "bytes": 1021,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 76,
+        "exploration": 220
+      }
+    },
+    {
+      "id": "Q18",
+      "x": "visibility_periods_used",
+      "y": "phot_bp_rp_excess_factor",
+      "coherence": 1,
+      "question": "Random baseline: compare visibility_periods_used with phot_bp_rp_excess_factor.",
+      "rationale": "A runnable selection/systematics comparison; no specific causal mechanism asserted.",
+      "baseline": true,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND ((all:Gaia AND (all:\"visibility periods\" OR all:\"scanning law\"))) AND ((all:Gaia AND (all:\"flux excess\" OR all:\"photometric excess\")))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:Gaia AND (all:\"visibility periods\" OR all:\"scanning law\"))) AND ((all:Gaia AND (all:\"flux excess\" OR all:\"photometric excess\")))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3AGaia+AND+%28all%3A%22visibility+periods%22+OR+all%3A%22scanning+law%22%29%29%29+AND+%28%28all%3AGaia+AND+%28all%3A%22flux+excess%22+OR+all%3A%22photometric+excess%22%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:17:18.471708+00:00",
+        "count": 0,
+        "status": "ok",
+        "sha256": "8118881f680f8d5c036b552396fb2326007642bd7ef2ce04334a69fc1ea4532c",
+        "bytes": 995,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 97,
+        "exploration": 340
+      }
+    },
+    {
+      "id": "Q19",
+      "x": "phot_g_mean_mag",
+      "y": "parallax_snr",
+      "coherence": 1,
+      "question": "Random baseline: compare phot_g_mean_mag with parallax_snr.",
+      "rationale": "A runnable selection/systematics comparison; no specific causal mechanism asserted.",
+      "baseline": true,
+      "conditioning": "sky_quadrants",
+      "search_query": "cat:astro-ph* AND ((all:Gaia AND (all:magnitude OR all:brightness))) AND ((all:parallax AND (all:uncertainty OR all:precision)))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:Gaia AND (all:magnitude OR all:brightness))) AND ((all:parallax AND (all:uncertainty OR all:precision)))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3AGaia+AND+%28all%3Amagnitude+OR+all%3Abrightness%29%29%29+AND+%28%28all%3Aparallax+AND+%28all%3Auncertainty+OR+all%3Aprecision%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:17:21.573032+00:00",
+        "count": 278,
+        "status": "ok",
+        "sha256": "6719a26f90cf5eb230112c6bc2fd03a69f16362c337cad360de4d3a4a0c112aa",
+        "bytes": 4750,
+        "cache_hit": true
+      },
+      "available_pairs": {
+        "calibration": 66,
+        "exploration": 299
+      }
+    },
+    {
+      "id": "Q20",
+      "x": "parallax_snr",
+      "y": "nearest_gaia_arcsec",
+      "coherence": 1,
+      "question": "Random baseline: compare parallax_snr with nearest_gaia_arcsec.",
+      "rationale": "A runnable selection/systematics comparison; no specific causal mechanism asserted.",
+      "baseline": true,
+      "conditioning": "two_magnitude_bins",
+      "search_query": "cat:astro-ph* AND ((all:parallax AND (all:uncertainty OR all:precision))) AND ((all:Gaia AND (all:crowding OR all:\"nearest neighbour\" OR all:\"nearest neighbor\")))",
+      "literature": {
+        "query": "cat:astro-ph* AND ((all:parallax AND (all:uncertainty OR all:precision))) AND ((all:Gaia AND (all:crowding OR all:\"nearest neighbour\" OR all:\"nearest neighbor\")))",
+        "url": "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph%2A+AND+%28%28all%3Aparallax+AND+%28all%3Auncertainty+OR+all%3Aprecision%29%29%29+AND+%28%28all%3AGaia+AND+%28all%3Acrowding+OR+all%3A%22nearest+neighbour%22+OR+all%3A%22nearest+neighbor%22%29%29%29&start=0&max_results=1",
+        "utc": "2026-11-06T21:18:09.690530+00:00",
+        "count": 10,
+        "status": "ok",
+        "sha256": "17f5fbe6a91a7dc755ee81d7b9b65c560a24ed2737cf5d279be716d7094bd93b",
+        "bytes": 27217
+      },
+      "available_pairs": {
+        "calibration": 66,
+        "exploration": 299
+      }
+    }
+  ],
+  "selected": [
+    "Q02",
+    "Q03",
+    "Q17"
+  ],
+  "fields": {
+    "calibration": {
+      "gaia_sha256": "bdfa59a6e59dd11a6f3addee14ead3917a48a5f720cc697bff8dd8ed912db77a",
+      "allwise_sha256": "b4adc9b4cf550e9e1945d3d0d3d68ee2ff03a4aa55745115cfb31382874c77ac",
+      "results": [
+        {
+          "question_id": "Q02",
+          "question": "Does flux excess track neighbour spacing within brightness bins?",
+          "baseline": false,
+          "result": {
+            "status": "ok",
+            "n": 97,
+            "within_block_rank_correlation": 0.04404354455121124,
+            "permutation_p": 0.661,
+            "permutations": 999,
+            "blocks": 6,
+            "block_sizes": [
+              2,
+              2,
+              9,
+              30,
+              53,
+              1
+            ],
+            "descriptive_26_test_adjusted_p": 1
+          }
+        },
+        {
+          "question_id": "Q03",
+          "question": "Does Gaia-to-WISE nonmatching grow toward faint Gaia magnitudes?",
+          "baseline": false,
+          "result": {
+            "status": "ok",
+            "n": 98,
+            "within_block_rank_correlation": 0.3553649929461774,
+            "permutation_p": 0.002,
+            "permutations": 999,
+            "blocks": 4,
+            "block_sizes": [
+              25,
+              27,
+              18,
+              28
+            ],
+            "descriptive_26_test_adjusted_p": 0.052000000000000005
+          }
+        },
+        {
+          "question_id": "Q17",
+          "question": "Random baseline: compare match_offset with nearest_gaia_arcsec.",
+          "baseline": true,
+          "result": {
+            "status": "ok",
+            "n": 76,
+            "within_block_rank_correlation": -0.07155443370494233,
+            "permutation_p": 0.519,
+            "permutations": 999,
+            "blocks": 5,
+            "block_sizes": [
+              1,
+              8,
+              28,
+              38,
+              1
+            ],
+            "descriptive_26_test_adjusted_p": 1
+          }
+        }
+      ]
+    },
+    "exploration": {
+      "gaia_sha256": "f8c4454e3813eb9dc68b7ce29590096ad6c39935486bfc36471dbac9160e96ab",
+      "allwise_sha256": "adabe757b82611a552f072dce27e76e6726e1c4fbb202df20b014e4a299b39ef",
+      "results": [
+        {
+          "question_id": "Q02",
+          "question": "Does flux excess track neighbour spacing within brightness bins?",
+          "baseline": false,
+          "result": {
+            "status": "ok",
+            "n": 340,
+            "within_block_rank_correlation": -0.027003843740375514,
+            "permutation_p": 0.619,
+            "permutations": 999,
+            "blocks": 6,
+            "block_sizes": [
+              2,
+              6,
+              26,
+              64,
+              110,
+              132
+            ],
+            "descriptive_26_test_adjusted_p": 1
+          }
+        },
+        {
+          "question_id": "Q03",
+          "question": "Does Gaia-to-WISE nonmatching grow toward faint Gaia magnitudes?",
+          "baseline": false,
+          "result": {
+            "status": "ok",
+            "n": 343,
+            "within_block_rank_correlation": 0.5243916839570094,
+            "permutation_p": 0.001,
+            "permutations": 999,
+            "blocks": 4,
+            "block_sizes": [
+              89,
+              90,
+              75,
+              89
+            ],
+            "descriptive_26_test_adjusted_p": 0.026000000000000002
+          }
+        },
+        {
+          "question_id": "Q17",
+          "question": "Random baseline: compare match_offset with nearest_gaia_arcsec.",
+          "baseline": true,
+          "result": {
+            "status": "ok",
+            "n": 220,
+            "within_block_rank_correlation": -0.18856611638077975,
+            "permutation_p": 0.008,
+            "permutations": 999,
+            "blocks": 6,
+            "block_sizes": [
+              2,
+              6,
+              25,
+              60,
+              78,
+              49
+            ],
+            "descriptive_26_test_adjusted_p": 0.20800000000000002
+          }
+        }
+      ]
+    }
+  },
+  "attempted_scientific_tests_this_batch": 6,
+  "prior_attempted_scientific_tests": 20,
+  "elapsed_seconds": 3.407,
+  "script_sha256": "5e21ca4cf1a1772c131b4a155184459fd93ee69412a803cc2418eead223837cd",
+  "interpretation": "All tests use already explored open fields. No confirmation or claim of absence. Dependence/overlap with prior tests and adaptive selection prohibit independent-validation language."
+}
