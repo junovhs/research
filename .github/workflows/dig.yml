@@ -16,13 +16,13 @@ jobs:
   dig:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    env:
-      NEEDLE_CACHE: ${{ runner.temp }}/needle-cache
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Set external cache directory
+        run: echo "NEEDLE_CACHE=$RUNNER_TEMP/needle-cache" >> "$GITHUB_ENV"
       - run: python -m unittest discover -s tests -v
       - run: python tools/check_project.py
       - name: Fetch bounded Gaia circle
@@ -33,6 +33,10 @@ jobs:
         env:
           NEEDLE: ${{ inputs.needle }}
         run: python tools/dig.py gaia --needle "$NEEDLE" --offline
+      - name: Probe cached layer
+        env:
+          NEEDLE: ${{ inputs.needle }}
+        run: python tools/probe.py --needle "$NEEDLE" --output "data/$NEEDLE-probes.json"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
