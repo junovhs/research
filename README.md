@@ -10,7 +10,7 @@ This is a replacement project, not a continuation of the previous repository con
 
 Read [CONSTITUTION.md](CONSTITUTION.md), [OWNERSHIP.md](OWNERSHIP.md), then [STATE.md](STATE.md). Coding agents also read [AGENTS.md](AGENTS.md).
 
-[PLAN.md](PLAN.md) is the short implementation path. [METHOD.md](METHOD.md) describes the discovery loop. [ALIEN.md](ALIEN.md) separates the published Alien Space of Science method from our proposed adaptation. [config/budget.json](config/budget.json) contains initial resource limits.
+[PLAN.md](PLAN.md) is the approach: pick three spots in the sky and dig down them layer by layer, asking questions nobody has asked. [LOG.md](LOG.md) is the field notebook. [METHOD.md](METHOD.md) describes the discovery loop. [ALIEN.md](ALIEN.md) separates the published Alien Space of Science method from our proposed adaptation. [config/budget.json](config/budget.json) contains initial resource limits.
 
 ## The loop
 

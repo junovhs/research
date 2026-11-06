@@ -1,6 +1,8 @@
 # Instructions for research and coding agents
 
-Read CONSTITUTION.md, OWNERSHIP.md, STATE.md and config/budget.json first. Then do the next useful executable task. Do not start by rewriting the plan.
+Read CONSTITUTION.md, OWNERSHIP.md, STATE.md and config/budget.json first. Read PLAN.md for the approach and LOG.md for what's been seen. Then do the next useful executable task. Do not start by rewriting the plan.
+
+The owner wants exploration, not bureaucracy. Write the least documentation the next dig needs: a LOG.md entry per look, and a manifest for any fetched data. Don't add planning documents; Ishoo holds the plan and issues.
 
 ## Work style
 

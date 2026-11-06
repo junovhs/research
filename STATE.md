@@ -20,6 +20,6 @@ For a history reset, the owner must change the protection rule and use an author
 
 No astronomy adapter or discovery engine has run. There are no scientific results and no measured search throughput yet.
 
-Implement the first real-data vertical slice in PLAN.md: a bounded catalog query, cached sample with provenance, a few numerical probes with null/positive controls, and a measured report. Benchmark before scaling. Run on the owner's machine, not ChatGPT's environment.
+The approach is now the three-needle dig in PLAN.md (calibration, exploration and confirmation needles, dug survey by survey, with an Alien-inspired map of unasked questions). Ishoo holds the plan "First dig": pick the needles, dig the Gaia layer with one command, then probe it and log results in LOG.md. Benchmark before scaling. Run on the owner's machine, not ChatGPT's environment.
 
 Not yet implemented: archive adapter, probe runner, holdout management, actual Alien inference, astronomy-specific scoring or scheduled scientific integration tests. Enable at most two short daily validation runs only once there is useful software/data integration work to validate; do not repeatedly schedule placeholder checks.

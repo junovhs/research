@@ -1,37 +1,30 @@
-# Build the smallest working discovery loop
+# The dig
 
-No calendar roadmap, feature backlog, or platform build. Complete these in order, stopping to change course when evidence warrants it.
+Pick a spot in the sky. Dig straight down it, one survey layer at a time. At each depth, look around and ask what nobody has asked. Then either "hmm, that's weird, look closer" or "nothing at this depth, moving on."
 
-## 1. One real sample, one measured run
+Ishoo holds the live plan and issues. This page is the idea, and it stays short.
 
-Implement a read-only public-catalog adapter with a documented sampling scheme, timeout, download cap and content hash. Start with about 10,000 rows and a modest set of measurements, errors and quality metadata. Gaia is a candidate starting point, not a commitment about what we should discover. Verify its current schema and query documentation before coding.
+## Three needles
 
-Do not call an arbitrary TOP-N result representative. Use a documented random or stratified design, record exclusions, and keep confirmation observations separate. Do not access the confirmation data during initial exploration.
+- **Calibration:** a well-studied deep field where the answers are known. If the dig can't rediscover what's published there, the dig is broken.
+- **Exploration:** a seeded random spot with decent public coverage across surveys. This is where we dig for real.
+- **Confirmation:** chosen up front with similar coverage, and not touched until a claim is frozen. A second line of sight is the cure for one-needle flukes.
 
-Implement a few cheap probes over the cached table: relationships and conditional residuals, subpopulation structure, and missingness/quality disagreements. Begin with ordinary statistics, not trained neural networks. Include known-signal and null controls. Benchmark elapsed time, peak memory, bytes transferred, actual probe count and timeout behavior.
+## Layers
 
-**Done:** one command produces a reproducible report from real data, including negative results and controls. No astronomical novelty is required. This is the next implementation task.
+Each layer is one public survey of the needle's circle: Gaia first, then deeper optical and infrared, then X-ray and radio as coverage allows. Fetch a bounded sample once, cache it outside Git with a hash, and cross-match it to the layers above. Keep unmatched objects, because things that appear in one survey and not another are often the interesting ones.
 
-## 2. Make exploration broad and cheap
+Going deeper means going fainter, so each layer's detection limit is built into every comparison. Populations that "change with depth" usually change because faint things drop out.
 
-Add a seeded probe generator over features, transformations and justified strata. Separate random exploration from adaptive follow-up. Cache shared computations and batch numerical operations; do not make a process or network call per probe. Track feature provenance so algebraic identities and reused measurements do not masquerade as discoveries.
+## Two ways of asking
 
-Scale from hundreds to thousands of useful evaluations only after measuring throughput. A million evaluations is an eventual benchmark target, not a promise or a requirement that every run meet it. Never equate more tests with more evidence.
+- **Data first:** cheap probes over a layer, such as relationships, residuals, clumps, missingness and flag disagreements, each against a null.
+- **Unasked questions** (Alien-inspired; see [ALIEN.md](ALIEN.md)): list combinations of what the needle actually measures ("compare A with B", "A only within B", "could A and B be related?"). An agent judges whether each could mean something physically. A script counts how often the literature mentions both together. Coherent and rarely asked goes to the top, and a few random combinations ride along as a baseline.
 
-**Done:** resumable batches respect budgets and do not quietly drop failures; a few top candidates can be reconstructed exactly.
+Both feed the same probes and the same log.
 
-## 3. Bring in the actual Alien program
+## The log
 
-Follow ALIEN.md. Inspect and pin the official code, then attempt its smallest CPU-supported demonstration on the owner's machine inside a separate dependency environment. Record the actual runtime and whether it needs external model calls. Do not spend weeks retraining before the astronomy loop works.
+[LOG.md](LOG.md) is the field notebook: one dated line or short paragraph per look. Write down what was looked at, at what depth, and whether it was weird or nothing. Nulls count. A lead that survives gets a frozen claim and goes to the confirmation needle.
 
-Create a small, source-linked astronomy concept set. Have subscription agents turn selected combinations into testable batch specifications. Treat any lightweight availability score as a proxy, not a validated reproduction. Compare the proposed ranking with random combinations and ordinary agent ideation on the same feasibility budget.
-
-**Done:** at least one traceable Alien-inspired proposal enters the same data-and-falsification loop as a data-first surprise.
-
-## 4. Investigate survivors; add bounded CI only where useful
-
-Freeze one candidate claim and test it on untouched observations. Check known literature, instrument effects and selection explanations. Escalate only when cheaper tests cannot discriminate.
-
-Once a real integration test exists, enable at most two short daily GitHub validation/reproducibility runs. Their purpose must be testing this repository's software; do not disguise a general compute farm as CI. Keep discovery workloads portable to bounded local sessions. GitHub's policy is the boundary, not a free-minute counter.
-
-**Done:** a candidate is rejected, remains explicitly inconclusive, or has a compact reproducible evidence packet. Update STATE.md; choose the next shortest useful test.
+That's it. Anything that isn't digging, asking or checking needs a reason to exist.

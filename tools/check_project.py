@@ -14,7 +14,7 @@ def check_project() -> list[str]:
     errors: list[str] = []
     documents = (
         "README.md", "CONSTITUTION.md", "OWNERSHIP.md", "AGENTS.md",
-        "CLAUDE.md", "PLAN.md", "METHOD.md", "ALIEN.md", "STATE.md",
+        "CLAUDE.md", "PLAN.md", "LOG.md", "METHOD.md", "ALIEN.md", "STATE.md",
         "experiments/README.md",
     )
     for relative in documents:
