@@ -25,18 +25,30 @@ jobs:
         run: echo "NEEDLE_CACHE=$RUNNER_TEMP/needle-cache" >> "$GITHUB_ENV"
       - run: python -m unittest discover -s tests -v
       - run: python tools/check_project.py
-      - name: Fetch bounded Gaia circle
+      - name: Dig Gaia and AllWISE from a cold cache
         env:
           NEEDLE: ${{ inputs.needle }}
-        run: python tools/dig.py gaia --needle "$NEEDLE" --output data/gaia-manifest.json
+          PYTHONHASHSEED: '1'
+        run: python tools/layers.py --needle "$NEEDLE" --output data/full-dig.json
       - name: Verify offline replay
         env:
           NEEDLE: ${{ inputs.needle }}
-        run: python tools/dig.py gaia --needle "$NEEDLE" --offline
-      - name: Probe cached layer
-        env:
-          NEEDLE: ${{ inputs.needle }}
-        run: python tools/probe.py --needle "$NEEDLE" --output "data/$NEEDLE-probes.json"
+          PYTHONHASHSEED: '2'
+        run: python tools/layers.py --needle "$NEEDLE" --offline --output data/replay.json
+      - name: Compare replayed evidence
+        run: |
+          python - <<'PY'
+          import json
+          a=json.load(open('data/full-dig.json'))['fields']
+          b=json.load(open('data/replay.json'))['fields']
+          assert set(a)==set(b)
+          for role in a:
+              for key in ('gaia_manifest','allwise_manifest','reference_manifest'):
+                  assert a[role][key]['sha256']==b[role][key]['sha256']
+              for key in ('crossmatch','published_calibration','infrared_followup'):
+                  assert a[role][key]==b[role][key]
+          print('Offline replay input hashes and matching/follow-up results agree')
+          PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:

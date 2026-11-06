@@ -114,6 +114,8 @@ def published_matches(role, batch, offline=False):
 
 
 def associations(gaia, wise, radius_arcsec=2.):
+    if len(gaia)*len(wise)>2_000_000:
+        raise ValueError('Bounded prototype pair-comparison budget exceeded; do not silently run a large brute-force match')
     pairs = []
     for source in gaia:
         for infrared in wise:
@@ -140,7 +142,7 @@ def summarize_matches(gaia, wise, field, radius_arcsec=2.):
                 matched_gaia=len(gaia_ids), matched_allwise=len(wise_ids),
                 gaia_match_fraction=len(gaia_ids)/len(gaia) if gaia else None,
                 median_offset_arcsec=statistics.median(p['separation_arcsec'] for p in pairs) if pairs else None,
-                ambiguous_gaia=[sid for sid,n in counts.items() if n>1], shared_allwise=[wid for wid,n in mates.items() if n>1],
+                ambiguous_gaia=sorted(sid for sid,n in counts.items() if n>1), shared_allwise=sorted(wid for wid,n in mates.items() if n>1),
                 unmatched_gaia=[r['source_id'] for r in gaia if r['source_id'] not in gaia_ids],
                 unmatched_allwise=[r['designation'] for r in wise if r['designation'] not in wise_ids],
                 interior_unshifted=dict(matched_gaia=len(interior_hits),denominator=len(interior)), shifted_controls=shifts,
@@ -215,7 +217,10 @@ def main():
     args = parser.parse_args()
     field = dig.get_needle(args.needle)
     started, batch = time.monotonic(), Batch()
-    gaia, gm, _ = dig.fetch_gaia(args.needle, offline=True, endpoint=dig.ARCHIVES['ari'])
+    gaia, gm = table(args.needle,'Gaia DR3',dig.ARCHIVES['ari'],dig.gaia_query(field),dig.COLUMNS,batch,args.offline)
+    gaia = dig.parse_gaia(Path(gm['cache_file']).read_bytes(),field)
+    gm = dict(gm,field=field,release='Gaia DR3',schema_reference=dig.SCHEMA_REFERENCE)
+    dig.write_json(Path(gm['cache_file']).with_suffix('.json'),gm)
     wise, wm = fetch_wise(args.needle,batch,args.offline)
     matches = summarize_matches(gaia,wise,field)
     reference, rm = published_matches(args.needle,batch,args.offline)
