@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "seed": 20261106,
+  "selection": "Uniform RA and sin(dec) in -60 < dec < -15; |b| >= 35; separation >= 20 degrees. First eligible draws, no source data inspected.",
+  "coverage": "Gaia and AllWISE all-sky layers planned. Deeper optical footprint not yet verified; do not infer coverage from declination alone.",
+  "confirmation_policy": "No source queries until a minimal claim, rejection criterion and controls are frozen. No override in ordinary dig commands.",
+  "needles": [
+    {
+      "id": "calibration",
+      "name": "GOODS-South ESO image center",
+      "ra_deg": 53.1364166667,
+      "dec_deg": -27.789,
+      "radius_deg": 0.1,
+      "locked": false,
+      "reference": "https://www.hq.eso.org/public/images/eso1013a/"
+    },
+    {
+      "id": "exploration",
+      "name": "Seeded southern exploration",
+      "ra_deg": 317.36184508,
+      "dec_deg": -59.20212048,
+      "radius_deg": 0.1,
+      "locked": false
+    },
+    {
+      "id": "confirmation",
+      "name": "Seeded southern confirmation",
+      "ra_deg": 8.96752034,
+      "dec_deg": -52.8732032,
+      "radius_deg": 0.1,
+      "locked": true
+    }
+  ]
+}
