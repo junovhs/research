@@ -1,0 +1,1115 @@
+{
+  "paper": "https://arxiv.org/abs/2603.01092",
+  "official_code": "https://github.com/alejandrohdez00/alien-space-of-science",
+  "hosted": {
+    "endpoint": "https://lacuna.tiptreesystems.com/api/mcp",
+    "proposals_opened": [
+      {
+        "id": "5324700cb8ee504c",
+        "title": "Compressed Gradients Silently Trim Causal Weights",
+        "url": "https://lacuna.tiptreesystems.com/hypothesis/compressed-gradients-silently-trim-causal-weights-5324700cb8ee504c",
+        "generated_at": "2026-10-04T14:45:28.292011+00:00",
+        "directions": [
+          {
+            "id": 22841,
+            "title": "propensity score instability",
+            "url": "https://lacuna.tiptreesystems.com/direction/propensity-score-instability-22841"
+          },
+          {
+            "id": 27924,
+            "title": "gradient synchronization overhead",
+            "url": "https://lacuna.tiptreesystems.com/direction/gradient-synchronization-overhead-27924"
+          }
+        ]
+      },
+      {
+        "id": "0a2130670db42afd",
+        "title": "Locally Repairable Agent Memory",
+        "url": "https://lacuna.tiptreesystems.com/hypothesis/locally-repairable-agent-memory-0a2130670db42afd",
+        "generated_at": "2026-10-04T14:45:28.292011+00:00",
+        "directions": [
+          {
+            "id": 3666,
+            "title": "generalized local repair algorithm",
+            "url": "https://lacuna.tiptreesystems.com/direction/generalized-local-repair-algorithm-3666"
+          },
+          {
+            "id": 20604,
+            "title": "hierarchical memory architecture",
+            "url": "https://lacuna.tiptreesystems.com/direction/hierarchical-memory-architecture-20604"
+          },
+          {
+            "id": 21748,
+            "title": "external knowledge integration (external knowledge dependency)",
+            "url": "https://lacuna.tiptreesystems.com/direction/external-knowledge-integration-external-knowledge-dependency-21748"
+          },
+          {
+            "id": 22840,
+            "title": "contextual noise sensitivity",
+            "url": "https://lacuna.tiptreesystems.com/direction/contextual-noise-sensitivity-22840"
+          }
+        ]
+      },
+      {
+        "id": "671a19dab5a5221a",
+        "title": "Removing Scanner Uncertainty While Keeping Reader Uncertainty",
+        "url": "https://lacuna.tiptreesystems.com/hypothesis/removing-scanner-uncertainty-while-keeping-reader-uncertainty-671a19dab5a5221a",
+        "generated_at": "2026-10-04T14:45:28.292011+00:00",
+        "directions": [
+          {
+            "id": 25283,
+            "title": "invasive diagnostic limitations",
+            "url": "https://lacuna.tiptreesystems.com/direction/invasive-diagnostic-limitations-25283"
+          },
+          {
+            "id": 26681,
+            "title": "unpaired image-to-image translation",
+            "url": "https://lacuna.tiptreesystems.com/direction/unpaired-image-to-image-translation-26681"
+          },
+          {
+            "id": 28430,
+            "title": "domain shift in medical imaging (domain shift)",
+            "url": "https://lacuna.tiptreesystems.com/direction/domain-shift-in-medical-imaging-domain-shift-28430"
+          },
+          {
+            "id": 28503,
+            "title": "inter-observer variability (diagnostic subjectivity)",
+            "url": "https://lacuna.tiptreesystems.com/direction/inter-observer-variability-diagnostic-subjectivity-28503"
+          }
+        ]
+      }
+    ],
+    "source_papers_opened": [
+      {
+        "title": "HyMem: Hierarchical Context Management for Long-Horizon Agents via Information Isolation",
+        "source_urls": [
+          "https://arxiv.org/abs/2608.15703v1"
+        ],
+        "id": "art_a32f0d176bf05707324f19cacd9646d6"
+      }
+    ],
+    "note": "Hosted retrieval scores are search relevance, not Alien coherence or availability scores."
+  },
+  "local_runs": [
+    {
+      "command": [
+        "alien.py",
+        "sample",
+        "--n-gen",
+        "32",
+        "--top-k",
+        "5",
+        "--device",
+        "cpu",
+        "--batch-size",
+        "8",
+        "--seed",
+        "42",
+        "--betas",
+        "0",
+        "0.7",
+        "0.95",
+        "--output-dir",
+        "results/cpu-demo"
+      ],
+      "code_revision": "a55d660de75c99afe9e0948781cdb828fe3798eb",
+      "seconds": 10.25,
+      "exit_code": 0,
+      "device": "cpu",
+      "seed": 42,
+      "threads": 2,
+      "model_release": {
+        "revision": "533937876344f11a10f5171cfea809255c9d952b",
+        "manifest": {
+          "files": {
+            "README.md": {
+              "bytes": 2622,
+              "sha256": "dd9211e1d8dcd64eeb07042424770359a84a1d2cecb5c0ca013408f84fcdd71d"
+            },
+            "availability_model/COMPLETE": {
+              "bytes": 44,
+              "sha256": "ae2c7e92d6b9a644f833a2c6c35230d92bbfb26a9f3791f95c8ce9f1e63e8f58"
+            },
+            "availability_model/author_embeddings.pt": {
+              "bytes": 81493636,
+              "sha256": "16bfdf7dcc08a41dea4709d567fbda89f1cfd45c5a365f54f45664765c2a4aa4"
+            },
+            "availability_model/author_id_to_index.json": {
+              "bytes": 1121013,
+              "sha256": "ad4b12e283e60e94db3cee5b1d2cbece76c42241731b09173a8f680f58feb14d"
+            },
+            "availability_model/metrics.jsonl": {
+              "bytes": 31173,
+              "sha256": "2a1f5baf316c583baa90e7661cbf11a4e551f50e94b11c487b78b079324a722e"
+            },
+            "availability_model/model.pt": {
+              "bytes": 104596293,
+              "sha256": "11a6286c3bb50012e3d257aaad2456a192f069269b04aeef3942d7840f44664f"
+            },
+            "availability_model/run_config.json": {
+              "bytes": 407,
+              "sha256": "95a4f2b8c5699579ba44005f074742da766f7f4ccb0afc436c7bbbb2fd4f036b"
+            },
+            "availability_model/token_mapping.json": {
+              "bytes": 18274,
+              "sha256": "e6e8208466749758cf3f8aca0ffb0e4f8e540343d5c88aa4b43c1907bf5b261a"
+            },
+            "coherence_model/model.pt": {
+              "bytes": 171080342,
+              "sha256": "93468cae4555f7e0ce3797a846fcdd2ac44655ed30392e4a03a70ea6b55b68d1"
+            },
+            "coherence_model/token_mapping.json": {
+              "bytes": 18274,
+              "sha256": "2e86436c9835f0136795707de111a53131590b83a0980e2d0b43e7f52a13fe2d"
+            },
+            "LICENSE": {
+              "bytes": 1085,
+              "sha256": "8857d19129eb06e9e9a1b4c86d758ada16d3ec6c990592d096b70fb7404f16e5"
+            }
+          },
+          "contact_identifiers_replaced": 1208,
+          "author_order": "Explicit author_ids.json preserves original compact row indices; model bank row indices unchanged.",
+          "source_inventory_sha256": "d2ee47a991a9a8f8d7f980232c35f68c448a687fa8c6fa226695955653f2b467",
+          "license": "MIT"
+        }
+      },
+      "dataset_revision": "3aec3c90c04442606d4cab3f42e02edf7be8cab5",
+      "rankings": [
+        {
+          "config": {
+            "beta": 0.0,
+            "top_k": 5,
+            "k": 3,
+            "fusion_formula": "(1 - beta) * z_coh + beta * z_avail",
+            "coherence_model": "models\\coherence_model",
+            "availability_model": "models\\availability_model",
+            "availability_model_type": "two_tower",
+            "token_mapping": null,
+            "n_gen": 32,
+            "gen_top_k": 0,
+            "gen_temperature": 1.0,
+            "tt_top_k": 10,
+            "exhaustive_ks": [],
+            "seed": 42,
+            "n_candidate_sets": 32
+          },
+          "top_k_sequences": [
+            {
+              "cluster_ids": [
+                151,
+                265,
+                269
+              ],
+              "length": 3,
+              "coherence": -3.6354583501815796,
+              "availability": 0.41223275661468506,
+              "unavailability": -0.41223275661468506,
+              "avg_nll_coherence": 3.6354583501815796,
+              "avg_nll_availability": -0.41223275661468506,
+              "rank_coherence": 1,
+              "rank_availability": 23,
+              "rank_fused": 1,
+              "fusion_score": 1.1769284031141887,
+              "z_coherence": 1.1769284031141887,
+              "z_availability": -0.6507020663890691
+            },
+            {
+              "cluster_ids": [
+                53,
+                57,
+                119
+              ],
+              "length": 3,
+              "coherence": -3.7335819403330484,
+              "availability": 0.4066227674484253,
+              "unavailability": -0.4066227674484253,
+              "avg_nll_coherence": 3.7335819403330484,
+              "avg_nll_availability": -0.4066227674484253,
+              "rank_coherence": 2,
+              "rank_availability": 21,
+              "rank_fused": 2,
+              "fusion_score": 1.0544473622539459,
+              "z_coherence": 1.0544473622539459,
+              "z_availability": -0.5183307572245088
+            },
+            {
+              "cluster_ids": [
+                50,
+                131,
+                268
+              ],
+              "length": 3,
+              "coherence": -3.736601988474528,
+              "availability": 0.40871161222457886,
+              "unavailability": -0.40871161222457886,
+              "avg_nll_coherence": 3.736601988474528,
+              "avg_nll_availability": -0.40871161222457886,
+              "rank_coherence": 3,
+              "rank_availability": 22,
+              "rank_fused": 3,
+              "fusion_score": 1.050677640424104,
+              "z_coherence": 1.050677640424104,
+              "z_availability": -0.567618395661313
+            },
+            {
+              "cluster_ids": [
+                109,
+                140,
+                145
+              ],
+              "length": 3,
+              "coherence": -3.746866544087728,
+              "availability": 0.3855380415916443,
+              "unavailability": -0.3855380415916443,
+              "avg_nll_coherence": 3.746866544087728,
+              "avg_nll_availability": -0.3855380415916443,
+              "rank_coherence": 4,
+              "rank_availability": 14,
+              "rank_fused": 4,
+              "fusion_score": 1.0378650899096773,
+              "z_coherence": 1.0378650899096773,
+              "z_availability": -0.0208230647277063
+            },
+            {
+              "cluster_ids": [
+                45,
+                225,
+                233
+              ],
+              "length": 3,
+              "coherence": -3.829354246457418,
+              "availability": 0.37475332617759705,
+              "unavailability": -0.37475332617759705,
+              "avg_nll_coherence": 3.829354246457418,
+              "avg_nll_availability": -0.37475332617759705,
+              "rank_coherence": 5,
+              "rank_availability": 12,
+              "rank_fused": 5,
+              "fusion_score": 0.9349012702123574,
+              "z_coherence": 0.9349012702123574,
+              "z_availability": 0.23364924457916394
+            }
+          ]
+        },
+        {
+          "config": {
+            "beta": 0.7,
+            "top_k": 5,
+            "k": 3,
+            "fusion_formula": "(1 - beta) * z_coh + beta * z_avail",
+            "coherence_model": "models\\coherence_model",
+            "availability_model": "models\\availability_model",
+            "availability_model_type": "two_tower",
+            "token_mapping": null,
+            "n_gen": 32,
+            "gen_top_k": 0,
+            "gen_temperature": 1.0,
+            "tt_top_k": 10,
+            "exhaustive_ks": [],
+            "seed": 42,
+            "n_candidate_sets": 32
+          },
+          "top_k_sequences": [
+            {
+              "cluster_ids": [
+                26,
+                190,
+                191
+              ],
+              "length": 3,
+              "coherence": -7.269316514333089,
+              "availability": 0.25352466106414795,
+              "unavailability": -0.25352466106414795,
+              "avg_nll_coherence": 7.269316514333089,
+              "avg_nll_availability": -0.25352466106414795,
+              "rank_coherence": 32,
+              "rank_availability": 1,
+              "rank_fused": 1,
+              "fusion_score": 1.1581911093460986,
+              "z_coherence": -3.358970962132445,
+              "z_availability": 3.094117711408332
+            },
+            {
+              "cluster_ids": [
+                119,
+                164,
+                240
+              ],
+              "length": 3,
+              "coherence": -5.056973298390706,
+              "availability": 0.31200098991394043,
+              "unavailability": -0.31200098991394043,
+              "avg_nll_coherence": 5.056973298390706,
+              "avg_nll_availability": -0.31200098991394043,
+              "rank_coherence": 26,
+              "rank_availability": 2,
+              "rank_fused": 2,
+              "fusion_score": 1.0207959689775108,
+              "z_coherence": -0.5974525605896943,
+              "z_availability": 1.7143310530777416
+            },
+            {
+              "cluster_ids": [
+                236,
+                246,
+                260
+              ],
+              "length": 3,
+              "coherence": -5.71941614151001,
+              "availability": 0.3133517801761627,
+              "unavailability": -0.3133517801761627,
+              "avg_nll_coherence": 5.71941614151001,
+              "avg_nll_availability": -0.3133517801761627,
+              "rank_coherence": 29,
+              "rank_availability": 3,
+              "rank_fused": 3,
+              "fusion_score": 0.7504202535998414,
+              "z_coherence": -1.4243351564101692,
+              "z_availability": 1.682458286461275
+            },
+            {
+              "cluster_ids": [
+                32,
+                33,
+                259
+              ],
+              "length": 3,
+              "coherence": -3.8339426517486572,
+              "availability": 0.3575170636177063,
+              "unavailability": -0.3575170636177063,
+              "avg_nll_coherence": 3.8339426517486572,
+              "avg_nll_availability": -0.3575170636177063,
+              "rank_coherence": 7,
+              "rank_availability": 7,
+              "rank_fused": 4,
+              "fusion_score": 0.7269971383538426,
+              "z_coherence": 0.929173874230493,
+              "z_availability": 0.6403499658352781
+            },
+            {
+              "cluster_ids": [
+                123,
+                230,
+                256
+              ],
+              "length": 3,
+              "coherence": -6.056164741516113,
+              "availability": 0.32032477855682373,
+              "unavailability": -0.32032477855682373,
+              "avg_nll_coherence": 6.056164741516113,
+              "avg_nll_availability": -0.32032477855682373,
+              "rank_coherence": 31,
+              "rank_availability": 4,
+              "rank_fused": 5,
+              "fusion_score": 0.50914543044022,
+              "z_coherence": -1.8446756573366911,
+              "z_availability": 1.517925896630325
+            }
+          ]
+        },
+        {
+          "config": {
+            "beta": 0.95,
+            "top_k": 5,
+            "k": 3,
+            "fusion_formula": "(1 - beta) * z_coh + beta * z_avail",
+            "coherence_model": "models\\coherence_model",
+            "availability_model": "models\\availability_model",
+            "availability_model_type": "two_tower",
+            "token_mapping": null,
+            "n_gen": 32,
+            "gen_top_k": 0,
+            "gen_temperature": 1.0,
+            "tt_top_k": 10,
+            "exhaustive_ks": [],
+            "seed": 42,
+            "n_candidate_sets": 32
+          },
+          "top_k_sequences": [
+            {
+              "cluster_ids": [
+                26,
+                190,
+                191
+              ],
+              "length": 3,
+              "coherence": -7.269316514333089,
+              "availability": 0.25352466106414795,
+              "unavailability": -0.25352466106414795,
+              "avg_nll_coherence": 7.269316514333089,
+              "avg_nll_availability": -0.25352466106414795,
+              "rank_coherence": 32,
+              "rank_availability": 1,
+              "rank_fused": 1,
+              "fusion_score": 2.771463277731293,
+              "z_coherence": -3.358970962132445,
+              "z_availability": 3.094117711408332
+            },
+            {
+              "cluster_ids": [
+                119,
+                164,
+                240
+              ],
+              "length": 3,
+              "coherence": -5.056973298390706,
+              "availability": 0.31200098991394043,
+              "unavailability": -0.31200098991394043,
+              "avg_nll_coherence": 5.056973298390706,
+              "avg_nll_availability": -0.31200098991394043,
+              "rank_coherence": 26,
+              "rank_availability": 2,
+              "rank_fused": 2,
+              "fusion_score": 1.5987418723943696,
+              "z_coherence": -0.5974525605896943,
+              "z_availability": 1.7143310530777416
+            },
+            {
+              "cluster_ids": [
+                236,
+                246,
+                260
+              ],
+              "length": 3,
+              "coherence": -5.71941614151001,
+              "availability": 0.3133517801761627,
+              "unavailability": -0.3133517801761627,
+              "avg_nll_coherence": 5.71941614151001,
+              "avg_nll_availability": -0.3133517801761627,
+              "rank_coherence": 29,
+              "rank_availability": 3,
+              "rank_fused": 3,
+              "fusion_score": 1.5271186143177027,
+              "z_coherence": -1.4243351564101692,
+              "z_availability": 1.682458286461275
+            },
+            {
+              "cluster_ids": [
+                123,
+                230,
+                256
+              ],
+              "length": 3,
+              "coherence": -6.056164741516113,
+              "availability": 0.32032477855682373,
+              "unavailability": -0.32032477855682373,
+              "avg_nll_coherence": 6.056164741516113,
+              "avg_nll_availability": -0.32032477855682373,
+              "rank_coherence": 31,
+              "rank_availability": 4,
+              "rank_fused": 4,
+              "fusion_score": 1.349795818931974,
+              "z_coherence": -1.8446756573366911,
+              "z_availability": 1.517925896630325
+            },
+            {
+              "cluster_ids": [
+                166,
+                222,
+                243
+              ],
+              "length": 3,
+              "coherence": -5.508414586385091,
+              "availability": 0.3494349718093872,
+              "unavailability": -0.3494349718093872,
+              "avg_nll_coherence": 5.508414586385091,
+              "avg_nll_availability": -0.3494349718093872,
+              "rank_coherence": 28,
+              "rank_availability": 5,
+              "rank_fused": 5,
+              "fusion_score": 0.7314517139209045,
+              "z_coherence": -1.1609561865321174,
+              "z_availability": 0.8310521297342215
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "command": [
+        "alien.py",
+        "sample",
+        "--n-gen",
+        "256",
+        "--top-k",
+        "5",
+        "--device",
+        "cpu",
+        "--batch-size",
+        "8",
+        "--seed",
+        "42",
+        "--betas",
+        "0",
+        "0.4",
+        "0.7",
+        "0.95",
+        "--output-dir",
+        "results/explore-42-256"
+      ],
+      "seconds": 82.937,
+      "exit_code": 0,
+      "code_revision": "a55d660de75c99afe9e0948781cdb828fe3798eb",
+      "device": "cpu",
+      "threads": 2,
+      "seed": 42,
+      "requested_candidates": 256,
+      "rankings": [
+        {
+          "config": {
+            "beta": 0.0,
+            "top_k": 5,
+            "k": 3,
+            "fusion_formula": "(1 - beta) * z_coh + beta * z_avail",
+            "coherence_model": "models\\coherence_model",
+            "availability_model": "models\\availability_model",
+            "availability_model_type": "two_tower",
+            "token_mapping": null,
+            "n_gen": 256,
+            "gen_top_k": 0,
+            "gen_temperature": 1.0,
+            "tt_top_k": 10,
+            "exhaustive_ks": [],
+            "seed": 42,
+            "n_candidate_sets": 254
+          },
+          "top_k_sequences": [
+            {
+              "cluster_ids": [
+                34,
+                262,
+                266
+              ],
+              "length": 3,
+              "coherence": -3.4682164192199707,
+              "availability": 0.452321857213974,
+              "unavailability": -0.452321857213974,
+              "avg_nll_coherence": 3.4682164192199707,
+              "avg_nll_availability": -0.452321857213974,
+              "rank_coherence": 1,
+              "rank_availability": 235,
+              "rank_fused": 1,
+              "fusion_score": 1.4498389955979996,
+              "z_coherence": 1.4498389955979996,
+              "z_availability": -1.3406176055779768
+            },
+            {
+              "cluster_ids": [
+                133,
+                143,
+                149
+              ],
+              "length": 3,
+              "coherence": -3.5235671599706015,
+              "availability": 0.4114348888397217,
+              "unavailability": -0.4114348888397217,
+              "avg_nll_coherence": 3.5235671599706015,
+              "avg_nll_availability": -0.4114348888397217,
+              "rank_coherence": 2,
+              "rank_availability": 161,
+              "rank_fused": 2,
+              "fusion_score": 1.383514658502897,
+              "z_coherence": 1.383514658502897,
+              "z_availability": -0.40990995512817513
+            },
+            {
+              "cluster_ids": [
+                62,
+                257,
+                258
+              ],
+              "length": 3,
+              "coherence": -3.6266122659047446,
+              "availability": 0.4318022131919861,
+              "unavailability": -0.4318022131919861,
+              "avg_nll_coherence": 3.6266122659047446,
+              "avg_nll_availability": -0.4318022131919861,
+              "rank_coherence": 3,
+              "rank_availability": 220,
+              "rank_fused": 3,
+              "fusion_score": 1.2600402794920111,
+              "z_coherence": 1.2600402794920111,
+              "z_availability": -0.8735301585224228
+            },
+            {
+              "cluster_ids": [
+                151,
+                265,
+                269
+              ],
+              "length": 3,
+              "coherence": -3.6354583501815796,
+              "availability": 0.41223275661468506,
+              "unavailability": -0.41223275661468506,
+              "avg_nll_coherence": 3.6354583501815796,
+              "avg_nll_availability": -0.41223275661468506,
+              "rank_coherence": 4,
+              "rank_availability": 163,
+              "rank_fused": 4,
+              "fusion_score": 1.2494404091453473,
+              "z_coherence": 1.2494404091453473,
+              "z_availability": -0.42807177224820897
+            },
+            {
+              "cluster_ids": [
+                34,
+                50,
+                61
+              ],
+              "length": 3,
+              "coherence": -3.6362369457880654,
+              "availability": 0.3692690134048462,
+              "unavailability": -0.3692690134048462,
+              "avg_nll_coherence": 3.6362369457880654,
+              "avg_nll_availability": -0.3692690134048462,
+              "rank_coherence": 5,
+              "rank_availability": 59,
+              "rank_fused": 5,
+              "fusion_score": 1.248507452571234,
+              "z_coherence": 1.248507452571234,
+              "z_availability": 0.5499093813395561
+            }
+          ]
+        },
+        {
+          "config": {
+            "beta": 0.4,
+            "top_k": 5,
+            "k": 3,
+            "fusion_formula": "(1 - beta) * z_coh + beta * z_avail",
+            "coherence_model": "models\\coherence_model",
+            "availability_model": "models\\availability_model",
+            "availability_model_type": "two_tower",
+            "token_mapping": null,
+            "n_gen": 256,
+            "gen_top_k": 0,
+            "gen_temperature": 1.0,
+            "tt_top_k": 10,
+            "exhaustive_ks": [],
+            "seed": 42,
+            "n_candidate_sets": 254
+          },
+          "top_k_sequences": [
+            {
+              "cluster_ids": [
+                82,
+                166,
+                223
+              ],
+              "length": 3,
+              "coherence": -3.854536493619283,
+              "availability": 0.3327031433582306,
+              "unavailability": -0.3327031433582306,
+              "avg_nll_coherence": 3.854536493619283,
+              "avg_nll_availability": -0.3327031433582306,
+              "rank_coherence": 33,
+              "rank_availability": 22,
+              "rank_fused": 1,
+              "fusion_score": 1.1450597234774906,
+              "z_coherence": 0.9869287889125878,
+              "z_availability": 1.3822561253248447
+            },
+            {
+              "cluster_ids": [
+                121,
+                161,
+                162
+              ],
+              "length": 3,
+              "coherence": -4.57592248916626,
+              "availability": 0.2794415056705475,
+              "unavailability": -0.2794415056705475,
+              "avg_nll_coherence": 4.57592248916626,
+              "avg_nll_availability": -0.2794415056705475,
+              "rank_coherence": 135,
+              "rank_availability": 8,
+              "rank_fused": 2,
+              "fusion_score": 1.1113734296486366,
+              "z_coherence": 0.12252395357533624,
+              "z_availability": 2.5946476437585866
+            },
+            {
+              "cluster_ids": [
+                96,
+                186,
+                268
+              ],
+              "length": 3,
+              "coherence": -3.7823994954427085,
+              "availability": 0.34329652786254883,
+              "unavailability": -0.34329652786254883,
+              "avg_nll_coherence": 3.7823994954427085,
+              "avg_nll_availability": -0.34329652786254883,
+              "rank_coherence": 20,
+              "rank_availability": 28,
+              "rank_fused": 3,
+              "fusion_score": 1.100468227522781,
+              "z_coherence": 1.073367353585951,
+              "z_availability": 1.1411195384280262
+            },
+            {
+              "cluster_ids": [
+                73,
+                157,
+                201
+              ],
+              "length": 3,
+              "coherence": -3.803561290105184,
+              "availability": 0.3456912636756897,
+              "unavailability": -0.3456912636756897,
+              "avg_nll_coherence": 3.803561290105184,
+              "avg_nll_availability": -0.3456912636756897,
+              "rank_coherence": 23,
+              "rank_availability": 32,
+              "rank_fused": 4,
+              "fusion_score": 1.0634493916323435,
+              "z_coherence": 1.04801011385081,
+              "z_availability": 1.0866083083046436
+            },
+            {
+              "cluster_ids": [
+                91,
+                141,
+                233
+              ],
+              "length": 3,
+              "coherence": -4.155758897463481,
+              "availability": 0.3259811997413635,
+              "unavailability": -0.3259811997413635,
+              "avg_nll_coherence": 4.155758897463481,
+              "avg_nll_availability": -0.3259811997413635,
+              "rank_coherence": 88,
+              "rank_availability": 19,
+              "rank_fused": 5,
+              "fusion_score": 0.9896993400021478,
+              "z_coherence": 0.6259873456324083,
+              "z_availability": 1.5352673315567569
+            }
+          ]
+        },
+        {
+          "config": {
+            "beta": 0.7,
+            "top_k": 5,
+            "k": 3,
+            "fusion_formula": "(1 - beta) * z_coh + beta * z_avail",
+            "coherence_model": "models\\coherence_model",
+            "availability_model": "models\\availability_model",
+            "availability_model_type": "two_tower",
+            "token_mapping": null,
+            "n_gen": 256,
+            "gen_top_k": 0,
+            "gen_temperature": 1.0,
+            "tt_top_k": 10,
+            "exhaustive_ks": [],
+            "seed": 42,
+            "n_candidate_sets": 254
+          },
+          "top_k_sequences": [
+            {
+              "cluster_ids": [
+                121,
+                161,
+                162
+              ],
+              "length": 3,
+              "coherence": -4.57592248916626,
+              "availability": 0.2794415056705475,
+              "unavailability": -0.2794415056705475,
+              "avg_nll_coherence": 4.57592248916626,
+              "avg_nll_availability": -0.2794415056705475,
+              "rank_coherence": 135,
+              "rank_availability": 8,
+              "rank_fused": 1,
+              "fusion_score": 1.8530105367036114,
+              "z_coherence": 0.12252395357533624,
+              "z_availability": 2.5946476437585866
+            },
+            {
+              "cluster_ids": [
+                78,
+                261,
+                262
+              ],
+              "length": 3,
+              "coherence": -5.8810798327128095,
+              "availability": 0.25579020380973816,
+              "unavailability": -0.25579020380973816,
+              "avg_nll_coherence": 5.8810798327128095,
+              "avg_nll_availability": -0.25579020380973816,
+              "rank_coherence": 231,
+              "rank_availability": 4,
+              "rank_fused": 2,
+              "fusion_score": 1.760698126493423,
+              "z_coherence": -1.4413881899950927,
+              "z_availability": 3.13302083355993
+            },
+            {
+              "cluster_ids": [
+                29,
+                52,
+                157
+              ],
+              "length": 3,
+              "coherence": -6.240551471710205,
+              "availability": 0.2661914825439453,
+              "unavailability": -0.2661914825439453,
+              "avg_nll_coherence": 6.240551471710205,
+              "avg_nll_availability": -0.2661914825439453,
+              "rank_coherence": 238,
+              "rank_availability": 6,
+              "rank_fused": 3,
+              "fusion_score": 1.465741864999473,
+              "z_coherence": -1.8721271076259396,
+              "z_availability": 2.896257138981793
+            },
+            {
+              "cluster_ids": [
+                38,
+                203,
+                265
+              ],
+              "length": 3,
+              "coherence": -7.222718556722005,
+              "availability": 0.24838978052139282,
+              "unavailability": -0.24838978052139282,
+              "avg_nll_coherence": 7.222718556722005,
+              "avg_nll_availability": -0.24838978052139282,
+              "rank_coherence": 252,
+              "rank_availability": 2,
+              "rank_fused": 4,
+              "fusion_score": 1.3963290567849858,
+              "z_coherence": -3.0490143533362803,
+              "z_availability": 3.3014762325512432
+            },
+            {
+              "cluster_ids": [
+                3,
+                168,
+                199
+              ],
+              "length": 3,
+              "coherence": -6.906858364741008,
+              "availability": 0.25734943151474,
+              "unavailability": -0.25734943151474,
+              "avg_nll_coherence": 6.906858364741008,
+              "avg_nll_availability": -0.25734943151474,
+              "rank_coherence": 250,
+              "rank_availability": 5,
+              "rank_fused": 5,
+              "fusion_score": 1.3671098282949026,
+              "z_coherence": -2.670533097913646,
+              "z_availability": 3.097528225241424
+            }
+          ]
+        },
+        {
+          "config": {
+            "beta": 0.95,
+            "top_k": 5,
+            "k": 3,
+            "fusion_formula": "(1 - beta) * z_coh + beta * z_avail",
+            "coherence_model": "models\\coherence_model",
+            "availability_model": "models\\availability_model",
+            "availability_model_type": "two_tower",
+            "token_mapping": null,
+            "n_gen": 256,
+            "gen_top_k": 0,
+            "gen_temperature": 1.0,
+            "tt_top_k": 10,
+            "exhaustive_ks": [],
+            "seed": 42,
+            "n_candidate_sets": 254
+          },
+          "top_k_sequences": [
+            {
+              "cluster_ids": [
+                37,
+                150,
+                179
+              ],
+              "length": 3,
+              "coherence": -7.984659830729167,
+              "availability": 0.23726367950439453,
+              "unavailability": -0.23726367950439453,
+              "avg_nll_coherence": 7.984659830729167,
+              "avg_nll_availability": -0.23726367950439453,
+              "rank_coherence": 254,
+              "rank_availability": 1,
+              "rank_fused": 1,
+              "fusion_score": 3.178901324332753,
+              "z_coherence": -3.9620147796828253,
+              "z_availability": 3.554739014017784
+            },
+            {
+              "cluster_ids": [
+                38,
+                203,
+                265
+              ],
+              "length": 3,
+              "coherence": -7.222718556722005,
+              "availability": 0.24838978052139282,
+              "unavailability": -0.24838978052139282,
+              "avg_nll_coherence": 7.222718556722005,
+              "avg_nll_availability": -0.24838978052139282,
+              "rank_coherence": 252,
+              "rank_availability": 2,
+              "rank_fused": 2,
+              "fusion_score": 2.9839517032568668,
+              "z_coherence": -3.0490143533362803,
+              "z_availability": 3.3014762325512432
+            },
+            {
+              "cluster_ids": [
+                78,
+                261,
+                262
+              ],
+              "length": 3,
+              "coherence": -5.8810798327128095,
+              "availability": 0.25579020380973816,
+              "unavailability": -0.25579020380973816,
+              "avg_nll_coherence": 5.8810798327128095,
+              "avg_nll_availability": -0.25579020380973816,
+              "rank_coherence": 231,
+              "rank_availability": 4,
+              "rank_fused": 3,
+              "fusion_score": 2.904300382382179,
+              "z_coherence": -1.4413881899950927,
+              "z_availability": 3.13302083355993
+            },
+            {
+              "cluster_ids": [
+                26,
+                190,
+                191
+              ],
+              "length": 3,
+              "coherence": -7.269316514333089,
+              "availability": 0.25352466106414795,
+              "unavailability": -0.25352466106414795,
+              "avg_nll_coherence": 7.269316514333089,
+              "avg_nll_availability": -0.25352466106414795,
+              "rank_coherence": 253,
+              "rank_availability": 3,
+              "rank_fused": 4,
+              "fusion_score": 2.8701191560936397,
+              "z_coherence": -3.104850618698377,
+              "z_availability": 3.1845912495037463
+            },
+            {
+              "cluster_ids": [
+                3,
+                168,
+                199
+              ],
+              "length": 3,
+              "coherence": -6.906858364741008,
+              "availability": 0.25734943151474,
+              "unavailability": -0.25734943151474,
+              "avg_nll_coherence": 6.906858364741008,
+              "avg_nll_availability": -0.25734943151474,
+              "rank_coherence": 250,
+              "rank_availability": 5,
+              "rank_fused": 5,
+              "fusion_score": 2.80912515908367,
+              "z_coherence": -2.670533097913646,
+              "z_availability": 3.097528225241424
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "interpretation": "Actual unchanged upstream models and CPU sampler, not the earlier keyword heuristic. Scores are relative to the candidate pool, not probabilities or proof of novelty. Hosted proposals are generated ideas, not findings.",
+  "release_catalog_check": {
+    "catalog_sha256": "9675a6cf30af8cb572129e00511dab857d972cd116ab4b0c219aaaaf0323878f",
+    "examples": [
+      {
+        "description_cluster": 121,
+        "sample_text": "The 'genealogy of skills' framework tracks the transfer of knowledge by correlating improvements in specific internal capabilities (measured by narrow diagnostic probes) with overall performance gains on broad target benchmarks, revealing which intermediate training datasets effectively act as 'teachers' for required skills.",
+        "matching_assignments": [
+          {
+            "assigned_cluster": -1,
+            "paper_id": "conf__acl__PruksachatkunPL20"
+          }
+        ]
+      },
+      {
+        "description_cluster": 121,
+        "sample_text": "Initializing a small student model to functionally approximate a larger teacher model before fine-tuning\u2014rather than training from scratch\u2014improves knowledge transfer; this is achieved by first aligning the models' internal representations on unlabeled data and then using a dual-objective loss to match their output distributions.",
+        "matching_assignments": [
+          {
+            "assigned_cluster": 166,
+            "paper_id": "conf__acl__ChenSZCLW0024"
+          }
+        ]
+      },
+      {
+        "description_cluster": 161,
+        "sample_text": "Temperature Scaling reduces model overconfidence post-training by dividing raw output scores (logits) by a learnable parameter T before the final softmax layer; values of T greater than 1 'flatten' the probability distribution, lowering confidence scores without changing which class is predicted as the winner.",
+        "matching_assignments": [
+          {
+            "assigned_cluster": 187,
+            "paper_id": "conf__emnlp__JiangLD22"
+          }
+        ]
+      },
+      {
+        "description_cluster": 161,
+        "sample_text": "Advanced calibration techniques improve on simple linear scaling by using flexible mathematical frameworks\u2014such as Beta distributions or Gaussian Processes\u2014to model non-linear and non-monotonic relationships between a model\u2019s predicted confidence and its actual accuracy, allowing for more precise adjustments across the entire probability range.",
+        "matching_assignments": [
+          {
+            "assigned_cluster": 158,
+            "paper_id": "conf__emnlp__JiangLD22"
+          }
+        ]
+      },
+      {
+        "description_cluster": 162,
+        "sample_text": "Traditional Conformal Prediction relies on the assumption of exchangeability\u2014that future test data follows the same distribution as the calibration data\u2014meaning that when a model encounters 'uncertainty outliers' (samples significantly more complex or different than those seen during calibration), the statistical error guarantees become invalid and the model becomes miscalibrated.",
+        "matching_assignments": [
+          {
+            "assigned_cluster": -1,
+            "paper_id": "conf__acl__WangWZ00SX25"
+          }
+        ]
+      },
+      {
+        "description_cluster": 162,
+        "sample_text": "Selective Conformal Uncertainty (SConU) introduces a statistical 'significance test' for individual model predictions by calculating a conformal p-value that assesses whether a new input's predictive uncertainty is consistent with the distribution of uncertainty observed in a prior calibration set, allowing the system to refuse predictions for outliers that fall below a specific significance threshold.",
+        "matching_assignments": [
+          {
+            "assigned_cluster": 138,
+            "paper_id": "conf__acl__WangWZ00SX25"
+          }
+        ]
+      }
+    ],
+    "interpretation": "The canonical cluster sample texts can have different cluster IDs in atom_assignments, including -1. This is a release-data consistency caveat; it does not by itself establish that model training was wrong. Numeric model outputs are retained; semantic/source interpretation is provisional."
+  },
+  "official_paper_method": "Idea atoms; learned coherence transformer; learned author-atom availability encoder and author bank; standardized coherence/unavailability fusion. No keyword co-mention substitute.",
+  "fresh_combination_interpretations": [
+    {
+      "cluster_ids": [
+        121,
+        161,
+        162
+      ],
+      "source": "beta=0.7 top-ranked out of 254; also ranked second at beta=0.4",
+      "question": "Can source-target compatibility help predict when confidence calibration or conformal coverage fails after domain transfer?",
+      "authorship": "Chat interpretation of released canonical descriptions, not an upstream reconstructed proposal; provisional due to catalog consistency caveat."
+    },
+    {
+      "cluster_ids": [
+        82,
+        166,
+        223
+      ],
+      "source": "beta=0.4 top-ranked out of 254",
+      "question": "Does adapter fine-tuning improve intermediate reasoning, or merely change sensitivity to answer order?",
+      "authorship": "Chat interpretation of released canonical descriptions, not an upstream reconstructed proposal; provisional due to catalog consistency caveat."
+    }
+  ]
+}
