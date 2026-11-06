@@ -1,36 +1,50 @@
-> **Historical/reference snapshot (2026-10-13).** This file is retained for optional background and provenance; it is **not** the live agent contract, frontier or routine update target. For every session, read all four files in [AGENTS-READ-THIS/](AGENTS-READ-THIS/00-START-HERE.md) in full. Live status: [02-LIVE-STATE.md](AGENTS-READ-THIS/02-LIVE-STATE.md). Only a new RESULTS/R-card and that live state need routine research writeback. Any legacy instruction below to synchronize README/INDEX/MAP/FRONTIER/SOURCES/etc. is superseded.
+# How we find things we did not expect
 
-> **Workflow supersession (2026-10-13):** The archival instruction below to update INDEX and MAP on *each* new P/R ID is no longer in force. INDEX remains a historical snapshot; MAP is a curated graph changed only at evidence-backed structural triggers defined in [03-WRITEBACK-CHECKLIST.md](AGENTS-READ-THIS/03-WRITEBACK-CHECKLIST.md). The original historical text is retained for provenance.
+## Two entry points, one evidence standard
 
-# Research method: construct, compute, understand, extend
+**Data first:** look for relationships, residual structure, subpopulations, disagreements between measurements, non-detections and unexpected absences. Search across representations, not just for isolated extreme points. A widespread effect may be ordinary-looking in every individual object.
 
-## Primary objective
+**Question first:** combine physically meaningful measurement, process and method concepts; prioritize coherent combinations neglected by the chosen literature corpus. Generate concrete tests rather than persuasive paragraphs.
 
-Use mathematical computation to **find new solutions**. A known technique may supply the crucial building block; the experiment should answer a new consequential question beyond its published result. Do not equate a close citation with a solved application, and do not default to trying to beat that citation in timing alone.
+The first route can reveal structures outside our existing conceptual vocabulary. The second helps us ask unfamiliar questions. Neither is assumption-free, and neither gets to skip verification.
 
-## Default discovery cycle (Track A)
+## Exploration allocation
 
-1. Identify a tractable unresolved proposition from [FRONTIER](FRONTIER.md), including promising unanswered parts of older P-cards.
-2. For each plausible published ingredient, write the exact known statement, the mathematical assumption it uses, and the *new extension or combination* to derive. A search is an accelerator of insight, not an obligatory series of vetoes.
-3. Produce an **explicit falsifiable construction**: equations/recurrence, input domain, proposed error mechanism or new algorithm, expected observable, and a counterexample that would reject it.
-4. **Run a cheap probe in Chat** when computation can discriminate it. Prefer a <30-second experiment; state seeds/precision and actual tool output. Start with correctness and pathologies, then costs only if relevant.
-5. Use observed failure/success to formulate the next improved construction or a derived obstruction. Report the strongest counterexample; no success claims from merely plausible reasoning.
-6. Record the exploration even if negative. Mark `EXPLORATORY`, novelty unverified and any missing reproducibility artifacts. **No three-query dossier or pretest Git commit is needed just to compute an exploratory numerical example.**
-7. Escalate only a promising, precisely stated hypothesis to Track B; or keep working an informative unresolved obstacle. A literature-only session is an explicit exception, not the preferred default output.
+Start with 50% diversified/random data-first screening, 30% question-driven probes and 20% follow-up. These are adjustable effort allocations, not measured optimal percentages. Do not let follow-up gradually consume all independent exploration. Diversify dataset, sky region, population, representation and timescale when resources permit.
 
-## Confirmatory experimental protocol (Track B)
+Rare events may require bigger samples. Population effects may require careful conditioning. A small sample's non-detection is only a statement about its sensitivity and selection, not the whole sky.
 
-Before the *frozen confirmatory* run, carry out external prior-art research and preregister linked P/PA files as described in [PRIOR_ART.md](PRIOR_ART.md). A related published technique may be part of `TRIAGE: EXTEND` or a justified `EVALUATE` question; merely proving a core algorithm old does not invalidate a genuinely new consequence. Preserve previously run explorations separately and do not claim the confirmation was the first test.
+## Fast funnel
 
-- **Accuracy first:** independent higher-accuracy oracle and pathological/domain cases; default maximum absolute state error ≤1e-7 and zero wrong discrete classes unless the specific P-card chooses a defensible different threshold. State and derivative checks if relevant. Empirical tests do not certify all inputs.
-- **Strongest meaningful comparison:** when measuring benefits, compare against correct same-math and specialist methods with equal permitted caching, composition, compilation, batching and validation. Do not engineer a weak baseline or assume known algorithm must be beaten if the novelty is mathematical rather than economic.
-- **Measured cost:** cold build/preprocessing/setup, warm kernel, realistic reuse count and actual amortized totals, in absolute units. At least three repeated paired/interleaved timings with ranges for a promising signal; report hardware/environment and uncertainty.
-- **No universal speed floor:** 1% improvement may matter when robust and widely used. Preserve frozen legacy gates and distinguish a failed historical performance target from a smaller valid effect.
-- **Honest provenance:** `REPORTED`, `REPRODUCED`, `CERTIFIED`, and `PROOF: NONE/INTERVAL/LEAN/OTHER` are separate from novelty. Lean is optional, relevant to mathematical identities when warranted.
-- **Decision:** test the specific hypothesis, explain negative results, preserve smaller true gains and ask what extension the evidence makes possible; avoid routine benchmark races unless they illuminate that question.
+| Stage | Work | Starting budget | Output |
+| --- | --- | --- | --- |
+| Screen | Cached-table numerical evaluations; reuse shared calculations | Target under 1 second per simple probe; batches target 60 seconds and stop at 180 seconds | Scores, diagnostics, every attempted configuration and failures |
+| Challenge | Cheapest plausible artifact/null explanation | Several short batches, not one unbounded run | Reject, inconclusive, or a frozen candidate claim |
+| Confirm | New observations, fixed estimator, controls, uncertainty and multiplicity accounting | Escalation only after a useful screening result | Evidence for the specified claim, or rejection |
+| Interpret | Literature, physical plausibility, independent dataset/instrument where available | Human/agent investigation of a small shortlist | Known effect, unresolved candidate, or evidence packet for expert review |
 
-## Record and handoff
+The targets above are engineering limits to benchmark, not claims about achieved performance. Enforce hard batch deadlines and preserve completed work. Do not hide expensive downloads in the probe timer.
 
-All attempted computations must have an R-card or linked explicit numerical record with equations, actual observed values/failures and status. Exploratory records may legitimately be `POD: NO`; this is not a reason to skip the computation. Confirmatory `POD: YES` requires the [10/10 audit](PROOF_OF_DONE.md) and Git read-back. Update [INDEX](INDEX.md) and [MAP](MAP.md) on new P/R IDs; update [FRONTIER](FRONTIER.md) when priorities materially change.
+## A probe is not a discovery
 
-The branch is a documentation-only research tree. Use the Chat compute sandbox for scripts; no renderer/source or binary output is committed without permission. Never touch `main`.
+A probe is a numerical evaluation of a declared transformation, relationship, subset or discrepancy on a specified dataset. It is not one astronomical object, one browser search, one API request, one LLM conversation, or necessarily one independent hypothesis.
+
+Aim for many cheap local evaluations per cached data sample. Network operations and agent reasoning happen at batch boundaries. Before quoting a throughput number, state the dataset size, operator, hardware, warm/cold cache state and what exactly was counted.
+
+## Controls that matter
+
+Carry units, errors, censoring and selection information. Examine magnitude, sky position, observing cadence, crowding, instrument/pipeline version and shared derived quantities. Correlations caused by a common input or mathematical identity are not new physical relationships. Missing data is not zero; negative/noisy measurements are not automatically invalid.
+
+Use synthetic injections to test sensitivity and appropriately structured nulls to test false alarms. Shuffle only where exchangeability is justified; preserve spatial, temporal or group dependence when necessary. Check whether the pipeline notices a known effect, but do not hardcode its identity into the discovery ranking.
+
+Searching a million valid null hypotheses at an unadjusted 0.05 threshold would produce an expected 50,000 false positives. Exploration therefore produces leads, not significance claims. For promoted claims, declare the tested family and suitable multiplicity control, or use genuinely independent confirmation with a fixed analysis. Account for repeated adaptive use of data. Splitting random rows is not sufficient when those rows share an object, instrument, field or observing epoch.
+
+An independent dataset strengthens a result only to the extent its errors and selection mechanisms are genuinely independent.
+
+## Minimal result record
+
+Use experiments/template.json as the shape, not a paperwork requirement. Save data source/release, exact query and hash, code revision, seed, probe-generator configuration, all attempts or reproducible attempt ledger, effect sizes, uncertainties when estimated, control outcomes, timings and the next discriminating test.
+
+Statuses are simple: screened, rejected, inconclusive, or candidate. A candidate is not a confirmed discovery. Do not silently discard failed jobs or count them as negative scientific results.
+
+Keep large cached inputs out of Git. Preserve a manifest and retrieval instructions. Download valuable CI results before their retention expires; artifacts are a convenience, not the research record.

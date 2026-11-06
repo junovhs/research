@@ -1,0 +1,27 @@
+name: Delete previous project branches and generated state
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/project-reset.yml']
+
+permissions: {}
+
+jobs:
+  cleanup:
+    if: startsWith(github.event.head_commit.message, 'Reset Research for Alien Astronomy') && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: write
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Delete old project state without creating a backup
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/cleanup_previous_project.py

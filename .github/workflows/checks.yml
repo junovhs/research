@@ -1,0 +1,29 @@
+name: Project checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: project-checks
+  cancel-in-progress: false
+
+jobs:
+  # This check name is required by the existing repository protection rule.
+  # Its implementation is new and checks only the replacement project.
+  evidence-and-structure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate the new project
+        run: python3 tools/check_project.py
+      - name: Compile-check project utilities
+        run: python3 -m compileall -q tools

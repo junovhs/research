@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": null,
+  "status": "not-run",
+  "entry_route": null,
+  "question_or_unexpected_pattern": null,
+  "data": {
+    "archive": null,
+    "release": null,
+    "query": null,
+    "sampling_and_exclusions": null,
+    "retrieved_at": null,
+    "sha256": null,
+    "units_and_uncertainty_metadata": null
+  },
+  "execution": {
+    "code_commit": null,
+    "command": null,
+    "seed": null,
+    "probe_generator_config": null,
+    "attempt_ledger_location": null,
+    "attempted_probes": 0,
+    "completed_probes": 0,
+    "failed_probes": 0,
+    "elapsed_seconds": null,
+    "peak_memory_mb": null,
+    "downloaded_bytes": null
+  },
+  "evidence": {
+    "effect_size": null,
+    "uncertainty": null,
+    "controls": [],
+    "selection_and_instrument_checks": [],
+    "multiplicity_and_dependence": null,
+    "confirmation_claim_frozen_before_access": false,
+    "confirmation_data": null,
+    "literature_check": null
+  },
+  "conclusion": null,
+  "next_discriminating_test": null
+}
